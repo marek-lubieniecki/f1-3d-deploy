@@ -1,5 +1,94 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow"><title>Preview</title></head>
-<body style="font-family:system-ui,sans-serif;background:#111;color:#ddd;display:grid;place-items:center;min-height:100vh;margin:0">
-<p>Test preview: first build coming soon.</p></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Hybrid 26 · v0.1 preview</title>
+  <meta name="description" content="Drive a car built to the 2026 single-seater regulations, with its hybrid energy controller, on an Ardennes circuit rebuilt from open data.">
+  <meta name="theme-color" content="#10151c">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Hybrid 26">
+  <script type="module" crossorigin src="./assets/main-D5K4Gd_a.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/ui-DeNK0E5Z.js">
+  <link rel="stylesheet" crossorigin href="./assets/ui-551SZm6v.css">
+  <link rel="stylesheet" crossorigin href="./assets/main-CxuuWSoP.css">
+</head>
+<body>
+  <canvas id="view"></canvas>
+  <div id="hud" class="hud">
+    <div class="perf" id="perf">–</div>
+    <div class="dash">
+      <div class="big"><span class="v" id="hud-speed">–</span><span class="u">km/h</span></div>
+      <div class="big"><span class="v" id="hud-gear">–</span><span class="u">gear</span></div>
+      <div class="rows">
+        <div><span class="k">lap</span><span id="hud-lap">–</span></div>
+        <div><span class="k">last</span><span id="hud-last">–</span></div>
+        <div><span class="k">period</span><span id="hud-period">–</span></div>
+        <div><span class="k">car</span><span id="hud-model">–</span></div>
+        <div><span class="k">SM</span><span id="hud-sm" class="sm" title="Straight Mode (active aero)">–</span></div>
+      </div>
+      <div class="bars">
+        <div class="bar"><span class="k">battery</span><div class="track"><div id="bar-batt" class="fill batt"></div></div><span id="hud-batt">–</span></div>
+        <div class="bar"><span class="k">MGU-K</span><div class="track mid"><div id="bar-pk" class="fill pk"></div></div><span id="hud-pk">–</span></div>
+        <div class="bar"><span class="k">steer</span><div class="track mid"><div id="bar-steer" class="fill steer"></div><div id="tick-steer-ref" class="tick"></div></div><span id="hud-steer">–</span></div>
+      </div>
+    </div>
+  </div>
+  <div id="refhud"></div>
+  <div id="warn" class="warn"></div>
+  <div id="touch" class="touch">
+    <div id="t-steer" class="steerzone" role="slider" aria-label="steering: slide the thumb left or right"
+      aria-valuemin="-1" aria-valuemax="1"><div class="st-track"><i class="st-knob"></i></div><span class="lbl">◀ slide to steer ▶</span></div>
+    <button id="t-left" class="steerbtn left" aria-label="steer left">◀</button>
+    <button id="t-right" class="steerbtn right" aria-label="steer right">▶</button>
+    <div id="t-brake" class="pedal brake" role="button" aria-label="brake: hold, slide up for more" aria-pressed="false"><i class="fill"></i><span>BRAKE</span></div>
+    <div id="t-throttle" class="pedal throttle" role="button" aria-label="throttle: hold, slide up for more" aria-pressed="false"><i class="fill"></i><span>THROTTLE</span></div>
+  </div>
+  <div id="cue" class="cue" aria-live="off"></div>
+  <div id="panel" class="panel">
+    <button id="panel-toggle" class="toggle" aria-label="menu">☰</button>
+    <div class="body">
+      <label>Mode
+        <select id="mode"><option value="drive">drive (wasm core)</option><option value="watch">watch (core autopilot)</option><option value="replay">replay (IPOPT lap)</option></select>
+      </label>
+      <label>Camera <select id="cam"></select></label>
+      <label>Quality
+        <select id="preset"><option value="desktop">desktop</option><option value="mobile">mobile</option></select>
+      </label>
+      <label>Car model
+        <select id="model"><option value="v1">V1 two-track (steering)</option><option value="v0">V0 on the racing line</option></select>
+      </label>
+      <label>Assists
+        <select id="assists"><option>casual</option><option>intermediate</option><option>pro</option><option>realistic</option><option>off</option></select>
+      </label>
+      <div class="help">W/↑ throttle · S/↓ brake · A/← D/→ steer · E/Q shift up/down · F Straight Mode · B Boost · 1-3 energy mode · T reset to track · R restart · C camera · H driving references · M sound. Gamepad: left stick steer, RT/LT pedals, RB/LB shift, Back reset to track</div>
+      <div class="attrib" id="attrib"></div>
+    </div>
+  </div>
+  <div id="sound" class="sound"><button id="sound-toggle" aria-pressed="true" title="Car sound (M)">Sound</button><input id="sound-volume" type="range" min="0" max="100" value="70" aria-label="sound volume"></div>
+  <div id="status" class="status">loading…</div>
+  <button id="pause-btn" class="pausebtn" aria-label="pause menu" title="Pause (Esc / P)">II</button>
+  <div id="rotate" class="rotate" role="note">↻ Turn the phone sideways for a wider view <button aria-label="dismiss">✕</button></div>
+  <div id="menu" class="screen menu hidden"></div>
+  <div id="screen-loading" class="screen loading">
+    <div class="card">
+      <h1>Hybrid 26 <small>v0.1 preview</small></h1>
+      <p class="sub">A car built to the 2026 single-seater regulations, with its hybrid energy controller, on an Ardennes circuit rebuilt from open data</p>
+      <div class="progress" role="progressbar" aria-label="loading" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
+      <div class="stage" aria-live="polite">starting…</div>
+      <noscript><p>This simulator needs JavaScript.</p></noscript>
+    </div>
+  </div>
+  <div id="screen-error" class="screen error hidden" role="alert">
+    <div class="card"><h2>Error</h2><p class="msg"></p><pre class="detail"></pre>
+      <div class="acts"><button class="primary retry">↻ Retry</button> <a href="./credits.html">Credits</a></div></div>
+  </div>
+  <div id="screen-ctx" class="screen ctx hidden" role="alert">
+    <div class="card"><h2>Graphics paused</h2><p class="msg">The browser reset the graphics context (GPU reset or too many
+      tabs with 3D). Waiting for it to come back…</p><div class="acts"><button class="primary reload" style="display:none">↻ Reload</button></div></div>
+  </div>
+</body>
+</html>

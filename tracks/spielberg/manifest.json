@@ -1,0 +1,4036 @@
+{
+ "format": "f1-3d track mesh v1",
+ "track": "spielberg",
+ "length": 4321.679914,
+ "frame": {
+  "origin": [
+   0.0,
+   0.0,
+   678.0
+  ],
+  "axes": "three.js Y-up: X = x - ox, Y = z - oz, Z = -(y - oy); x east, y north, z up = TrackProfile / RoadSurface world frame (m)",
+  "crs": "EPSG:32633",
+  "local_to_crs": {
+   "equation": "[E, N] = scale * R(theta) [x, y] + [tx, ty]",
+   "scale": 1.0,
+   "theta_rad": 0.0063575082087767324,
+   "tx": 482205.8843126081,
+   "ty": 5229787.173362519
+  }
+ },
+ "attribution": [
+  "Centreline and widths: TUM racetrack-database (LGPL-3.0), via racing_optimizer",
+  "Elevation: Land Steiermark - data.steiermark.gv.at (ALS Gelaendehoehe 1 m, CC BY 4.0) (CC BY 4.0 AT)",
+  "Placement on the map: (c) OpenStreetMap contributors (ODbL), highway=raceway ways",
+  "Kerbs: detected in Land Steiermark - GIS-Steiermark, Orthofotos Befliegung 2022-2024 (20 cm, CC BY 4.0 AT)",
+  "Elevation: Land Steiermark - data.steiermark.gv.at (ALS Gelaendehoehe 1 m, CC BY 4.0)",
+  "Placement on the map: (c) OpenStreetMap contributors (ODbL)",
+  "Track centreline: TUM racetrack-database (LGPL-3.0)",
+  "Orthophoto: Land Steiermark - GIS-Steiermark, Orthofotos Befliegung 2022-2024 (20 cm), CC BY 4.0 AT",
+  "Surface model: Land Steiermark - data.steiermark.gv.at (ALS Oberflaechenhoehe 1 m, Befliegung 2010, CC BY 4.0 AT)",
+  "Barriers, fences, buildings: (c) OpenStreetMap contributors, ODbL 1.0 (openstreetmap.org/copyright)"
+ ],
+ "inputs": {
+  "surface": "tracks/spielberg/surface.json (opendata)",
+  "widths": "tracks/spielberg/profile_centreline.json",
+  "terrain": "private/tracks/spielberg/terrain/terrain.json",
+  "terrain_source": "public: GIS-Steiermark ALS DGM 1 m (Gelaendehoehe Gesamtmodell)"
+ },
+ "params": {
+  "line_width_m": 0.15,
+  "kerb_outer_ramp_m": 0.2,
+  "kerb_nominal_m": 1.5,
+  "runoff_m": 3.0,
+  "verge_cols": 4,
+  "edge_eps_m": 0.02,
+  "skirt_m": [
+   3.0,
+   6.0,
+   10.0
+  ],
+  "skirt_lift_m": 0.04,
+  "chord_err_m": 0.02,
+  "vert_err_m": 0.01,
+  "ds_rows": [
+   1,
+   2,
+   4
+  ],
+  "inner_radius_frac": 0.85,
+  "anchor_margin_m": 2.0,
+  "curv_smooth_m": 10.0,
+  "other_part_ds_m": 120.0,
+  "tile_m": 256.0,
+  "lod_cell_m": [
+   4.0,
+   8.0,
+   16.0,
+   32.0
+  ],
+  "lod_track_dist_m": [
+   160.0,
+   700.0,
+   1000000000.0,
+   1000000000.0
+  ],
+  "lod_drop_m": [
+   0.3,
+   0.5,
+   1.0,
+   2.0
+  ],
+  "lod_dilate_m": [
+   4.0,
+   8.0,
+   24.0,
+   48.0
+  ],
+  "tile_skirt_m": [
+   1.5,
+   3.0,
+   6.0,
+   12.0
+  ],
+  "area_buffer_m": 1000.0,
+  "ortho_margin_m": 8.0,
+  "ortho_px": {
+   "O2": 1024,
+   "O1": 512,
+   "O0": 128
+  },
+  "ortho_lo_px": 256,
+  "ortho_quality": 85
+ },
+ "road": {
+  "file": "road.glb",
+  "nodes": [
+   {
+    "tile": [
+     4,
+     6
+    ],
+    "primitives": 4
+   },
+   {
+    "tile": [
+     4,
+     7
+    ],
+    "primitives": 4
+   },
+   {
+    "tile": [
+     5,
+     5
+    ],
+    "primitives": 4
+   },
+   {
+    "tile": [
+     5,
+     6
+    ],
+    "primitives": 4
+   },
+   {
+    "tile": [
+     5,
+     7
+    ],
+    "primitives": 5
+   },
+   {
+    "tile": [
+     6,
+     4
+    ],
+    "primitives": 4
+   },
+   {
+    "tile": [
+     6,
+     5
+    ],
+    "primitives": 5
+   },
+   {
+    "tile": [
+     6,
+     6
+    ],
+    "primitives": 4
+   },
+   {
+    "tile": [
+     6,
+     7
+    ],
+    "primitives": 3
+   },
+   {
+    "tile": [
+     7,
+     4
+    ],
+    "primitives": 4
+   },
+   {
+    "tile": [
+     7,
+     5
+    ],
+    "primitives": 4
+   },
+   {
+    "tile": [
+     7,
+     6
+    ],
+    "primitives": 5
+   },
+   {
+    "tile": [
+     7,
+     7
+    ],
+    "primitives": 1
+   },
+   {
+    "tile": [
+     8,
+     4
+    ],
+    "primitives": 4
+   },
+   {
+    "tile": [
+     8,
+     5
+    ],
+    "primitives": 4
+   },
+   {
+    "tile": [
+     8,
+     6
+    ],
+    "primitives": 1
+   },
+   {
+    "tile": [
+     9,
+     4
+    ],
+    "primitives": 4
+   },
+   {
+    "tile": [
+     9,
+     5
+    ],
+    "primitives": 4
+   }
+  ],
+  "triangles": 117520,
+  "vertices": 72209,
+  "node_count": 18,
+  "by_material": {
+   "asphalt": 9040,
+   "line": 9040,
+   "kerb": 5148,
+   "verge": 94172,
+   "kerb_yellow": 120
+  },
+  "bytes": 2205308,
+  "materials": {
+   "asphalt": "inside the white lines (uv = ortho tile coordinates)",
+   "line": "white line (uv = |n|, s in m)",
+   "kerb": "surface kerb bands, red/white (uv = |n|, s in m)",
+   "kerb_yellow": "surface kerb bands detected red/yellow (uv = |n|, s in m)",
+   "verge": "beyond the line: run-off, grass, skirt (uv = ortho tile coordinates)"
+  }
+ },
+ "terrain": {
+  "tile_m": 256.0,
+  "x0": -2048.0,
+  "y0": -1280.0,
+  "nx": 14,
+  "ny": 12,
+  "levels": [
+   {
+    "lod": 0,
+    "file": "terrain_lod0.glb",
+    "cell_m": 4.0,
+    "tiles": 31,
+    "vertices_per_tile": 4481,
+    "triangles_per_tile": 8704,
+    "bytes": 2300752
+   },
+   {
+    "lod": 1,
+    "file": "terrain_lod1.glb",
+    "cell_m": 8.0,
+    "tiles": 87,
+    "vertices_per_tile": 1217,
+    "triangles_per_tile": 2304,
+    "bytes": 1779832
+   },
+   {
+    "lod": 2,
+    "file": "terrain_lod2.glb",
+    "cell_m": 16.0,
+    "tiles": 168,
+    "vertices_per_tile": 353,
+    "triangles_per_tile": 640,
+    "bytes": 1090896
+   },
+   {
+    "lod": 3,
+    "file": "terrain_lod3.glb",
+    "cell_m": 32.0,
+    "tiles": 168,
+    "vertices_per_tile": 113,
+    "triangles_per_tile": 192,
+    "bytes": 442468
+   }
+  ],
+  "tiles": [
+   {
+    "i": 0,
+    "j": 0,
+    "x0": -2048.0,
+    "y0": -1280.0,
+    "size": 256.0,
+    "track_dist_m": 1673.065541044045,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_0_0.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 1,
+    "j": 0,
+    "x0": -1792.0,
+    "y0": -1280.0,
+    "size": 256.0,
+    "track_dist_m": 1458.9252144338861,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_1_0.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 2,
+    "j": 0,
+    "x0": -1536.0,
+    "y0": -1280.0,
+    "size": 256.0,
+    "track_dist_m": 1255.6023869898227,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_2_0.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 3,
+    "j": 0,
+    "x0": -1280.0,
+    "y0": -1280.0,
+    "size": 256.0,
+    "track_dist_m": 1071.27019744465,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_3_0.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 4,
+    "j": 0,
+    "x0": -1024.0,
+    "y0": -1280.0,
+    "size": 256.0,
+    "track_dist_m": 915.5376966233604,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_4_0.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 5,
+    "j": 0,
+    "x0": -768.0,
+    "y0": -1280.0,
+    "size": 256.0,
+    "track_dist_m": 802.0326267340104,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_5_0.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 6,
+    "j": 0,
+    "x0": -512.0,
+    "y0": -1280.0,
+    "size": 256.0,
+    "track_dist_m": 746.1579718241594,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_6_0.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 7,
+    "j": 0,
+    "x0": -256.0,
+    "y0": -1280.0,
+    "size": 256.0,
+    "track_dist_m": 757.9603304536628,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_7_0.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 8,
+    "j": 0,
+    "x0": 0.0,
+    "y0": -1280.0,
+    "size": 256.0,
+    "track_dist_m": 820.1977959057432,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_8_0.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 9,
+    "j": 0,
+    "x0": 256.0,
+    "y0": -1280.0,
+    "size": 256.0,
+    "track_dist_m": 885.1481290628898,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_9_0.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 10,
+    "j": 0,
+    "x0": 512.0,
+    "y0": -1280.0,
+    "size": 256.0,
+    "track_dist_m": 950.4892217270286,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_10_0.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 11,
+    "j": 0,
+    "x0": 768.0,
+    "y0": -1280.0,
+    "size": 256.0,
+    "track_dist_m": 1044.3073164705565,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_11_0.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 12,
+    "j": 0,
+    "x0": 1024.0,
+    "y0": -1280.0,
+    "size": 256.0,
+    "track_dist_m": 1171.7749871396204,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_12_0.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 13,
+    "j": 0,
+    "x0": 1280.0,
+    "y0": -1280.0,
+    "size": 256.0,
+    "track_dist_m": 1326.9192411620375,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_13_0.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 0,
+    "j": 1,
+    "x0": -2048.0,
+    "y0": -1024.0,
+    "size": 256.0,
+    "track_dist_m": 1528.3402815908435,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_0_1.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 1,
+    "j": 1,
+    "x0": -1792.0,
+    "y0": -1024.0,
+    "size": 256.0,
+    "track_dist_m": 1316.2733994563305,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_1_1.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 2,
+    "j": 1,
+    "x0": -1536.0,
+    "y0": -1024.0,
+    "size": 256.0,
+    "track_dist_m": 1104.3416599852076,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_2_1.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 3,
+    "j": 1,
+    "x0": -1280.0,
+    "y0": -1024.0,
+    "size": 256.0,
+    "track_dist_m": 895.1355208840108,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_3_1.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 4,
+    "j": 1,
+    "x0": -1024.0,
+    "y0": -1024.0,
+    "size": 256.0,
+    "track_dist_m": 709.8485314101157,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_4_1.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 5,
+    "j": 1,
+    "x0": -768.0,
+    "y0": -1024.0,
+    "size": 256.0,
+    "track_dist_m": 566.3127391366371,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_5_1.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 6,
+    "j": 1,
+    "x0": -512.0,
+    "y0": -1024.0,
+    "size": 256.0,
+    "track_dist_m": 491.52951481305627,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_6_1.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 7,
+    "j": 1,
+    "x0": -256.0,
+    "y0": -1024.0,
+    "size": 256.0,
+    "track_dist_m": 507.5119860964287,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_7_1.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 8,
+    "j": 1,
+    "x0": 0.0,
+    "y0": -1024.0,
+    "size": 256.0,
+    "track_dist_m": 572.5799897200781,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_8_1.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 9,
+    "j": 1,
+    "x0": 256.0,
+    "y0": -1024.0,
+    "size": 256.0,
+    "track_dist_m": 637.5193970946347,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_9_1.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 10,
+    "j": 1,
+    "x0": 512.0,
+    "y0": -1024.0,
+    "size": 256.0,
+    "track_dist_m": 707.1169518754767,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_10_1.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 11,
+    "j": 1,
+    "x0": 768.0,
+    "y0": -1024.0,
+    "size": 256.0,
+    "track_dist_m": 818.7325779995397,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_11_1.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 12,
+    "j": 1,
+    "x0": 1024.0,
+    "y0": -1024.0,
+    "size": 256.0,
+    "track_dist_m": 966.0138652278607,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_12_1.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 13,
+    "j": 1,
+    "x0": 1280.0,
+    "y0": -1024.0,
+    "size": 256.0,
+    "track_dist_m": 1143.983918422276,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_13_1.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 0,
+    "j": 2,
+    "x0": -2048.0,
+    "y0": -768.0,
+    "size": 256.0,
+    "track_dist_m": 1402.6106059197155,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_0_2.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 1,
+    "j": 2,
+    "x0": -1792.0,
+    "y0": -768.0,
+    "size": 256.0,
+    "track_dist_m": 1177.091612647835,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_1_2.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 2,
+    "j": 2,
+    "x0": -1536.0,
+    "y0": -768.0,
+    "size": 256.0,
+    "track_dist_m": 959.7856200292675,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_2_2.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 3,
+    "j": 2,
+    "x0": -1280.0,
+    "y0": -768.0,
+    "size": 256.0,
+    "track_dist_m": 750.2813839478463,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_3_2.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 4,
+    "j": 2,
+    "x0": -1024.0,
+    "y0": -768.0,
+    "size": 256.0,
+    "track_dist_m": 536.2047848481052,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_4_2.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 5,
+    "j": 2,
+    "x0": -768.0,
+    "y0": -768.0,
+    "size": 256.0,
+    "track_dist_m": 349.1895457020204,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_5_2.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 6,
+    "j": 2,
+    "x0": -512.0,
+    "y0": -768.0,
+    "size": 256.0,
+    "track_dist_m": 238.57350630778217,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_6_2.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 7,
+    "j": 2,
+    "x0": -256.0,
+    "y0": -768.0,
+    "size": 256.0,
+    "track_dist_m": 260.0120374460662,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_7_2.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 8,
+    "j": 2,
+    "x0": 0.0,
+    "y0": -768.0,
+    "size": 256.0,
+    "track_dist_m": 324.9613089656242,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_8_2.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 9,
+    "j": 2,
+    "x0": 256.0,
+    "y0": -768.0,
+    "size": 256.0,
+    "track_dist_m": 389.94016272970794,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_9_2.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 10,
+    "j": 2,
+    "x0": 512.0,
+    "y0": -768.0,
+    "size": 256.0,
+    "track_dist_m": 471.8757523015614,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_10_2.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 11,
+    "j": 2,
+    "x0": 768.0,
+    "y0": -768.0,
+    "size": 256.0,
+    "track_dist_m": 606.0547689736276,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_11_2.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 12,
+    "j": 2,
+    "x0": 1024.0,
+    "y0": -768.0,
+    "size": 256.0,
+    "track_dist_m": 782.6129192998892,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_12_2.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 13,
+    "j": 2,
+    "x0": 1280.0,
+    "y0": -768.0,
+    "size": 256.0,
+    "track_dist_m": 987.7437819427672,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_13_2.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 0,
+    "j": 3,
+    "x0": -2048.0,
+    "y0": -512.0,
+    "size": 256.0,
+    "track_dist_m": 1252.8863957552012,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_0_3.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 1,
+    "j": 3,
+    "x0": -1792.0,
+    "y0": -512.0,
+    "size": 256.0,
+    "track_dist_m": 1059.8636519626334,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_1_3.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 2,
+    "j": 3,
+    "x0": -1536.0,
+    "y0": -512.0,
+    "size": 256.0,
+    "track_dist_m": 830.2314317968595,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_2_3.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 3,
+    "j": 3,
+    "x0": -1280.0,
+    "y0": -512.0,
+    "size": 256.0,
+    "track_dist_m": 605.8430820861585,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_3_3.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 4,
+    "j": 3,
+    "x0": -1024.0,
+    "y0": -512.0,
+    "size": 256.0,
+    "track_dist_m": 393.59706099565915,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_4_3.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 5,
+    "j": 3,
+    "x0": -768.0,
+    "y0": -512.0,
+    "size": 256.0,
+    "track_dist_m": 182.8009651041363,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_5_3.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 6,
+    "j": 3,
+    "x0": -512.0,
+    "y0": -512.0,
+    "size": 256.0,
+    "track_dist_m": 0.0,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O1_6_3.jpg",
+     "level": "O1",
+     "px": 512,
+     "m_per_px": 0.53125,
+     "file_lo": "ortho/O1_6_3_lo.jpg"
+    }
+   },
+   {
+    "i": 7,
+    "j": 3,
+    "x0": -256.0,
+    "y0": -512.0,
+    "size": 256.0,
+    "track_dist_m": 12.378364471779122,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O1_7_3.jpg",
+     "level": "O1",
+     "px": 512,
+     "m_per_px": 0.53125,
+     "file_lo": "ortho/O1_7_3_lo.jpg"
+    }
+   },
+   {
+    "i": 8,
+    "j": 3,
+    "x0": 0.0,
+    "y0": -512.0,
+    "size": 256.0,
+    "track_dist_m": 77.3386340490672,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O1_8_3.jpg",
+     "level": "O1",
+     "px": 512,
+     "m_per_px": 0.53125,
+     "file_lo": "ortho/O1_8_3_lo.jpg"
+    }
+   },
+   {
+    "i": 9,
+    "j": 3,
+    "x0": 256.0,
+    "y0": -512.0,
+    "size": 256.0,
+    "track_dist_m": 142.16119903686115,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O1_9_3.jpg",
+     "level": "O1",
+     "px": 512,
+     "m_per_px": 0.53125,
+     "file_lo": "ortho/O1_9_3_lo.jpg"
+    }
+   },
+   {
+    "i": 10,
+    "j": 3,
+    "x0": 512.0,
+    "y0": -512.0,
+    "size": 256.0,
+    "track_dist_m": 248.75599405944877,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_10_3.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 11,
+    "j": 3,
+    "x0": 768.0,
+    "y0": -512.0,
+    "size": 256.0,
+    "track_dist_m": 422.00684745329715,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_11_3.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 12,
+    "j": 3,
+    "x0": 1024.0,
+    "y0": -512.0,
+    "size": 256.0,
+    "track_dist_m": 637.1317076260057,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_12_3.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 13,
+    "j": 3,
+    "x0": 1280.0,
+    "y0": -512.0,
+    "size": 256.0,
+    "track_dist_m": 870.2631150909705,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_13_3.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 0,
+    "j": 4,
+    "x0": -2048.0,
+    "y0": -256.0,
+    "size": 256.0,
+    "track_dist_m": 1103.82285947622,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_0_4.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 1,
+    "j": 4,
+    "x0": -1792.0,
+    "y0": -256.0,
+    "size": 256.0,
+    "track_dist_m": 892.8693075669984,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_1_4.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 2,
+    "j": 4,
+    "x0": -1536.0,
+    "y0": -256.0,
+    "size": 256.0,
+    "track_dist_m": 703.067737355085,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_2_4.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 3,
+    "j": 4,
+    "x0": -1280.0,
+    "y0": -256.0,
+    "size": 256.0,
+    "track_dist_m": 487.64825686824963,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_3_4.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 4,
+    "j": 4,
+    "x0": -1024.0,
+    "y0": -256.0,
+    "size": 256.0,
+    "track_dist_m": 257.8774229147537,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_4_4.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 5,
+    "j": 4,
+    "x0": -768.0,
+    "y0": -256.0,
+    "size": 256.0,
+    "track_dist_m": 36.87484315696918,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O2_5_4.jpg",
+     "level": "O2",
+     "px": 1024,
+     "m_per_px": 0.265625,
+     "file_lo": "ortho/O2_5_4_lo.jpg"
+    }
+   },
+   {
+    "i": 6,
+    "j": 4,
+    "x0": -512.0,
+    "y0": -256.0,
+    "size": 256.0,
+    "track_dist_m": 0.0,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O2_6_4.jpg",
+     "level": "O2",
+     "px": 1024,
+     "m_per_px": 0.265625,
+     "file_lo": "ortho/O2_6_4_lo.jpg"
+    }
+   },
+   {
+    "i": 7,
+    "j": 4,
+    "x0": -256.0,
+    "y0": -256.0,
+    "size": 256.0,
+    "track_dist_m": 0.0,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O2_7_4.jpg",
+     "level": "O2",
+     "px": 1024,
+     "m_per_px": 0.265625,
+     "file_lo": "ortho/O2_7_4_lo.jpg"
+    }
+   },
+   {
+    "i": 8,
+    "j": 4,
+    "x0": 0.0,
+    "y0": -256.0,
+    "size": 256.0,
+    "track_dist_m": 0.0,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O2_8_4.jpg",
+     "level": "O2",
+     "px": 1024,
+     "m_per_px": 0.265625,
+     "file_lo": "ortho/O2_8_4_lo.jpg"
+    }
+   },
+   {
+    "i": 9,
+    "j": 4,
+    "x0": 256.0,
+    "y0": -256.0,
+    "size": 256.0,
+    "track_dist_m": 0.0,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O2_9_4.jpg",
+     "level": "O2",
+     "px": 1024,
+     "m_per_px": 0.265625,
+     "file_lo": "ortho/O2_9_4_lo.jpg"
+    }
+   },
+   {
+    "i": 10,
+    "j": 4,
+    "x0": 512.0,
+    "y0": -256.0,
+    "size": 256.0,
+    "track_dist_m": 65.08013928176098,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O1_10_4.jpg",
+     "level": "O1",
+     "px": 512,
+     "m_per_px": 0.53125,
+     "file_lo": "ortho/O1_10_4_lo.jpg"
+    }
+   },
+   {
+    "i": 11,
+    "j": 4,
+    "x0": 768.0,
+    "y0": -256.0,
+    "size": 256.0,
+    "track_dist_m": 302.7902750151914,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_11_4.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 12,
+    "j": 4,
+    "x0": 1024.0,
+    "y0": -256.0,
+    "size": 256.0,
+    "track_dist_m": 552.5689377977708,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_12_4.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 13,
+    "j": 4,
+    "x0": 1280.0,
+    "y0": -256.0,
+    "size": 256.0,
+    "track_dist_m": 805.468713703968,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_13_4.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 0,
+    "j": 5,
+    "x0": -2048.0,
+    "y0": 0.0,
+    "size": 256.0,
+    "track_dist_m": 991.301088103348,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_0_5.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 1,
+    "j": 5,
+    "x0": -1792.0,
+    "y0": 0.0,
+    "size": 256.0,
+    "track_dist_m": 756.0650240029194,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_1_5.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 2,
+    "j": 5,
+    "x0": -1536.0,
+    "y0": 0.0,
+    "size": 256.0,
+    "track_dist_m": 534.7256323183693,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_2_5.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 3,
+    "j": 5,
+    "x0": -1280.0,
+    "y0": 0.0,
+    "size": 256.0,
+    "track_dist_m": 341.02964173138616,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_3_5.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 4,
+    "j": 5,
+    "x0": -1024.0,
+    "y0": 0.0,
+    "size": 256.0,
+    "track_dist_m": 148.86349054029205,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O1_4_5.jpg",
+     "level": "O1",
+     "px": 512,
+     "m_per_px": 0.53125,
+     "file_lo": "ortho/O1_4_5_lo.jpg"
+    }
+   },
+   {
+    "i": 5,
+    "j": 5,
+    "x0": -768.0,
+    "y0": 0.0,
+    "size": 256.0,
+    "track_dist_m": 0.0,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O2_5_5.jpg",
+     "level": "O2",
+     "px": 1024,
+     "m_per_px": 0.265625,
+     "file_lo": "ortho/O2_5_5_lo.jpg"
+    }
+   },
+   {
+    "i": 6,
+    "j": 5,
+    "x0": -512.0,
+    "y0": 0.0,
+    "size": 256.0,
+    "track_dist_m": 0.0,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O2_6_5.jpg",
+     "level": "O2",
+     "px": 1024,
+     "m_per_px": 0.265625,
+     "file_lo": "ortho/O2_6_5_lo.jpg"
+    }
+   },
+   {
+    "i": 7,
+    "j": 5,
+    "x0": -256.0,
+    "y0": 0.0,
+    "size": 256.0,
+    "track_dist_m": 0.0,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O2_7_5.jpg",
+     "level": "O2",
+     "px": 1024,
+     "m_per_px": 0.265625,
+     "file_lo": "ortho/O2_7_5_lo.jpg"
+    }
+   },
+   {
+    "i": 8,
+    "j": 5,
+    "x0": 0.0,
+    "y0": 0.0,
+    "size": 256.0,
+    "track_dist_m": 0.0,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O2_8_5.jpg",
+     "level": "O2",
+     "px": 1024,
+     "m_per_px": 0.265625,
+     "file_lo": "ortho/O2_8_5_lo.jpg"
+    }
+   },
+   {
+    "i": 9,
+    "j": 5,
+    "x0": 256.0,
+    "y0": 0.0,
+    "size": 256.0,
+    "track_dist_m": 0.0,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O2_9_5.jpg",
+     "level": "O2",
+     "px": 1024,
+     "m_per_px": 0.265625,
+     "file_lo": "ortho/O2_9_5_lo.jpg"
+    }
+   },
+   {
+    "i": 10,
+    "j": 5,
+    "x0": 512.0,
+    "y0": 0.0,
+    "size": 256.0,
+    "track_dist_m": 52.47583983532681,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O2_10_5.jpg",
+     "level": "O2",
+     "px": 1024,
+     "m_per_px": 0.265625,
+     "file_lo": "ortho/O2_10_5_lo.jpg"
+    }
+   },
+   {
+    "i": 11,
+    "j": 5,
+    "x0": 768.0,
+    "y0": 0.0,
+    "size": 256.0,
+    "track_dist_m": 298.91786429587205,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_11_5.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 12,
+    "j": 5,
+    "x0": 1024.0,
+    "y0": 0.0,
+    "size": 256.0,
+    "track_dist_m": 550.0742582320675,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_12_5.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 13,
+    "j": 5,
+    "x0": 1280.0,
+    "y0": 0.0,
+    "size": 256.0,
+    "track_dist_m": 803.6305850690998,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_13_5.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 0,
+    "j": 6,
+    "x0": -2048.0,
+    "y0": 256.0,
+    "size": 256.0,
+    "track_dist_m": 926.660196183432,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_0_6.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 1,
+    "j": 6,
+    "x0": -1792.0,
+    "y0": 256.0,
+    "size": 256.0,
+    "track_dist_m": 674.2063347520136,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_1_6.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 2,
+    "j": 6,
+    "x0": -1536.0,
+    "y0": 256.0,
+    "size": 256.0,
+    "track_dist_m": 424.64616727292105,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_2_6.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 3,
+    "j": 6,
+    "x0": -1280.0,
+    "y0": 256.0,
+    "size": 256.0,
+    "track_dist_m": 183.68768886076867,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_3_6.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 4,
+    "j": 6,
+    "x0": -1024.0,
+    "y0": 256.0,
+    "size": 256.0,
+    "track_dist_m": 0.0,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O1_4_6.jpg",
+     "level": "O1",
+     "px": 512,
+     "m_per_px": 0.53125,
+     "file_lo": "ortho/O1_4_6_lo.jpg"
+    }
+   },
+   {
+    "i": 5,
+    "j": 6,
+    "x0": -768.0,
+    "y0": 256.0,
+    "size": 256.0,
+    "track_dist_m": 0.0,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O2_5_6.jpg",
+     "level": "O2",
+     "px": 1024,
+     "m_per_px": 0.265625,
+     "file_lo": "ortho/O2_5_6_lo.jpg"
+    }
+   },
+   {
+    "i": 6,
+    "j": 6,
+    "x0": -512.0,
+    "y0": 256.0,
+    "size": 256.0,
+    "track_dist_m": 0.0,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O2_6_6.jpg",
+     "level": "O2",
+     "px": 1024,
+     "m_per_px": 0.265625,
+     "file_lo": "ortho/O2_6_6_lo.jpg"
+    }
+   },
+   {
+    "i": 7,
+    "j": 6,
+    "x0": -256.0,
+    "y0": 256.0,
+    "size": 256.0,
+    "track_dist_m": 0.0,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O2_7_6.jpg",
+     "level": "O2",
+     "px": 1024,
+     "m_per_px": 0.265625,
+     "file_lo": "ortho/O2_7_6_lo.jpg"
+    }
+   },
+   {
+    "i": 8,
+    "j": 6,
+    "x0": 0.0,
+    "y0": 256.0,
+    "size": 256.0,
+    "track_dist_m": 0.0,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O2_8_6.jpg",
+     "level": "O2",
+     "px": 1024,
+     "m_per_px": 0.265625,
+     "file_lo": "ortho/O2_8_6_lo.jpg"
+    }
+   },
+   {
+    "i": 9,
+    "j": 6,
+    "x0": 256.0,
+    "y0": 256.0,
+    "size": 256.0,
+    "track_dist_m": 6.631093146191716,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O2_9_6.jpg",
+     "level": "O2",
+     "px": 1024,
+     "m_per_px": 0.265625,
+     "file_lo": "ortho/O2_9_6_lo.jpg"
+    }
+   },
+   {
+    "i": 10,
+    "j": 6,
+    "x0": 512.0,
+    "y0": 256.0,
+    "size": 256.0,
+    "track_dist_m": 152.61535872093992,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_10_6.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 11,
+    "j": 6,
+    "x0": 768.0,
+    "y0": 256.0,
+    "size": 256.0,
+    "track_dist_m": 374.48132414554914,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_11_6.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 12,
+    "j": 6,
+    "x0": 1024.0,
+    "y0": 256.0,
+    "size": 256.0,
+    "track_dist_m": 615.2386591259798,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_12_6.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 13,
+    "j": 6,
+    "x0": 1280.0,
+    "y0": 256.0,
+    "size": 256.0,
+    "track_dist_m": 861.1684705087454,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_13_6.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 0,
+    "j": 7,
+    "x0": -2048.0,
+    "y0": 512.0,
+    "size": 256.0,
+    "track_dist_m": 918.4520534656375,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_0_7.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 1,
+    "j": 7,
+    "x0": -1792.0,
+    "y0": 512.0,
+    "size": 256.0,
+    "track_dist_m": 663.5864993548525,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_1_7.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 2,
+    "j": 7,
+    "x0": -1536.0,
+    "y0": 512.0,
+    "size": 256.0,
+    "track_dist_m": 409.70284741405567,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_2_7.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 3,
+    "j": 7,
+    "x0": -1280.0,
+    "y0": 512.0,
+    "size": 256.0,
+    "track_dist_m": 158.87323840551488,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_3_7.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 4,
+    "j": 7,
+    "x0": -1024.0,
+    "y0": 512.0,
+    "size": 256.0,
+    "track_dist_m": 0.0,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O1_4_7.jpg",
+     "level": "O1",
+     "px": 512,
+     "m_per_px": 0.53125,
+     "file_lo": "ortho/O1_4_7_lo.jpg"
+    }
+   },
+   {
+    "i": 5,
+    "j": 7,
+    "x0": -768.0,
+    "y0": 512.0,
+    "size": 256.0,
+    "track_dist_m": 0.0,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O2_5_7.jpg",
+     "level": "O2",
+     "px": 1024,
+     "m_per_px": 0.265625,
+     "file_lo": "ortho/O2_5_7_lo.jpg"
+    }
+   },
+   {
+    "i": 6,
+    "j": 7,
+    "x0": -512.0,
+    "y0": 512.0,
+    "size": 256.0,
+    "track_dist_m": 0.0,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O2_6_7.jpg",
+     "level": "O2",
+     "px": 1024,
+     "m_per_px": 0.265625,
+     "file_lo": "ortho/O2_6_7_lo.jpg"
+    }
+   },
+   {
+    "i": 7,
+    "j": 7,
+    "x0": -256.0,
+    "y0": 512.0,
+    "size": 256.0,
+    "track_dist_m": 0.0,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O2_7_7.jpg",
+     "level": "O2",
+     "px": 1024,
+     "m_per_px": 0.265625,
+     "file_lo": "ortho/O2_7_7_lo.jpg"
+    }
+   },
+   {
+    "i": 8,
+    "j": 7,
+    "x0": 0.0,
+    "y0": 512.0,
+    "size": 256.0,
+    "track_dist_m": 42.61666168093407,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O2_8_7.jpg",
+     "level": "O2",
+     "px": 1024,
+     "m_per_px": 0.265625,
+     "file_lo": "ortho/O2_8_7_lo.jpg"
+    }
+   },
+   {
+    "i": 9,
+    "j": 7,
+    "x0": 256.0,
+    "y0": 512.0,
+    "size": 256.0,
+    "track_dist_m": 258.5469989779588,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_9_7.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 10,
+    "j": 7,
+    "x0": 512.0,
+    "y0": 512.0,
+    "size": 256.0,
+    "track_dist_m": 345.9288340219997,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_10_7.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 11,
+    "j": 7,
+    "x0": 768.0,
+    "y0": 512.0,
+    "size": 256.0,
+    "track_dist_m": 513.26730078939,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_11_7.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 12,
+    "j": 7,
+    "x0": 1024.0,
+    "y0": 512.0,
+    "size": 256.0,
+    "track_dist_m": 720.298141440793,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_12_7.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 13,
+    "j": 7,
+    "x0": 1280.0,
+    "y0": 512.0,
+    "size": 256.0,
+    "track_dist_m": 946.463365786001,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_13_7.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 0,
+    "j": 8,
+    "x0": -2048.0,
+    "y0": 768.0,
+    "size": 256.0,
+    "track_dist_m": 968.0155740100389,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_0_8.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 1,
+    "j": 8,
+    "x0": -1792.0,
+    "y0": 768.0,
+    "size": 256.0,
+    "track_dist_m": 727.0556979709064,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_1_8.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 2,
+    "j": 8,
+    "x0": -1536.0,
+    "y0": 768.0,
+    "size": 256.0,
+    "track_dist_m": 496.92596753664475,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_2_8.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 3,
+    "j": 8,
+    "x0": -1280.0,
+    "y0": 768.0,
+    "size": 256.0,
+    "track_dist_m": 293.6363688327879,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_3_8.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 4,
+    "j": 8,
+    "x0": -1024.0,
+    "y0": 768.0,
+    "size": 256.0,
+    "track_dist_m": 165.95642719924706,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_4_8.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 5,
+    "j": 8,
+    "x0": -768.0,
+    "y0": 768.0,
+    "size": 256.0,
+    "track_dist_m": 149.50001171926624,
+    "lods": [
+     0,
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_5_8.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 6,
+    "j": 8,
+    "x0": -512.0,
+    "y0": 768.0,
+    "size": 256.0,
+    "track_dist_m": 187.4365299353825,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_6_8.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 7,
+    "j": 8,
+    "x0": -256.0,
+    "y0": 768.0,
+    "size": 256.0,
+    "track_dist_m": 223.49718136811725,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_7_8.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 8,
+    "j": 8,
+    "x0": 0.0,
+    "y0": 768.0,
+    "size": 256.0,
+    "track_dist_m": 262.05625455210355,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_8_8.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 9,
+    "j": 8,
+    "x0": 256.0,
+    "y0": 768.0,
+    "size": 256.0,
+    "track_dist_m": 404.6332307687471,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_9_8.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 10,
+    "j": 8,
+    "x0": 512.0,
+    "y0": 768.0,
+    "size": 256.0,
+    "track_dist_m": 574.3871196924256,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_10_8.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 11,
+    "j": 8,
+    "x0": 768.0,
+    "y0": 768.0,
+    "size": 256.0,
+    "track_dist_m": 702.1556671677091,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_11_8.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 12,
+    "j": 8,
+    "x0": 1024.0,
+    "y0": 768.0,
+    "size": 256.0,
+    "track_dist_m": 874.8080215611816,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_12_8.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 13,
+    "j": 8,
+    "x0": 1280.0,
+    "y0": 768.0,
+    "size": 256.0,
+    "track_dist_m": 1074.8125999351464,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_13_8.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 0,
+    "j": 9,
+    "x0": -2048.0,
+    "y0": 1024.0,
+    "size": 256.0,
+    "track_dist_m": 1068.6732330230561,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_0_9.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 1,
+    "j": 9,
+    "x0": -1792.0,
+    "y0": 1024.0,
+    "size": 256.0,
+    "track_dist_m": 851.2521042549364,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_1_9.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 2,
+    "j": 9,
+    "x0": -1536.0,
+    "y0": 1024.0,
+    "size": 256.0,
+    "track_dist_m": 655.6467172159668,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_2_9.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 3,
+    "j": 9,
+    "x0": -1280.0,
+    "y0": 1024.0,
+    "size": 256.0,
+    "track_dist_m": 500.63834528880534,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_3_9.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 4,
+    "j": 9,
+    "x0": -1024.0,
+    "y0": 1024.0,
+    "size": 256.0,
+    "track_dist_m": 417.82645533831123,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_4_9.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 5,
+    "j": 9,
+    "x0": -768.0,
+    "y0": 1024.0,
+    "size": 256.0,
+    "track_dist_m": 405.4635694334105,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_5_9.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 6,
+    "j": 9,
+    "x0": -512.0,
+    "y0": 1024.0,
+    "size": 256.0,
+    "track_dist_m": 438.20155734685557,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_6_9.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 7,
+    "j": 9,
+    "x0": -256.0,
+    "y0": 1024.0,
+    "size": 256.0,
+    "track_dist_m": 479.21260684729396,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_7_9.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 8,
+    "j": 9,
+    "x0": 0.0,
+    "y0": 1024.0,
+    "size": 256.0,
+    "track_dist_m": 506.19132710463566,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_8_9.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 9,
+    "j": 9,
+    "x0": 256.0,
+    "y0": 1024.0,
+    "size": 256.0,
+    "track_dist_m": 607.1461256371795,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_9_9.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 10,
+    "j": 9,
+    "x0": 512.0,
+    "y0": 1024.0,
+    "size": 256.0,
+    "track_dist_m": 766.6622254228799,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_10_9.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 11,
+    "j": 9,
+    "x0": 768.0,
+    "y0": 1024.0,
+    "size": 256.0,
+    "track_dist_m": 917.0689490189083,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_11_9.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 12,
+    "j": 9,
+    "x0": 1024.0,
+    "y0": 1024.0,
+    "size": 256.0,
+    "track_dist_m": 1061.5925923002887,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_12_9.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 13,
+    "j": 9,
+    "x0": 1280.0,
+    "y0": 1024.0,
+    "size": 256.0,
+    "track_dist_m": 1236.6006058080552,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_13_9.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 0,
+    "j": 10,
+    "x0": -2048.0,
+    "y0": 1280.0,
+    "size": 256.0,
+    "track_dist_m": 1209.48861897169,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_0_10.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 1,
+    "j": 10,
+    "x0": -1792.0,
+    "y0": 1280.0,
+    "size": 256.0,
+    "track_dist_m": 1017.67417406738,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_1_10.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 2,
+    "j": 10,
+    "x0": -1536.0,
+    "y0": 1280.0,
+    "size": 256.0,
+    "track_dist_m": 853.6943737511623,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_2_10.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 3,
+    "j": 10,
+    "x0": -1280.0,
+    "y0": 1280.0,
+    "size": 256.0,
+    "track_dist_m": 732.5430012541859,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_3_10.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 4,
+    "j": 10,
+    "x0": -1024.0,
+    "y0": 1280.0,
+    "size": 256.0,
+    "track_dist_m": 672.0987193887057,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_4_10.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 5,
+    "j": 10,
+    "x0": -768.0,
+    "y0": 1280.0,
+    "size": 256.0,
+    "track_dist_m": 661.4402229019141,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_5_10.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 6,
+    "j": 10,
+    "x0": -512.0,
+    "y0": 1280.0,
+    "size": 256.0,
+    "track_dist_m": 688.9699682847797,
+    "lods": [
+     1,
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_6_10.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 7,
+    "j": 10,
+    "x0": -256.0,
+    "y0": 1280.0,
+    "size": 256.0,
+    "track_dist_m": 734.9644092047495,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_7_10.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 8,
+    "j": 10,
+    "x0": 0.0,
+    "y0": 1280.0,
+    "size": 256.0,
+    "track_dist_m": 756.4333163966234,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_8_10.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 9,
+    "j": 10,
+    "x0": 256.0,
+    "y0": 1280.0,
+    "size": 256.0,
+    "track_dist_m": 833.5297687758699,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_9_10.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 10,
+    "j": 10,
+    "x0": 512.0,
+    "y0": 1280.0,
+    "size": 256.0,
+    "track_dist_m": 962.531908531855,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_10_10.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 11,
+    "j": 10,
+    "x0": 768.0,
+    "y0": 1280.0,
+    "size": 256.0,
+    "track_dist_m": 1128.6965701258264,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_11_10.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 12,
+    "j": 10,
+    "x0": 1024.0,
+    "y0": 1280.0,
+    "size": 256.0,
+    "track_dist_m": 1268.7779937503701,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_12_10.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 13,
+    "j": 10,
+    "x0": 1280.0,
+    "y0": 1280.0,
+    "size": 256.0,
+    "track_dist_m": 1422.1513290658672,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_13_10.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 0,
+    "j": 11,
+    "x0": -2048.0,
+    "y0": 1536.0,
+    "size": 256.0,
+    "track_dist_m": 1379.7068339450448,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_0_11.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 1,
+    "j": 11,
+    "x0": -1792.0,
+    "y0": 1536.0,
+    "size": 256.0,
+    "track_dist_m": 1211.3142412414386,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_1_11.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 2,
+    "j": 11,
+    "x0": -1536.0,
+    "y0": 1536.0,
+    "size": 256.0,
+    "track_dist_m": 1072.7284887674532,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_2_11.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 3,
+    "j": 11,
+    "x0": -1280.0,
+    "y0": 1536.0,
+    "size": 256.0,
+    "track_dist_m": 974.5312307050143,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_3_11.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 4,
+    "j": 11,
+    "x0": -1024.0,
+    "y0": 1536.0,
+    "size": 256.0,
+    "track_dist_m": 926.4642582387775,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_4_11.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 5,
+    "j": 11,
+    "x0": -768.0,
+    "y0": 1536.0,
+    "size": 256.0,
+    "track_dist_m": 917.4238662433451,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_5_11.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 6,
+    "j": 11,
+    "x0": -512.0,
+    "y0": 1536.0,
+    "size": 256.0,
+    "track_dist_m": 940.5142226201543,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_6_11.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 7,
+    "j": 11,
+    "x0": -256.0,
+    "y0": 1536.0,
+    "size": 256.0,
+    "track_dist_m": 990.7382734885065,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_7_11.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 8,
+    "j": 11,
+    "x0": 0.0,
+    "y0": 1536.0,
+    "size": 256.0,
+    "track_dist_m": 1009.0284736991649,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_8_11.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 9,
+    "j": 11,
+    "x0": 256.0,
+    "y0": 1536.0,
+    "size": 256.0,
+    "track_dist_m": 1071.1177287970527,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_9_11.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 10,
+    "j": 11,
+    "x0": 512.0,
+    "y0": 1536.0,
+    "size": 256.0,
+    "track_dist_m": 1178.1961371612615,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_10_11.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 11,
+    "j": 11,
+    "x0": 768.0,
+    "y0": 1536.0,
+    "size": 256.0,
+    "track_dist_m": 1321.042987160623,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_11_11.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 12,
+    "j": 11,
+    "x0": 1024.0,
+    "y0": 1536.0,
+    "size": 256.0,
+    "track_dist_m": 1489.0707478394934,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_12_11.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   },
+   {
+    "i": 13,
+    "j": 11,
+    "x0": 1280.0,
+    "y0": 1536.0,
+    "size": 256.0,
+    "track_dist_m": 1624.4397966897468,
+    "lods": [
+     2,
+     3
+    ],
+    "ortho": {
+     "file": "ortho/O0_13_11.jpg",
+     "level": "O0",
+     "px": 128,
+     "m_per_px": 2.125
+    }
+   }
+  ]
+ },
+ "ortho": {
+  "levels": {
+   "O0": 140,
+   "O1": 8,
+   "O2": 20
+  },
+  "bytes": 4819330,
+  "margin_m": 8.0,
+  "attribution": "Land Steiermark - GIS-Steiermark, Orthofotos Befliegung 2022-2024 (20 cm), CC BY 4.0 AT",
+  "tone": {
+   "gamma": 1.3,
+   "saturation": 1.4
+  }
+ },
+ "objects": {
+  "trees": {
+   "file": "trees.bin",
+   "count": 30957,
+   "near": 3234,
+   "bytes": 742980,
+   "height_m": {
+    "median": 17.683517456054688,
+    "p95": 31.824739135742306
+   },
+   "source": "local maxima of surface model - terrain model (Land Steiermark - data.steiermark.gv.at (ALS Oberflaechenhoehe 1 m, Befliegung 2010, CC BY 4.0 AT); public: GIS-Steiermark ALS DGM 1 m (Gelaendehoehe Gesamtmodell)), checked in the orthophoto (Land Steiermark - GIS-Steiermark, Orthofotos Befliegung 2022-2024 (20 cm), CC BY 4.0 AT)"
+  },
+  "buildings": null
+ },
+ "lookup": {
+  "file": "road_lookup.bin",
+  "rows": 8643,
+  "ds": 0.5000208161517992,
+  "length": 4321.679914,
+  "fields": [
+   "x",
+   "y",
+   "psi",
+   "z_c",
+   "dz_dn"
+  ],
+  "dtype": "float32 little-endian, row-major",
+  "equation": "z(s, n) = z_c + n * dz_dn, linear between rows (asphalt plane; kerbs ignored)",
+  "bytes": 172860
+ },
+ "ipopt_line": {
+  "file": "ipopt_line.json",
+  "samples": 1729,
+  "lap_time": 66.050845
+ },
+ "cameras": {
+  "pit_straight": {
+   "pos": [
+    241.13,
+    11.26,
+    64.45
+   ],
+   "target": [
+    -15.89,
+    0.69,
+    154.65
+   ],
+   "fov": 50,
+   "def": {
+    "s": 4200.0,
+    "n": -22.0,
+    "h": 10.0,
+    "look": [
+     150.0,
+     0.0,
+     1.0
+    ],
+    "fov": 50
+   }
+  },
+  "t1": {
+   "pos": [
+    -267.21,
+    31.86,
+    261.91
+   ],
+   "target": [
+    -315.55,
+    15.5,
+    210.72
+   ],
+   "fov": 60,
+   "def": {
+    "s": 420.0,
+    "n": 40.0,
+    "h": 12.0,
+    "look": [
+     470.0,
+     -4.0,
+     0.0
+    ],
+    "fov": 60
+   }
+  },
+  "t3": {
+   "pos": [
+    -840.69,
+    62.85,
+    -491.48
+   ],
+   "target": [
+    -818.09,
+    61.12,
+    -553.07
+   ],
+   "fov": 60,
+   "def": {
+    "s": 1360.0,
+    "n": 45.0,
+    "h": 12.0,
+    "look": [
+     1400.0,
+     -4.0,
+     0.0
+    ],
+    "fov": 60
+   }
+  },
+  "t4": {
+   "pos": [
+    -56.94,
+    55.19,
+    -522.44
+   ],
+   "target": [
+    -23.31,
+    34.7,
+    -463.51
+   ],
+   "fov": 60,
+   "def": {
+    "s": 2170.0,
+    "n": 35.0,
+    "h": 10.0,
+    "look": [
+     2220.0,
+     -3.0,
+     0.0
+    ],
+    "fov": 60
+   }
+  },
+  "t9_t10": {
+   "pos": [
+    428.9,
+    15.94,
+    41.6
+   ],
+   "target": [
+    407.89,
+    12.81,
+    -90.82
+   ],
+   "fov": 60,
+   "def": {
+    "s": 4020.0,
+    "n": 28.0,
+    "h": 9.0,
+    "look": [
+     3900.0,
+     0.0,
+     0.0
+    ],
+    "fov": 60
+   }
+  }
+ },
+ "checks": {
+  "seam": {
+   "edge_minus_terrain_left": {
+    "rows": 2260,
+    "rms_m": 0.41695630071484024,
+    "p99_abs_m": 1.2505840358863076,
+    "max_abs_m": 7.102748924326875
+   },
+   "edge_minus_terrain_right": {
+    "rows": 2018,
+    "rms_m": 0.40627242996191865,
+    "p99_abs_m": 1.1658157895600785,
+    "max_abs_m": 6.747537336096343
+   },
+   "paved_minus_lod_mesh_min_m": 0.22718593194008463,
+   "verge_skirt_minus_lod01_min_m": 0.0
+  }
+ },
+ "t3": {
+  "format": "f1-3d T3 v1",
+  "chunk_m": 512.0,
+  "x0": -2048.0,
+  "y0": -1280.0,
+  "attribution": [
+   "Barriers, fences, buildings: (c) OpenStreetMap contributors, ODbL 1.0 (openstreetmap.org/copyright)"
+  ],
+  "osm": "private/opendata/osm/spielberg_t3.json",
+  "trackside": {
+   "file": "trackside.glb",
+   "bytes": 7429128,
+   "nodes": 7,
+   "primitives": 16,
+   "triangles": {
+    "t3_board": 30,
+    "t3_fence": 2336,
+    "t3_solid": 192784
+   },
+   "triangles_by_object": {
+    "wall_osm": 11850,
+    "tyres_osm": 132552,
+    "catch_fence_osm": 270,
+    "fence_osm": 258,
+    "armco_rule": 2096,
+    "catch_fence_rule": 10712,
+    "hoardings": 944,
+    "tyres_rule": 35532,
+    "boards": 390,
+    "marshal_posts": 420,
+    "gantry": 126
+   },
+   "lines_m": {
+    "armco_rule": 339.6,
+    "catch_fence_osm": 104.3,
+    "catch_fence_rule": 4185.6,
+    "fence_osm": 78.4,
+    "tyres_osm": 2283.7,
+    "wall_osm": 7186.8
+   },
+   "osm_ways_used": 78,
+   "hoardings_m": 3210.9,
+   "braking_zones": [
+    {
+     "s_min": 447.415098,
+     "v_min_kph": 138.39102731552927,
+     "drop_kph": 183.7540886772109,
+     "turn": -1,
+     "s_corner": 437.51821413282426
+    },
+    {
+     "s_min": 1384.737231,
+     "v_min_kph": 65.4183789405666,
+     "drop_kph": 264.89948271059177,
+     "turn": -1,
+     "s_corner": 1376.557306865903
+    },
+    {
+     "s_min": 2197.08308,
+     "v_min_kph": 98.0803057670601,
+     "drop_kph": 223.91714364598374,
+     "turn": -1,
+     "s_corner": 2183.590904134907
+    },
+    {
+     "s_min": 2736.980628,
+     "v_min_kph": 183.03389195714956,
+     "drop_kph": 132.25059733933935,
+     "turn": 1,
+     "s_corner": 2652.6104296852945
+    },
+    {
+     "s_min": 3041.922762,
+     "v_min_kph": 189.792101590579,
+     "drop_kph": 74.4719833634613,
+     "turn": 1,
+     "s_corner": 2971.1236895739908
+    },
+    {
+     "s_min": 3981.744421,
+     "v_min_kph": 172.7213391968864,
+     "drop_kph": 135.74949685009813,
+     "turn": -1,
+     "s_corner": 3975.6655092229553
+    }
+   ],
+   "tyre_walls": [
+    {
+     "s": [
+      1294.737231,
+      1399.737231
+     ],
+     "side": 1,
+     "stacks": 1362,
+     "on_barrier": true,
+     "placeholder": true
+    },
+    {
+     "s": [
+      2107.08308,
+      2212.08308
+     ],
+     "side": 1,
+     "stacks": 1176,
+     "on_barrier": true,
+     "placeholder": true
+    }
+   ],
+   "boards": [
+    {
+     "s": 287.51821413282426,
+     "side": 1,
+     "label": 150,
+     "corner_s": 437.51821413282426
+    },
+    {
+     "s": 337.51821413282426,
+     "side": 1,
+     "label": 100,
+     "corner_s": 437.51821413282426
+    },
+    {
+     "s": 387.51821413282426,
+     "side": 1,
+     "label": 50,
+     "corner_s": 437.51821413282426
+    },
+    {
+     "s": 1226.557306865903,
+     "side": 1,
+     "label": 150,
+     "corner_s": 1376.557306865903
+    },
+    {
+     "s": 1276.557306865903,
+     "side": 1,
+     "label": 100,
+     "corner_s": 1376.557306865903
+    },
+    {
+     "s": 1326.557306865903,
+     "side": 1,
+     "label": 50,
+     "corner_s": 1376.557306865903
+    },
+    {
+     "s": 2033.5909041349069,
+     "side": 1,
+     "label": 150,
+     "corner_s": 2183.590904134907
+    },
+    {
+     "s": 2083.590904134907,
+     "side": 1,
+     "label": 100,
+     "corner_s": 2183.590904134907
+    },
+    {
+     "s": 2133.590904134907,
+     "side": 1,
+     "label": 50,
+     "corner_s": 2183.590904134907
+    },
+    {
+     "s": 2502.6104296852945,
+     "side": -1,
+     "label": 150,
+     "corner_s": 2652.6104296852945
+    },
+    {
+     "s": 2552.6104296852945,
+     "side": -1,
+     "label": 100,
+     "corner_s": 2652.6104296852945
+    },
+    {
+     "s": 2602.6104296852945,
+     "side": -1,
+     "label": 50,
+     "corner_s": 2652.6104296852945
+    },
+    {
+     "s": 3825.6655092229553,
+     "side": 1,
+     "label": 150,
+     "corner_s": 3975.6655092229553
+    },
+    {
+     "s": 3875.6655092229553,
+     "side": 1,
+     "label": 100,
+     "corner_s": 3975.6655092229553
+    },
+    {
+     "s": 3925.6655092229553,
+     "side": 1,
+     "label": 50,
+     "corner_s": 3975.6655092229553
+    }
+   ],
+   "marshal_posts": 14,
+   "gantry": {
+    "s": 0.0,
+    "width_m": 17.137,
+    "height_m": 6.6227240803181076
+   },
+   "params": {
+    "sample_m": 4.0,
+    "osm_max_n_m": 70.0,
+    "osm_fence_max_n_m": 120.0,
+    "line_clear_m": 1.0,
+    "catch_fence_max_m": 15.0,
+    "cover_n_m": 45.0,
+    "cover_along_m": 12.0,
+    "rule_offset_m": 1.5,
+    "rule_min_run_m": 30.0,
+    "rule_lim_margin_m": 1.0,
+    "catch_near_m": 30.0,
+    "catch_kappa": 0.0025,
+    "catch_stand_m": 90.0,
+    "catch_behind_m": 0.45,
+    "catch_height_m": 4.0,
+    "fence_height_m": 2.0,
+    "wall_height_m": 1.0,
+    "armco_rails": [
+     [
+      0.4,
+      0.72
+     ],
+     [
+      0.78,
+      1.1
+     ]
+    ],
+    "post_spacing_m": 4.0,
+    "tyre_vmin_kph": 110.0,
+    "tyre_drop_kph": 120.0,
+    "tyre_before_m": 90.0,
+    "tyre_after_m": 15.0,
+    "tyre_merge_osm": true,
+    "board_drop_kph": 80.0,
+    "board_n_m": 4.0,
+    "boards": [
+     150,
+     100,
+     50
+    ],
+    "marshal_ds_m": 300.0,
+    "gantry_s_m": 0.0,
+    "hoarding_stand_m": 120.0,
+    "hoarding_near_m": 25.0,
+    "hoarding_panel_m": 8.0,
+    "sink_m": 0.25
+   },
+   "materials": {
+    "t3_solid": "armco, posts, walls, tyres, marshal posts, gantry, hoardings, board backs (vertex colour; alpha 1 steel, 0.5 paint, 0 concrete)",
+    "t3_fence": "chain-link mesh (uv = along m, height m; alpha texture)",
+    "t3_board": "braking board faces (uv = board atlas cell)"
+   }
+  },
+  "buildings": {
+   "file": "buildings_t3.glb",
+   "bytes": 370584,
+   "nodes": 15,
+   "primitives": 20,
+   "triangles": {
+    "t3_facade": 5626,
+    "t3_seats": 59
+   },
+   "triangles_by_object": {
+    "roofs": 2078,
+    "walls": 3548,
+    "grandstands": 59
+   },
+   "buildings": 321,
+   "pieces": 339,
+   "kinds": {
+    "yes": 174,
+    "house": 49,
+    "garage": 42,
+    "cowshed": 10,
+    "shed": 9,
+    "farm": 8,
+    "grandstand": 7,
+    "hut": 7,
+    "stable": 6,
+    "detached": 5,
+    "transformer_tower": 1,
+    "public": 1,
+    "commercial": 1,
+    "roof": 1
+   },
+   "skipped": {
+    "far": 0,
+    "road": 2,
+    "degenerate": 0
+   },
+   "height_source": {
+    "default": 183,
+    "mns": 156
+   },
+   "grandstands": 7,
+   "params": {
+    "max_dist_m": 1400.0,
+    "min_h_m": 2.5,
+    "max_h_m": 35.0,
+    "level_m": 3.0,
+    "default_h_m": 6.0,
+    "small_area_m2": 250.0,
+    "dilate_m": 3.0
+   },
+   "mns_cells_dropped": 367,
+   "materials": {
+    "t3_facade": "walls (vertex colour x generic facade texture; uv = along the wall m, height m)",
+    "t3_roof": "roofs: in t3_facade with uv 0 (orthophoto colour)",
+    "t3_seats": "grandstand seating (uv = along m, rise m)"
+   }
+  },
+  "vegetation": {
+   "file": "vegetation.bin",
+   "count": 31552,
+   "species": {
+    "conifer": 9945,
+    "broadleaf": 21012,
+    "shrub": 595
+   },
+   "bytes": 757260,
+   "height_m": {
+    "conifer": {
+     "median": 24.239864501953093
+    },
+    "broadleaf": {
+     "median": 15.922390747070267
+    },
+    "shrub": {
+     "median": 2.288543701171875
+    }
+   },
+   "params": {
+    "peaked": 0.25,
+    "tall_m": 24.0,
+    "dark": 46.0,
+    "stand_m": 12.0,
+    "shrub_min_m": 1.5,
+    "shrub_max_dist_m": 250.0
+   },
+   "source": "local maxima of surface model - terrain model (Land Steiermark - data.steiermark.gv.at (ALS Oberflaechenhoehe 1 m, Befliegung 2010, CC BY 4.0 AT); public: GIS-Steiermark ALS DGM 1 m (Gelaendehoehe Gesamtmodell)), checked in the orthophoto (Land Steiermark - GIS-Steiermark, Orthofotos Befliegung 2022-2024 (20 cm), CC BY 4.0 AT)"
+  }
+ },
+ "budgets": {
+  "road_triangles": 117520,
+  "road_draw_calls": 68,
+  "terrain_triangles_per_tile": {
+   "lod0": 8704,
+   "lod1": 2304,
+   "lod2": 640,
+   "lod3": 192
+  },
+  "terrain_tiles_per_lod": {
+   "lod0": 31,
+   "lod1": 87,
+   "lod2": 168,
+   "lod3": 168
+  },
+  "download_bytes": {
+   "road": 2205308,
+   "terrain_lod0.glb": 2300752,
+   "terrain_lod1.glb": 1779832,
+   "terrain_lod2.glb": 1090896,
+   "terrain_lod3.glb": 442468,
+   "ortho": 4819330,
+   "lookup": 172860,
+   "trees": 742980
+  },
+  "trees": 30957,
+  "building_triangles": 0
+ }
+}
