@@ -1,0 +1,140 @@
+{
+ "format": "f1-3d pit lane v1",
+ "name": "Spa pit lane",
+ "track": "spa",
+ "surface": "surface.json",
+ "track_name": "Spa",
+ "track_length": 6997.491259,
+ "length": 720.582979,
+ "ns": 1442,
+ "nn": 62,
+ "ds": 0.5000575841641028,
+ "dn": 0.25,
+ "binary": "pit_lane.bin",
+ "kerb_height_unit_m": 0.01,
+ "types": [
+  {
+   "id": 0,
+   "name": "Asphalt",
+   "grip": 1.0
+  },
+  {
+   "id": 1,
+   "name": "Kerb",
+   "grip": 0.9
+  },
+  {
+   "id": 2,
+   "name": "Grass",
+   "grip": 0.55
+  },
+  {
+   "id": 3,
+   "name": "Gravel",
+   "grip": 0.45
+  },
+  {
+   "id": 4,
+   "name": "RunoffAsphalt",
+   "grip": 0.95
+  },
+  {
+   "id": 5,
+   "name": "Barrier",
+   "grip": 0.0
+  },
+  {
+   "id": 6,
+   "name": "OffGrid",
+   "grip": 0.0
+  }
+ ],
+ "loops": {
+  "pit_in": {
+   "s_pit": 29.503397465682067,
+   "s_track": 6797.277044940983
+  },
+  "pit_out": {
+   "s_pit": 682.0785447998363,
+   "s_track": 515.6160510733007
+  },
+  "limit_start": {
+   "s_pit": 180.35,
+   "s_track": 6916.246596794571
+  },
+  "limit_end": {
+   "s_pit": 547.78,
+   "s_track": 281.195963720128
+  }
+ },
+ "transverse_lines": [
+  {
+   "s_pit": 180.35,
+   "width_m": 0.25,
+   "share": 0.857
+  },
+  {
+   "s_pit": 238.68,
+   "width_m": 0.1,
+   "share": 0.75
+  },
+  {
+   "s_pit": 266.13,
+   "width_m": 1.0,
+   "share": 0.979
+  },
+  {
+   "s_pit": 547.78,
+   "width_m": 0.1,
+   "share": 0.792
+  },
+  {
+   "s_pit": 685.77,
+   "width_m": 0.3,
+   "share": 0.88
+  }
+ ],
+ "speed_limit_zone": {
+  "from": "limit_start",
+  "to": "limit_end",
+  "rule": "reviewed points snapped to detected transverse lines"
+ },
+ "lane": {
+  "width_median_m": 4.671,
+  "width_min_m": 3.527,
+  "width_max_m": 9.154
+ },
+ "weights": {
+  "rule": "W = smoothstep((d_rs - d0) / (d1 - d0)), 0 on the main racing surface, tapered to 0 over the ribbon's outer 4 nodes, 1 off the main grid or within w_edge of its edge; 0 on the end rows",
+  "d0_m": 0.6,
+  "d1_m": 2.6,
+  "w_edge_m": 1.5,
+  "unit": "1/255"
+ },
+ "attribution": [
+  "Pit lane edges and centreline: detected in SPW Orthophotos 2024 (CC BY 4.0)",
+  "Pit lane heights: Service public de Wallonie (SPW) - Relief de la Wallonie - Modele Numerique de Terrain (MNT) 2021-2022 (CC BY 4.0)",
+  "Pit lane search seed: (c) OpenStreetMap contributors (ODbL 1.0)"
+ ],
+ "source": "public: open data (orthophoto white lines, LiDAR terrain model, OSM seed)",
+ "provenance": {
+  "seed": {
+   "osm_way": 323851541,
+   "name": "Pit Lane"
+  },
+  "grid": "1442 rows x 62 nodes, ds = 0.500058 m, dn = 0.25 m, lane + 3.0 m each side",
+  "edges": {
+   "left_detected_share": 0.901,
+   "right_detected_share": 0.779
+  },
+  "heights": {
+   "plane_residual_median_m": 0.0051,
+   "junction_blend_m": 25.0,
+   "bridged_rows_m": []
+  },
+  "main_surface_sha_len": [
+   13995,
+   181
+  ]
+ }
+}

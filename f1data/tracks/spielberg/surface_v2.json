@@ -416,7 +416,7 @@
  "provenance": {
   "grid": "8619 rows x 140 nodes, ds = 0.500013 m, dn = 0.25 m, >= 10.0 m beyond each white line",
   "kerbs": "tracks/spielberg/kerbs.json: kerbs detected in the open orthophoto (open orthophoto only (CC BY 4.0); docs/models/kerb-detection.md); the regularised kerbs (regular_bands: bridged, smoothed width, height taper at the ends) placed from our white line outward, width clipped to [0.3, 3.0] m; profile ASSUMPTION: linear rise to 0.05 m at the outer edge (lower when narrower than 1.0 m), 0.2 m outer ramp; painted run-off areas and the paved extent seen in the photo (paved_d_1m) typed RunoffAsphalt",
-  "types": "asphalt inside the white lines; kerb band; run-off asphalt 3.0 m (and painted run-off); then gravel on the outside where |kappa| (100 m mean) > 1/250 1/m, else grass",
+  "types": "asphalt inside the white lines; kerb band; run-off asphalt 3.0 m (and painted run-off); then the site's ground classes (tracks/spielberg/ground.png, nearest 0.5 m pixel): gravel -> Gravel, paved and paint -> RunoffAsphalt, else Grass",
   "registration": {
    "format": "f1-3d georef v1",
    "track": "spielberg",
@@ -892,6 +892,12 @@
      "kind": "tunnel"
     }
    ]
+  },
+  "ground": {
+   "file": "tracks/spielberg/ground.png",
+   "px_m": 0.5,
+   "source": "Land Steiermark - GIS-Steiermark, Orthofotos Befliegung 2022-2024 (20 cm), CC BY 4.0 AT; LiDAR: public: GIS-Steiermark ALS DGM 1 m (Gelaendehoehe Gesamtmodell)",
+   "rule": "nodes beyond the paved strip: gravel -> Gravel, paved / paint -> RunoffAsphalt, else Grass (docs/models/road-surface.md \u00a75)"
   }
  },
  "format": "f1-3d road surface v2",

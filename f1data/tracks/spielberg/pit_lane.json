@@ -1,0 +1,138 @@
+{
+ "format": "f1-3d pit lane v1",
+ "name": "Spielberg pit lane",
+ "track": "spielberg",
+ "surface": "surface.json",
+ "track_name": "Spielberg",
+ "track_length": 4309.610124,
+ "length": 999.537727,
+ "ns": 2000,
+ "nn": 64,
+ "ds": 0.5000188727407967,
+ "dn": 0.25,
+ "binary": "pit_lane.bin",
+ "kerb_height_unit_m": 0.01,
+ "types": [
+  {
+   "id": 0,
+   "name": "Asphalt",
+   "grip": 1.0
+  },
+  {
+   "id": 1,
+   "name": "Kerb",
+   "grip": 0.9
+  },
+  {
+   "id": 2,
+   "name": "Grass",
+   "grip": 0.55
+  },
+  {
+   "id": 3,
+   "name": "Gravel",
+   "grip": 0.45
+  },
+  {
+   "id": 4,
+   "name": "RunoffAsphalt",
+   "grip": 0.95
+  },
+  {
+   "id": 5,
+   "name": "Barrier",
+   "grip": 0.0
+  },
+  {
+   "id": 6,
+   "name": "OffGrid",
+   "grip": 0.0
+  }
+ ],
+ "loops": {
+  "pit_in": {
+   "s_pit": 37.001396582818955,
+   "s_track": 3872.4621954246268
+  },
+  "pit_out": {
+   "s_pit": 962.0363111532929,
+   "s_track": 559.2747155578927
+  },
+  "limit_start": {
+   "s_pit": 346.2,
+   "s_track": 4233.501952242718
+  },
+  "limit_end": {
+   "s_pit": 962.0363111532929,
+   "s_track": 559.2747155578927
+  }
+ },
+ "transverse_lines": [
+  {
+   "s_pit": 346.2,
+   "width_m": 0.15,
+   "share": 0.778
+  },
+  {
+   "s_pit": 421.85,
+   "width_m": 0.45,
+   "share": 0.828
+  }
+ ],
+ "speed_limit_zone": {
+  "from": "limit_start",
+  "to": "limit_end",
+  "rule": "start: reviewed point snapped to a detected transverse line; end at PIT OUT (A)"
+ },
+ "lane": {
+  "width_median_m": 5.064,
+  "width_min_m": 3.436,
+  "width_max_m": 9.593
+ },
+ "weights": {
+  "rule": "W = smoothstep((d_rs - d0) / (d1 - d0)), 0 on the main racing surface, tapered to 0 over the ribbon's outer 4 nodes, 1 off the main grid or within w_edge of its edge; 0 on the end rows",
+  "d0_m": 0.6,
+  "d1_m": 2.6,
+  "w_edge_m": 1.5,
+  "unit": "1/255"
+ },
+ "attribution": [
+  "Pit lane edges and centreline: detected in GIS-Steiermark Orthofoto 2022-24 (CC BY 4.0 AT)",
+  "Pit lane heights: Land Steiermark - data.steiermark.gv.at (ALS Gelaendehoehe 1 m, CC BY 4.0) (CC BY 4.0 AT)",
+  "Pit lane search seed: (c) OpenStreetMap contributors (ODbL 1.0)"
+ ],
+ "source": "public: open data (orthophoto white lines, LiDAR terrain model, OSM seed)",
+ "provenance": {
+  "seed": {
+   "osm_way": 289111668,
+   "name": "Boxenstra\u00dfe"
+  },
+  "grid": "2000 rows x 64 nodes, ds = 0.500019 m, dn = 0.25 m, lane + 3.0 m each side",
+  "edges": {
+   "left_detected_share": 0.91,
+   "right_detected_share": 0.914
+  },
+  "heights": {
+   "plane_residual_median_m": 0.0062,
+   "junction_blend_m": 25.0,
+   "bridged_rows_m": [
+    [
+     388.5,
+     405.5
+    ],
+    [
+     634.0,
+     657.5
+    ],
+    [
+     776.0,
+     804.0
+    ]
+   ]
+  },
+  "main_surface_sha_len": [
+   8619,
+   140
+  ]
+ }
+}

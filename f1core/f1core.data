@@ -2816,7 +2816,13 @@
           "A5": "110m after T17"
         }
       },
-      "role": "main track"
+      "role": "main track",
+      "pit_lane_speed_limit_kph": {
+        "value": 80,
+        "ref": "(A) verify: pit-lane speed limit of the FIA Sporting Regulations / the event notes; not in the local event documents (circuit map Doc 7 v4 16.07.26: the pit lane drawing labels FAST LANE, Pit Entry, Pit Exit, Safety Car Lines, no speed value)",
+        "status": "assumption (verify)",
+        "rule_id": "R-PIT-01"
+      }
     },
     "Spielberg": {
       "round": 8,
@@ -2915,7 +2921,13 @@
         }
       },
       "role": "physics test track",
-      "centreline_note": "PU sheet prints 4.236 km; map v3 gives 4.326 km (verify)"
+      "centreline_note": "PU sheet prints 4.236 km; map v3 gives 4.326 km (verify)",
+      "pit_lane_speed_limit_kph": {
+        "value": 80,
+        "ref": "(A) verify: pit-lane speed limit of the FIA Sporting Regulations / the event notes; not in the local event documents (circuit map Doc 7 v3 22.06.26: the pit lane drawing labels FAST LANE, Pit Entry, Pit Exit, Safety Car Lines, no speed value)",
+        "status": "assumption (verify)",
+        "rule_id": "R-PIT-01"
+      }
     },
     "Monza": {
       "round": 13,

@@ -29,7 +29,9 @@
   "Track centreline: TUM racetrack-database (LGPL-3.0)",
   "Orthophoto: Land Steiermark - GIS-Steiermark, Orthofotos Befliegung 2022-2024 (20 cm), CC BY 4.0 AT",
   "Surface model: Land Steiermark - data.steiermark.gv.at (ALS Oberflaechenhoehe 1 m, Befliegung 2010, CC BY 4.0 AT)",
-  "Barriers, fences, buildings: (c) OpenStreetMap contributors, ODbL 1.0 (openstreetmap.org/copyright)"
+  "Barriers, fences, buildings: (c) OpenStreetMap contributors, ODbL 1.0 (openstreetmap.org/copyright)",
+  "Ground classes: derived from Land Steiermark - GIS-Steiermark, Orthofotos Befliegung 2022-2024 (20 cm), CC BY 4.0 AT and the LiDAR surface and terrain models (tools/track/ground.py)",
+  "Gravel areas (labels of the photo classes): (c) OpenStreetMap contributors, ODbL 1.0 (openstreetmap.org/copyright); the ground classes are offered under ODbL 1.0"
  ],
  "inputs": {
   "surface": "tracks/spielberg/surface.json (opendata)",
@@ -1196,6 +1198,12 @@
      "px": 512,
      "m_per_px": 0.53125,
      "file_lo": "ortho/O1_6_3_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/6_3.png",
+     "file_lo": "ground/6_3_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -1217,6 +1225,12 @@
      "px": 512,
      "m_per_px": 0.53125,
      "file_lo": "ortho/O1_7_3_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/7_3.png",
+     "file_lo": "ground/7_3_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -1447,6 +1461,12 @@
      "px": 1024,
      "m_per_px": 0.265625,
      "file_lo": "ortho/O2_5_4_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/5_4.png",
+     "file_lo": "ground/5_4_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -1468,6 +1488,12 @@
      "px": 1024,
      "m_per_px": 0.265625,
      "file_lo": "ortho/O2_6_4_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/6_4.png",
+     "file_lo": "ground/6_4_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -1489,6 +1515,12 @@
      "px": 1024,
      "m_per_px": 0.265625,
      "file_lo": "ortho/O2_7_4_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/7_4.png",
+     "file_lo": "ground/7_4_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -1510,6 +1542,12 @@
      "px": 1024,
      "m_per_px": 0.265625,
      "file_lo": "ortho/O2_8_4_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/8_4.png",
+     "file_lo": "ground/8_4_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -1531,6 +1569,12 @@
      "px": 1024,
      "m_per_px": 0.265625,
      "file_lo": "ortho/O2_9_4_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/9_4.png",
+     "file_lo": "ground/9_4_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -1552,6 +1596,12 @@
      "px": 512,
      "m_per_px": 0.53125,
      "file_lo": "ortho/O1_10_4_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/10_4.png",
+     "file_lo": "ground/10_4_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -1723,6 +1773,12 @@
      "px": 1024,
      "m_per_px": 0.265625,
      "file_lo": "ortho/O2_5_5_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/5_5.png",
+     "file_lo": "ground/5_5_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -1744,6 +1800,12 @@
      "px": 1024,
      "m_per_px": 0.265625,
      "file_lo": "ortho/O2_6_5_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/6_5.png",
+     "file_lo": "ground/6_5_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -1765,6 +1827,12 @@
      "px": 1024,
      "m_per_px": 0.265625,
      "file_lo": "ortho/O2_7_5_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/7_5.png",
+     "file_lo": "ground/7_5_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -1786,6 +1854,12 @@
      "px": 1024,
      "m_per_px": 0.265625,
      "file_lo": "ortho/O2_8_5_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/8_5.png",
+     "file_lo": "ground/8_5_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -1807,6 +1881,12 @@
      "px": 1024,
      "m_per_px": 0.265625,
      "file_lo": "ortho/O2_9_5_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/9_5.png",
+     "file_lo": "ground/9_5_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -1828,6 +1908,12 @@
      "px": 1024,
      "m_per_px": 0.265625,
      "file_lo": "ortho/O2_10_5_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/10_5.png",
+     "file_lo": "ground/10_5_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -1980,6 +2066,12 @@
      "px": 512,
      "m_per_px": 0.53125,
      "file_lo": "ortho/O1_4_6_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/4_6.png",
+     "file_lo": "ground/4_6_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -2001,6 +2093,12 @@
      "px": 1024,
      "m_per_px": 0.265625,
      "file_lo": "ortho/O2_5_6_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/5_6.png",
+     "file_lo": "ground/5_6_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -2022,6 +2120,12 @@
      "px": 1024,
      "m_per_px": 0.265625,
      "file_lo": "ortho/O2_6_6_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/6_6.png",
+     "file_lo": "ground/6_6_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -2043,6 +2147,12 @@
      "px": 1024,
      "m_per_px": 0.265625,
      "file_lo": "ortho/O2_7_6_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/7_6.png",
+     "file_lo": "ground/7_6_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -2064,6 +2174,12 @@
      "px": 1024,
      "m_per_px": 0.265625,
      "file_lo": "ortho/O2_8_6_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/8_6.png",
+     "file_lo": "ground/8_6_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -2085,6 +2201,12 @@
      "px": 1024,
      "m_per_px": 0.265625,
      "file_lo": "ortho/O2_9_6_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/9_6.png",
+     "file_lo": "ground/9_6_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -2257,6 +2379,12 @@
      "px": 512,
      "m_per_px": 0.53125,
      "file_lo": "ortho/O1_4_7_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/4_7.png",
+     "file_lo": "ground/4_7_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -2278,6 +2406,12 @@
      "px": 1024,
      "m_per_px": 0.265625,
      "file_lo": "ortho/O2_5_7_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/5_7.png",
+     "file_lo": "ground/5_7_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -2299,6 +2433,12 @@
      "px": 1024,
      "m_per_px": 0.265625,
      "file_lo": "ortho/O2_6_7_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/6_7.png",
+     "file_lo": "ground/6_7_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -2320,6 +2460,12 @@
      "px": 1024,
      "m_per_px": 0.265625,
      "file_lo": "ortho/O2_7_7_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/7_7.png",
+     "file_lo": "ground/7_7_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -2341,6 +2487,12 @@
      "px": 1024,
      "m_per_px": 0.265625,
      "file_lo": "ortho/O2_8_7_lo.jpg"
+    },
+    "ground": {
+     "file": "ground/8_7.png",
+     "file_lo": "ground/8_7_lo.png",
+     "px": 544,
+     "px_lo": 272
     }
    },
    {
@@ -3494,6 +3646,80 @@
   },
   "photo_kerb_painted_m2": 2915.5
  },
+ "ground": {
+  "format": "f1-3d ground masks v1",
+  "classes": {
+   "none": 0,
+   "grass": 1,
+   "gravel": 2,
+   "paved": 3,
+   "paint": 4,
+   "other": 5,
+   "road": 6
+  },
+  "tiles": 25,
+  "bytes": 198686,
+  "mask_px": 544,
+  "mask_lo_px": 272,
+  "m_per_px": 0.5,
+  "layout": "ground/<i>_<j>[_lo].png: uint8 class per pixel over the tile's orthophoto square (tile + margin), row 0 at +y; sampled with the orthophoto uv",
+  "colours_srgb": {
+   "grass": [
+    68.3,
+    76.5,
+    52.5
+   ],
+   "gravel": [
+    162.9,
+    159.6,
+    159.6
+   ],
+   "paved": [
+    119.4,
+    117.9,
+    122.4
+   ],
+   "paint": [
+    204.3,
+    209.5,
+    209.5
+   ],
+   "other": [
+    80.1,
+    82.9,
+    70.4
+   ]
+  },
+  "paint_srgb": {
+   "white": [
+    211.7,
+    217.0,
+    218.7
+   ],
+   "red": [
+    217.0,
+    111.8,
+    105.7
+   ]
+  },
+  "tone": {
+   "gamma": 1.3,
+   "saturation": 1.4
+  },
+  "source": "private/tracks/spielberg/ground/ (tools/track/ground.py)",
+  "attribution": [
+   "Ground classes: derived from Land Steiermark - GIS-Steiermark, Orthofotos Befliegung 2022-2024 (20 cm), CC BY 4.0 AT and the LiDAR surface and terrain models (tools/track/ground.py)",
+   "Gravel areas (labels of the photo classes): (c) OpenStreetMap contributors, ODbL 1.0 (openstreetmap.org/copyright); the ground classes are offered under ODbL 1.0"
+  ],
+  "area_m2_in_masks": {
+   "none": 1018944,
+   "grass": 335124,
+   "gravel": 69092,
+   "paved": 323469,
+   "paint": 9943,
+   "other": 93029
+  }
+ },
  "objects": {
   "trees": {
    "file": "trees.bin",
@@ -3910,10 +4136,10 @@
   },
   "barriers": {
    "file": "barriers.json",
-   "bytes": 51098,
-   "lines": 81,
-   "points": 2843,
-   "length_m": 10037.2
+   "bytes": 59206,
+   "lines": 83,
+   "points": 3336,
+   "length_m": 11006.7
   },
   "buildings": {
    "file": "buildings_t3.glb",
@@ -4004,6 +4230,18 @@
    "source": "local maxima of surface model - terrain model (Land Steiermark - data.steiermark.gv.at (ALS Oberflaechenhoehe 1 m, Befliegung 2010, CC BY 4.0 AT); public: GIS-Steiermark ALS DGM 1 m (Gelaendehoehe Gesamtmodell)), checked in the orthophoto (Land Steiermark - GIS-Steiermark, Orthofotos Befliegung 2022-2024 (20 cm), CC BY 4.0 AT)"
   }
  },
+ "pit_lane": {
+  "file": "pit_lane.glb",
+  "bytes": 954612,
+  "triangles": 55082,
+  "source": "tracks/spielberg/pit_lane.json",
+  "lift_m": 0.015,
+  "materials": {
+   "asphalt": "pit lane and paved margins (uv = world m / 272)",
+   "line": "lane edge lines",
+   "verge": "grass cells of the pit grid"
+  }
+ },
  "budgets": {
   "road_triangles": 122616,
   "road_draw_calls": 68,
@@ -4026,6 +4264,7 @@
    "terrain_lod2.glb": 1090924,
    "terrain_lod3.glb": 442492,
    "ortho": 4767931,
+   "ground": 198686,
    "lookup": 172380,
    "trees": 743220,
    "buildings": 7484

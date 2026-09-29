@@ -644,7 +644,7 @@
  "provenance": {
   "grid": "13995 rows x 181 nodes, ds = 0.499999 m, dn = 0.25 m, >= 10.0 m beyond each white line",
   "kerbs": "tracks/spa/kerbs.json: kerbs detected in the open orthophoto (open orthophoto only (CC BY 4.0); docs/models/kerb-detection.md); the regularised kerbs (regular_bands: bridged, smoothed width, height taper at the ends) placed from our white line outward, width clipped to [0.3, 3.0] m; profile ASSUMPTION: linear rise to 0.05 m at the outer edge (lower when narrower than 1.0 m), 0.2 m outer ramp; painted run-off areas and the paved extent seen in the photo (paved_d_1m) typed RunoffAsphalt",
-  "types": "asphalt inside the white lines; kerb band; run-off asphalt 3.0 m (and painted run-off); then gravel on the outside where |kappa| (100 m mean) > 1/250 1/m, else grass",
+  "types": "asphalt inside the white lines; kerb band; run-off asphalt 3.0 m (and painted run-off); then the site's ground classes (tracks/spa/ground.png, nearest 0.5 m pixel): gravel -> Gravel, paved and paint -> RunoffAsphalt, else Grass",
   "registration": {
    "transform": {
     "scale": 1.0,
@@ -663,7 +663,13 @@
    "osm": "(c) OpenStreetMap contributors, ODbL"
   },
   "underpass_rows_m": [],
-  "road_fit_residual_rms_m": 0.012174102926574464
+  "road_fit_residual_rms_m": 0.012174102926574464,
+  "ground": {
+   "file": "tracks/spa/ground.png",
+   "px_m": 0.5,
+   "source": "Service public de Wallonie (SPW) - Orthophotos 2024 (2026-01-15), CC BY 4.0; LiDAR: public: SPW Relief de la Wallonie - MNT 2021-2022 (LiDAR, 0.5 m)",
+   "rule": "nodes beyond the paved strip: gravel -> Gravel, paved / paint -> RunoffAsphalt, else Grass (docs/models/road-surface.md \u00a75)"
+  }
  },
  "format": "f1-3d road surface v2",
  "ns": 13995,
