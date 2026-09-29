@@ -2,15 +2,16 @@
  "name": "Spielberg",
  "event_key": "Spielberg",
  "variant": "opendata",
- "source": "public: TUM geometry; road height and banking fitted to GIS-Steiermark ALS DGM 1 m (Gelaendehoehe Gesamtmodell) (CC BY 4.0 AT); registered to OSM",
+ "source": "public: open-data centreline and widths (GIS-Steiermark Orthofoto 2022-24 white lines, tools/track/centreline_fit.py); road height and banking fitted to GIS-Steiermark ALS DGM 1 m (Gelaendehoehe Gesamtmodell) (CC BY 4.0 AT); fixed track frame (tracks/spielberg/georef.json)",
  "attribution": [
-  "Centreline and widths: TUM racetrack-database (LGPL-3.0), via racing_optimizer",
+  "Centreline and widths: fitted to the white edge lines in Land Steiermark - GIS-Steiermark, Orthofotos Befliegung 2022-2024 (CC BY 4.0 AT), tools/track/centreline_fit.py",
+  "Search seed: (c) OpenStreetMap contributors (ODbL), highway=raceway ways (tools/track/osm_seed.py); no OSM geometry is output",
+  "Track frame: fixed transform to EPSG:32633 (tracks/spielberg/georef.json)",
   "Elevation: Land Steiermark - data.steiermark.gv.at (ALS Gelaendehoehe 1 m, CC BY 4.0) (CC BY 4.0 AT)",
-  "Placement on the map: (c) OpenStreetMap contributors (ODbL), highway=raceway ways",
   "Kerbs: detected in Land Steiermark - GIS-Steiermark, Orthofotos Befliegung 2022-2024 (20 cm, CC BY 4.0 AT)"
  ],
- "length": 4321.679914,
- "ds": 0.5000208161517992,
+ "length": 4309.610124,
+ "ds": 0.5000127768882701,
  "dn": 0.25,
  "kerb_height_unit_m": 0.01,
  "types": [
@@ -54,44 +55,242 @@
  "kerbs": [
   {
    "side": "left",
-   "s_start": 17.5,
-   "s_end": 22.9,
-   "width_m": 0.85,
-   "height_m": 0.043,
+   "s_start": 9.2,
+   "s_end": 14.2,
+   "width_m": 0.4,
+   "height_m": 0.02,
    "pattern": "red/yellow",
-   "confidence": 1.0
+   "confidence": 0.84
   },
   {
    "side": "left",
-   "s_start": 36.8,
-   "s_end": 47.2,
-   "width_m": 1.1,
+   "s_start": 38.1,
+   "s_end": 48.3,
+   "width_m": 1.0,
    "height_m": 0.05,
    "pattern": "red/yellow",
-   "confidence": 0.894
+   "confidence": 0.882
   },
   {
    "side": "left",
-   "s_start": 255.8,
-   "s_end": 435.1,
+   "s_start": 257.2,
+   "s_end": 436.5,
    "width_m": 1.0,
    "height_m": 0.05,
    "pattern": "red/white",
-   "confidence": 0.997
+   "confidence": 0.995
   },
   {
    "side": "right",
-   "s_start": 441.4,
-   "s_end": 447.4,
-   "width_m": 0.65,
-   "height_m": 0.033,
+   "s_start": 442.0,
+   "s_end": 448.2,
+   "width_m": 0.7,
+   "height_m": 0.035,
    "pattern": "red/white",
    "confidence": 1.0
   },
   {
    "side": "left",
-   "s_start": 467.2,
-   "s_end": 538.8,
+   "s_start": 471.3,
+   "s_end": 541.6,
+   "width_m": 1.1,
+   "height_m": 0.05,
+   "pattern": "red/white",
+   "confidence": 1.0
+  },
+  {
+   "side": "left",
+   "s_start": 771.8,
+   "s_end": 787.4,
+   "width_m": 0.7,
+   "height_m": 0.035,
+   "pattern": "red/yellow",
+   "confidence": 1.0
+  },
+  {
+   "side": "left",
+   "s_start": 874.6,
+   "s_end": 882.3,
+   "width_m": 0.6,
+   "height_m": 0.03,
+   "pattern": "red/white",
+   "confidence": 1.0
+  },
+  {
+   "side": "left",
+   "s_start": 963.8,
+   "s_end": 972.1,
+   "width_m": 1.7,
+   "height_m": 0.05,
+   "pattern": "red/white",
+   "confidence": 0.892
+  },
+  {
+   "side": "right",
+   "s_start": 1003.9,
+   "s_end": 1015.5,
+   "width_m": 1.2,
+   "height_m": 0.05,
+   "pattern": "red/white",
+   "confidence": 0.81
+  },
+  {
+   "side": "right",
+   "s_start": 1110.1,
+   "s_end": 1122.8,
+   "width_m": 1.1,
+   "height_m": 0.05,
+   "pattern": "red/white",
+   "confidence": 0.732
+  },
+  {
+   "side": "right",
+   "s_start": 1127.0,
+   "s_end": 1134.7,
+   "width_m": 0.4,
+   "height_m": 0.02,
+   "pattern": "red/white",
+   "confidence": 0.974
+  },
+  {
+   "side": "left",
+   "s_start": 1195.1,
+   "s_end": 1366.8,
+   "width_m": 0.9,
+   "height_m": 0.045,
+   "pattern": "red/white",
+   "confidence": 1.0
+  },
+  {
+   "side": "right",
+   "s_start": 1374.8,
+   "s_end": 1409.4,
+   "width_m": 1.0,
+   "height_m": 0.05,
+   "pattern": "red/white",
+   "confidence": 0.867
+  },
+  {
+   "side": "left",
+   "s_start": 1405.1,
+   "s_end": 1416.4,
+   "width_m": 0.9,
+   "height_m": 0.045,
+   "pattern": "red/white",
+   "confidence": 1.0
+  },
+  {
+   "side": "left",
+   "s_start": 1426.0,
+   "s_end": 1492.3,
+   "width_m": 0.9,
+   "height_m": 0.045,
+   "pattern": "red/white",
+   "confidence": 1.0
+  },
+  {
+   "side": "left",
+   "s_start": 1738.1,
+   "s_end": 1743.8,
+   "width_m": 0.4,
+   "height_m": 0.02,
+   "pattern": "red/yellow",
+   "confidence": 0.877
+  },
+  {
+   "side": "left",
+   "s_start": 1756.4,
+   "s_end": 1765.5,
+   "width_m": 0.5,
+   "height_m": 0.025,
+   "pattern": "red/yellow",
+   "confidence": 0.978
+  },
+  {
+   "side": "left",
+   "s_start": 1982.0,
+   "s_end": 2165.6,
+   "width_m": 0.9,
+   "height_m": 0.045,
+   "pattern": "red/white",
+   "confidence": 0.984
+  },
+  {
+   "side": "right",
+   "s_start": 2214.5,
+   "s_end": 2220.7,
+   "width_m": 0.4,
+   "height_m": 0.02,
+   "pattern": "red/white",
+   "confidence": 0.823
+  },
+  {
+   "side": "left",
+   "s_start": 2224.4,
+   "s_end": 2322.8,
+   "width_m": 0.9,
+   "height_m": 0.045,
+   "pattern": "red/white",
+   "confidence": 0.972
+  },
+  {
+   "side": "left",
+   "s_start": 2378.5,
+   "s_end": 2386.9,
+   "width_m": 0.4,
+   "height_m": 0.02,
+   "pattern": "red/yellow",
+   "confidence": 0.702
+  },
+  {
+   "side": "right",
+   "s_start": 2545.0,
+   "s_end": 2642.7,
+   "width_m": 1.0,
+   "height_m": 0.05,
+   "pattern": "red/white",
+   "confidence": 1.0
+  },
+  {
+   "side": "right",
+   "s_start": 2662.7,
+   "s_end": 2670.8,
+   "width_m": 1.1,
+   "height_m": 0.05,
+   "pattern": "red/white",
+   "confidence": 0.63
+  },
+  {
+   "side": "left",
+   "s_start": 2704.1,
+   "s_end": 2808.4,
+   "width_m": 0.6,
+   "height_m": 0.03,
+   "pattern": "red/white",
+   "confidence": 0.976
+  },
+  {
+   "side": "right",
+   "s_start": 2823.1,
+   "s_end": 2915.6,
+   "width_m": 1.0,
+   "height_m": 0.05,
+   "pattern": "red/white",
+   "confidence": 0.982
+  },
+  {
+   "side": "left",
+   "s_start": 3019.8,
+   "s_end": 3103.3,
+   "width_m": 0.7,
+   "height_m": 0.035,
+   "pattern": "red/white",
+   "confidence": 0.954
+  },
+  {
+   "side": "right",
+   "s_start": 3123.7,
+   "s_end": 3248.3,
    "width_m": 1.0,
    "height_m": 0.05,
    "pattern": "red/white",
@@ -99,287 +298,53 @@
   },
   {
    "side": "left",
-   "s_start": 768.6,
-   "s_end": 784.5,
-   "width_m": 0.7,
-   "height_m": 0.035,
-   "pattern": "red/yellow",
-   "confidence": 0.855
-  },
-  {
-   "side": "left",
-   "s_start": 932.8,
-   "s_end": 946.5,
-   "width_m": 1.2,
-   "height_m": 0.05,
-   "pattern": "red/white",
-   "confidence": 0.788
-  },
-  {
-   "side": "left",
-   "s_start": 959.8,
-   "s_end": 969.1,
-   "width_m": 1.2,
+   "s_start": 3270.0,
+   "s_end": 3391.1,
+   "width_m": 1.0,
    "height_m": 0.05,
    "pattern": "red/white",
    "confidence": 1.0
   },
   {
-   "side": "right",
-   "s_start": 1000.8,
-   "s_end": 1012.0,
+   "side": "left",
+   "s_start": 3597.9,
+   "s_end": 3724.3,
    "width_m": 1.1,
    "height_m": 0.05,
    "pattern": "red/white",
-   "confidence": 0.991
+   "confidence": 1.0
   },
   {
    "side": "right",
-   "s_start": 1035.9,
-   "s_end": 1051.2,
+   "s_start": 3744.6,
+   "s_end": 3821.4,
+   "width_m": 0.7,
+   "height_m": 0.035,
+   "pattern": "red/white",
+   "confidence": 0.983
+  },
+  {
+   "side": "left",
+   "s_start": 3830.2,
+   "s_end": 3956.3,
+   "width_m": 0.9,
+   "height_m": 0.045,
+   "pattern": "red/white",
+   "confidence": 0.951
+  },
+  {
+   "side": "right",
+   "s_start": 3946.7,
+   "s_end": 4008.5,
    "width_m": 1.1,
    "height_m": 0.05,
    "pattern": "red/white",
-   "confidence": 0.556
-  },
-  {
-   "side": "right",
-   "s_start": 1119.5,
-   "s_end": 1131.7,
-   "width_m": 0.5,
-   "height_m": 0.025,
-   "pattern": "red/white",
-   "confidence": 0.902
+   "confidence": 0.992
   },
   {
    "side": "left",
-   "s_start": 1191.8,
-   "s_end": 1363.4,
-   "width_m": 0.9,
-   "height_m": 0.045,
-   "pattern": "red/white",
-   "confidence": 1.0
-  },
-  {
-   "side": "right",
-   "s_start": 1371.2,
-   "s_end": 1387.0,
-   "width_m": 1.5,
-   "height_m": 0.05,
-   "pattern": "red/white",
-   "confidence": 0.987
-  },
-  {
-   "side": "left",
-   "s_start": 1407.3,
-   "s_end": 1495.2,
-   "width_m": 0.9,
-   "height_m": 0.045,
-   "pattern": "red/white",
-   "confidence": 0.958
-  },
-  {
-   "side": "left",
-   "s_start": 1518.4,
-   "s_end": 1536.8,
-   "width_m": 0.3,
-   "height_m": 0.015,
-   "pattern": "red/yellow",
-   "confidence": 0.603
-  },
-  {
-   "side": "left",
-   "s_start": 1589.4,
-   "s_end": 1597.2,
-   "width_m": 0.5,
-   "height_m": 0.025,
-   "pattern": "red/yellow",
-   "confidence": 1.0
-  },
-  {
-   "side": "left",
-   "s_start": 1988.9,
-   "s_end": 2169.0,
-   "width_m": 0.9,
-   "height_m": 0.045,
-   "pattern": "red/white",
-   "confidence": 1.0
-  },
-  {
-   "side": "right",
-   "s_start": 2015.8,
-   "s_end": 2021.1,
-   "width_m": 0.3,
-   "height_m": 0.015,
-   "pattern": "red/yellow",
-   "confidence": 0.868
-  },
-  {
-   "side": "left",
-   "s_start": 2254.3,
-   "s_end": 2268.7,
-   "width_m": 0.6,
-   "height_m": 0.03,
-   "pattern": "red/white",
-   "confidence": 0.243
-  },
-  {
-   "side": "left",
-   "s_start": 2290.1,
-   "s_end": 2326.7,
-   "width_m": 0.9,
-   "height_m": 0.045,
-   "pattern": "red/white",
-   "confidence": 0.85
-  },
-  {
-   "side": "left",
-   "s_start": 2339.9,
-   "s_end": 2345.4,
-   "width_m": 0.7,
-   "height_m": 0.035,
-   "pattern": "red/yellow",
-   "confidence": 1.0
-  },
-  {
-   "side": "left",
-   "s_start": 2463.4,
-   "s_end": 2468.5,
-   "width_m": 0.6,
-   "height_m": 0.03,
-   "pattern": "red/yellow",
-   "confidence": 0.784
-  },
-  {
-   "side": "right",
-   "s_start": 2560.5,
-   "s_end": 2646.2,
-   "width_m": 1.0,
-   "height_m": 0.05,
-   "pattern": "red/white",
-   "confidence": 0.784
-  },
-  {
-   "side": "left",
-   "s_start": 2750.7,
-   "s_end": 2815.4,
-   "width_m": 0.7,
-   "height_m": 0.035,
-   "pattern": "red/white",
-   "confidence": 0.701
-  },
-  {
-   "side": "right",
-   "s_start": 2829.9,
-   "s_end": 2922.1,
-   "width_m": 0.9,
-   "height_m": 0.045,
-   "pattern": "red/white",
-   "confidence": 0.98
-  },
-  {
-   "side": "left",
-   "s_start": 3025.6,
-   "s_end": 3107.5,
-   "width_m": 0.7,
-   "height_m": 0.035,
-   "pattern": "red/white",
-   "confidence": 0.943
-  },
-  {
-   "side": "right",
-   "s_start": 3129.1,
-   "s_end": 3135.8,
-   "width_m": 0.8,
-   "height_m": 0.04,
-   "pattern": "red/white",
-   "confidence": 0.731
-  },
-  {
-   "side": "right",
-   "s_start": 3152.9,
-   "s_end": 3172.2,
-   "width_m": 0.9,
-   "height_m": 0.045,
-   "pattern": "red/white",
-   "confidence": 0.205
-  },
-  {
-   "side": "right",
-   "s_start": 3184.8,
-   "s_end": 3212.4,
-   "width_m": 0.9,
-   "height_m": 0.045,
-   "pattern": "red/white",
-   "confidence": 0.634
-  },
-  {
-   "side": "right",
-   "s_start": 3243.3,
-   "s_end": 3255.4,
-   "width_m": 1.0,
-   "height_m": 0.05,
-   "pattern": "red/white",
-   "confidence": 0.975
-  },
-  {
-   "side": "left",
-   "s_start": 3274.6,
-   "s_end": 3395.8,
-   "width_m": 1.0,
-   "height_m": 0.05,
-   "pattern": "red/white",
-   "confidence": 1.0
-  },
-  {
-   "side": "left",
-   "s_start": 3602.8,
-   "s_end": 3729.5,
-   "width_m": 1.2,
-   "height_m": 0.05,
-   "pattern": "red/white",
-   "confidence": 1.0
-  },
-  {
-   "side": "right",
-   "s_start": 3750.1,
-   "s_end": 3794.4,
-   "width_m": 0.7,
-   "height_m": 0.035,
-   "pattern": "red/white",
-   "confidence": 0.7
-  },
-  {
-   "side": "left",
-   "s_start": 3831.5,
-   "s_end": 3964.5,
-   "width_m": 0.9,
-   "height_m": 0.045,
-   "pattern": "red/white",
-   "confidence": 0.927
-  },
-  {
-   "side": "left",
-   "s_start": 3982.3,
-   "s_end": 3989.2,
-   "width_m": 1.0,
-   "height_m": 0.05,
-   "pattern": "red/yellow",
-   "confidence": 1.0
-  },
-  {
-   "side": "right",
-   "s_start": 3999.7,
-   "s_end": 4019.2,
-   "width_m": 1.2,
-   "height_m": 0.05,
-   "pattern": "red/white",
-   "confidence": 0.99
-  },
-  {
-   "side": "left",
-   "s_start": 4027.4,
-   "s_end": 4118.4,
+   "s_start": 4016.9,
+   "s_end": 4107.9,
    "width_m": 1.1,
    "height_m": 0.05,
    "pattern": "red/white",
@@ -389,61 +354,67 @@
  "painted_runoff": [
   {
    "side": "left",
-   "s_start": 462.7,
-   "s_end": 497.8,
-   "outer_d_m": 11.85
+   "s_start": 464.4,
+   "s_end": 539.4,
+   "outer_d_m": 7.15
   },
   {
    "side": "left",
-   "s_start": 504.5,
-   "s_end": 536.6,
-   "outer_d_m": 6.15
+   "s_start": 940.4,
+   "s_end": 957.3,
+   "outer_d_m": 4.25
   },
   {
    "side": "left",
-   "s_start": 936.3,
-   "s_end": 948.0,
-   "outer_d_m": 5.45
+   "s_start": 964.0,
+   "s_end": 971.0,
+   "outer_d_m": 2.75
+  },
+  {
+   "side": "right",
+   "s_start": 1005.2,
+   "s_end": 1014.4,
+   "outer_d_m": 3.35
+  },
+  {
+   "side": "right",
+   "s_start": 1027.8,
+   "s_end": 1049.9,
+   "outer_d_m": 4.95
   },
   {
    "side": "left",
-   "s_start": 962.7,
-   "s_end": 968.2,
+   "s_start": 3825.0,
+   "s_end": 3876.9,
+   "outer_d_m": 4.35
+  },
+  {
+   "side": "right",
+   "s_start": 3885.7,
+   "s_end": 3896.6,
+   "outer_d_m": 5.05
+  },
+  {
+   "side": "right",
+   "s_start": 3904.4,
+   "s_end": 3924.7,
+   "outer_d_m": 5.35
+  },
+  {
+   "side": "right",
+   "s_start": 3952.7,
+   "s_end": 3959.8,
    "outer_d_m": 4.05
   },
   {
-   "side": "right",
-   "s_start": 1002.6,
-   "s_end": 1011.2,
-   "outer_d_m": 5.45
-  },
-  {
-   "side": "right",
-   "s_start": 1031.8,
-   "s_end": 1047.1,
-   "outer_d_m": 5.75
-  },
-  {
    "side": "left",
-   "s_start": 3799.5,
-   "s_end": 3928.6,
-   "outer_d_m": 1.75
-  },
-  {
-   "side": "left",
-   "s_start": 3985.1,
-   "s_end": 4023.7,
+   "s_start": 3977.0,
+   "s_end": 4014.1,
    "outer_d_m": 11.95
-  },
-  {
-   "side": "left",
-   "s_start": 4111.7,
-   "s_end": 4117.3,
-   "outer_d_m": 7.55
   }
  ],
  "provenance": {
-  "grid": "8643 rows x 136 nodes, ds = 0.500021 m, dn = 0.25 m, >= 10.0 m beyond each white line",
+  "grid": "8619 rows x 140 nodes, ds = 0.500013 m, dn = 0.25 m, >= 10.0 m beyond each white line",
   "kerbs": "tracks/spielberg/kerbs.json: kerbs detected in the open orthophoto (open orthophoto only (CC BY 4.0); docs/models/kerb-detection.md); the regularised kerbs (regular_bands: bridged, smoothed width, height taper at the ends) placed from our white line outward, width clipped to [0.3, 3.0] m; profile ASSUMPTION: linear rise to 0.05 m at the outer edge (lower when narrower than 1.0 m), 0.2 m outer ramp; painted run-off areas and the paved extent seen in the photo (paved_d_1m) typed RunoffAsphalt",
   "types": "asphalt inside the white lines; kerb band; run-off asphalt 3.0 m (and painted run-off); then gravel on the outside where |kappa| (100 m mean) > 1/250 1/m, else grass",
   "registration": {
@@ -879,53 +850,53 @@
   },
   "underpass_rows_m": [
    [
-    28.0,
-    152.0
+    30.0,
+    153.0
    ],
    [
-    172.0,
-    204.0
+    174.0,
+    205.0
    ],
    [
-    234.0,
-    286.0
+    236.0,
+    287.0
    ],
    [
-    336.0,
-    404.0
+    338.0,
+    405.0
    ]
   ],
-  "road_fit_residual_rms_m": 0.010957075798541447,
+  "road_fit_residual_rms_m": 0.010705504028823145,
   "road_structures": {
    "source": "tracks/spielberg/road_structures.json (evidence per zone there)",
    "method": "road centre height and bank replaced inside each zone by a cubic Hermite tied to the road on both sides (line fit over 15.0 m outside each end); docs/models/road-surface.md 6.4",
    "zones": [
     {
-     "s_start": 28.0,
-     "s_end": 152.0,
+     "s_start": 29.4,
+     "s_end": 153.4,
      "kind": "dtm_artefact"
     },
     {
-     "s_start": 172.0,
-     "s_end": 204.0,
+     "s_start": 173.4,
+     "s_end": 205.4,
      "kind": "dtm_artefact"
     },
     {
-     "s_start": 234.0,
-     "s_end": 286.0,
+     "s_start": 235.4,
+     "s_end": 287.4,
      "kind": "culvert"
     },
     {
-     "s_start": 336.0,
-     "s_end": 404.0,
+     "s_start": 337.4,
+     "s_end": 405.4,
      "kind": "tunnel"
     }
    ]
   }
  },
  "format": "f1-3d road surface v2",
- "ns": 8643,
- "nn": 136,
+ "ns": 8619,
+ "nn": 140,
  "binary": "surface_v2.bin",
  "encoding": {
   "converted_from": "surface.json",

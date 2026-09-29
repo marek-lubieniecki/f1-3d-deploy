@@ -123,16 +123,16 @@
    "kingpin_z": null
   }
  },
- "triangles": 37924,
+ "triangles": 39459,
  "files": {
   "car.glb": {
-   "bytes": 963932,
-   "triangles": 37924,
+   "bytes": 990240,
+   "triangles": 39459,
    "draw_primitives": 33
   },
   "car_lod1.glb": {
-   "bytes": 534572,
-   "triangles": 19150,
+   "bytes": 530852,
+   "triangles": 19051,
    "draw_primitives": 33
   }
  }
