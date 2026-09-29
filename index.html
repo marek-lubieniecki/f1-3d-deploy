@@ -11,10 +11,10 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Hybrid 26">
-  <script type="module" crossorigin src="./assets/main-D5K4Gd_a.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/ui-DeNK0E5Z.js">
-  <link rel="stylesheet" crossorigin href="./assets/ui-551SZm6v.css">
-  <link rel="stylesheet" crossorigin href="./assets/main-CxuuWSoP.css">
+  <script type="module" crossorigin src="./assets/main-DhmBqTJb.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/ui-BnuMTeRP.js">
+  <link rel="stylesheet" crossorigin href="./assets/ui-CpPbNUfr.css">
+  <link rel="stylesheet" crossorigin href="./assets/main-CaW8pk-v.css">
 </head>
 <body>
   <canvas id="view"></canvas>
@@ -31,12 +31,11 @@
         <div><span class="k">SM</span><span id="hud-sm" class="sm" title="Straight Mode (active aero)">–</span></div>
       </div>
       <div class="bars">
-        <div class="bar"><span class="k">battery</span><div class="track"><div id="bar-batt" class="fill batt"></div></div><span id="hud-batt">–</span></div>
-        <div class="bar"><span class="k">MGU-K</span><div class="track mid"><div id="bar-pk" class="fill pk"></div></div><span id="hud-pk">–</span></div>
         <div class="bar"><span class="k">steer</span><div class="track mid"><div id="bar-steer" class="fill steer"></div><div id="tick-steer-ref" class="tick"></div></div><span id="hud-steer">–</span></div>
       </div>
     </div>
   </div>
+  <div id="energy" aria-label="energy"></div>
   <div id="refhud"></div>
   <div id="warn" class="warn"></div>
   <div id="touch" class="touch">
@@ -44,8 +43,12 @@
       aria-valuemin="-1" aria-valuemax="1"><div class="st-track"><i class="st-knob"></i></div><span class="lbl">◀ slide to steer ▶</span></div>
     <button id="t-left" class="steerbtn left" aria-label="steer left">◀</button>
     <button id="t-right" class="steerbtn right" aria-label="steer right">▶</button>
-    <div id="t-brake" class="pedal brake" role="button" aria-label="brake: hold, slide up for more" aria-pressed="false"><i class="fill"></i><span>BRAKE</span></div>
-    <div id="t-throttle" class="pedal throttle" role="button" aria-label="throttle: hold, slide up for more" aria-pressed="false"><i class="fill"></i><span>THROTTLE</span></div>
+    <div id="t-pedal" class="pedalslider" role="slider" aria-orientation="vertical" aria-valuemin="-1" aria-valuemax="1" aria-valuenow="0"
+      aria-label="pedal: slide up for throttle, down for brake, middle to coast" data-k="coast">
+      <div class="pd-track"><i class="pd-fill thr"></i><i class="pd-fill brk"></i><i class="pd-band"></i></div>
+      <span class="pd-lbl up">▲ THROTTLE</span><span class="pd-lbl dn">▼ BRAKE</span>
+      <i class="pd-thumb"><b class="pd-val">COAST</b></i>
+    </div>
   </div>
   <div id="cue" class="cue" aria-live="off"></div>
   <div id="panel" class="panel">

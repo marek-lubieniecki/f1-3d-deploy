@@ -2163,6 +2163,48 @@
   "unit": "-",
   "kind": "estimate",
   "source": "C4 \u00a75.1 (A8): front-wheel speed below 0.9 x the IMU-propagated speed is treated as a front lock; the IMU estimate is used until the wheels recover"
+ },
+ "cap_noise_margin": {
+  "value": 1.5,
+  "unit": "kW",
+  "kind": "estimate",
+  "source": "C4 D60 (ECU audit F8): the MGU-K deploy cap (350 kW, taper) and the harvest floor are held this far inside the rule values: 3 sigma of the true-power error from the sensor noise (core/plant/sensors.h: engine speed 0.5 rad/s -> torque = P / omega about +-0.05 % of 350 kW; CU-K 0.2 V / 0.5 A -> 0.4 kW on P_dc; with noise the true power exceeded 350 kW and the taper by up to 0.6 kW)"
+ },
+ "rate_noise_margin": {
+  "value": 4.0,
+  "unit": "kW",
+  "kind": "estimate",
+  "source": "C4 D60 (ECU audit F8): the reduction R rises at most (rate x 1 s - this) over any 1 s window: the monitor's drop runs from the window's highest true P_dc, which the noise-driven power jitter raises by ~3 sigma (P_dc fell 50.2 kW over 1 s with noise)"
+ },
+ "p_dc_filter_time": {
+  "value": 5,
+  "unit": "ms",
+  "kind": "estimate",
+  "source": "C4 D60 (ECU audit F8): first-order filter of the measured CU-K power (V_cuk I_cuk, sigma 0.4 kW) for exception a; the claim also needs cap_noise_margin below 100 kW"
+ },
+ "p_mc_noise_margin": {
+  "value": 0.3,
+  "unit": "bar",
+  "kind": "estimate",
+  "source": "C4 D60 (ECU audit F8): 3 sigma of the 0.1 bar master-cylinder pressure noise (core/plant/sensors.h), taken off p_mc_rear before the 1.2 x clamp (R-BRK-09) and off p_mc_front for the rear brake-by-wire target: a released pedal asks for no rear pressure and no braking regen"
+ },
+ "energy_noise_margin": {
+  "value": 2,
+  "unit": "kJ",
+  "kind": "estimate",
+  "source": "C4 D60 (ECU audit F8): the deploy energy ramp and the harvest fade stop this far inside the R-ES-01 4 MJ swing: the SOC integral of the noisy ES sensor and one tick of lag (fuzz: SOC error up to 0.7 kJ)"
+ },
+ "handover_brake_pressure": {
+  "value": 0.5,
+  "unit": "bar",
+  "kind": "estimate",
+  "source": "C4 D61 (ECU audit F9): the D47 handover (strategy split left when the driver's rear target exceeds the PU braking) runs only above this front master-cylinder pressure: 5 sigma of the 0.1 bar sensor noise (core/plant/sensors.h), 0.5 % of full pedal; the A6 5 bar test is unchanged"
+ },
+ "brake_topup": {
+  "value": 0,
+  "unit": "-",
+  "kind": "design choice",
+  "source": "C4 D66 (owner-approved 2026-09-28): ICE-assisted braking harvest, default off until the V1 driver takes the faster T9 entry at Spielberg (ecu-audit.md 4c). While the driver brakes at zero pedal the ICE tops the MGU-K harvest up to the strategy's zero-pedal split after the wheel regen (wheel regen first and in full, total PU torque = the zero-pedal demand, balance untouched); 0 = off"
  }
 }
 {

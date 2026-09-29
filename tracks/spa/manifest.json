@@ -31,6 +31,7 @@
  ],
  "inputs": {
   "surface": "tracks/spa/surface.json (opendata)",
+  "kerbs": "tracks/spa/kerbs.json (regular_bands: 54)",
   "widths": "tracks/spa/profile_centreline.json",
   "terrain": "private/tracks/spa/terrain/terrain.json",
   "terrain_source": "public: SPW Relief de la Wallonie - MNT 2021-2022 (LiDAR, 0.5 m)"
@@ -342,22 +343,22 @@
     "primitives": 3
    }
   ],
-  "triangles": 189332,
-  "vertices": 117413,
+  "triangles": 196976,
+  "vertices": 122190,
   "node_count": 34,
   "by_material": {
-   "asphalt": 14564,
-   "line": 14564,
-   "kerb": 2436,
-   "kerb_yellow": 11064,
-   "verge": 146704
+   "asphalt": 15152,
+   "line": 15152,
+   "kerb": 2706,
+   "kerb_yellow": 12090,
+   "verge": 151876
   },
-  "bytes": 3594312,
+  "bytes": 3735732,
   "materials": {
    "asphalt": "inside the white lines (uv = ortho tile coordinates)",
    "line": "white line (uv = |n|, s in m)",
-   "kerb": "surface kerb bands, red/white (uv = |n|, s in m)",
-   "kerb_yellow": "surface kerb bands detected red/yellow (uv = |n|, s in m)",
+   "kerb": "regularised kerbs (kerbs.json regular_bands), red/white (uv = |n| in m, v in stripe blocks)",
+   "kerb_yellow": "regularised kerbs detected red/yellow (uv = |n| in m, v in blocks)",
    "verge": "beyond the line: run-off, grass, skirt (uv = ortho tile coordinates)"
   }
  },
@@ -4934,9 +4935,23 @@
    "O1": 37,
    "O2": 10
   },
-  "bytes": 5380788,
+  "bytes": 5364973,
   "margin_m": 8.0,
-  "attribution": "Service public de Wallonie (SPW) - Orthophotos 2024 (2026-01-15), CC BY 4.0"
+  "attribution": "Service public de Wallonie (SPW) - Orthophotos 2024 (2026-01-15), CC BY 4.0",
+  "tone": {},
+  "photo_kerb": {
+   "near_m": 1.5,
+   "margin_m": 0.3,
+   "feather_m": 0.3,
+   "src_d_m": [
+    0.5,
+    1.0
+   ],
+   "src_smooth_m": 3.0,
+   "end_m": 1.0,
+   "step_m": 0.1
+  },
+  "photo_kerb_painted_m2": 7606.4
  },
  "objects": {
   "trees": {
@@ -4948,7 +4963,7 @@
     "median": 16.685662078857376,
     "p95": 30.1929468383789
    },
-   "source": "local maxima of MNS - MNT (SPW 2021-2022), vegetation-coloured in the orthophoto"
+   "source": "local maxima of surface model - terrain model (Service public de Wallonie (SPW) - Relief de la Wallonie - Modele Numerique de Surface (MNS) 2021-2022, CC BY 4.0; public: SPW Relief de la Wallonie - MNT 2021-2022 (LiDAR, 0.5 m)), checked in the orthophoto (Service public de Wallonie (SPW) - Orthophotos 2024 (2026-01-15), CC BY 4.0)"
   },
   "buildings": {
    "file": "buildings.glb",
@@ -4956,7 +4971,7 @@
    "nodes": 4,
    "cells": 308,
    "bytes": 64364,
-   "source": "SPW MNS - MNT >= 2.5 m, not vegetation-coloured, 2 m cells"
+   "source": "2 m cells >= 2.5 m, not vegetation, of surface model - terrain model (Service public de Wallonie (SPW) - Relief de la Wallonie - Modele Numerique de Surface (MNS) 2021-2022, CC BY 4.0; public: SPW Relief de la Wallonie - MNT 2021-2022 (LiDAR, 0.5 m)), checked in the orthophoto (Service public de Wallonie (SPW) - Orthophotos 2024 (2026-01-15), CC BY 4.0)"
   }
  },
  "lookup": {
@@ -4978,7 +4993,7 @@
  "ipopt_line": {
   "file": "ipopt_line.json",
   "samples": 2800,
-  "lap_time": 103.873778
+  "lap_time": 103.876623
  },
  "cameras": {
   "start": {
@@ -5105,18 +5120,18 @@
  "checks": {
   "seam": {
    "edge_minus_terrain_left": {
-    "rows": 3552,
-    "rms_m": 0.11551988762527007,
-    "p99_abs_m": 0.29118366332607204,
+    "rows": 3695,
+    "rms_m": 0.1139440269629346,
+    "p99_abs_m": 0.2924108353105793,
     "max_abs_m": 2.938450751677806
    },
    "edge_minus_terrain_right": {
-    "rows": 3415,
-    "rms_m": 0.058688955747845044,
-    "p99_abs_m": 0.2763334093399866,
+    "rows": 3553,
+    "rms_m": 0.05804923466716014,
+    "p99_abs_m": 0.273649997416303,
     "max_abs_m": 0.8068769800514701
    },
-   "paved_minus_lod_mesh_min_m": 0.22248405932765536,
+   "paved_minus_lod_mesh_min_m": 0.23593082866545956,
    "verge_skirt_minus_lod01_min_m": 0.0
   }
  },
@@ -5384,6 +5399,7 @@
     "tyre_drop_kph": 120.0,
     "tyre_before_m": 90.0,
     "tyre_after_m": 15.0,
+    "tyre_merge_osm": true,
     "board_drop_kph": 80.0,
     "board_n_m": 4.0,
     "boards": [
@@ -5485,11 +5501,11 @@
     "shrub_min_m": 1.5,
     "shrub_max_dist_m": 250.0
    },
-   "source": "SPW MNS - MNT (2021-2022) local maxima, vegetation-coloured in the SPW orthophoto 2024"
+   "source": "local maxima of surface model - terrain model (Service public de Wallonie (SPW) - Relief de la Wallonie - Modele Numerique de Surface (MNS) 2021-2022, CC BY 4.0; public: SPW Relief de la Wallonie - MNT 2021-2022 (LiDAR, 0.5 m)), checked in the orthophoto (Service public de Wallonie (SPW) - Orthophotos 2024 (2026-01-15), CC BY 4.0)"
   }
  },
  "budgets": {
-  "road_triangles": 189332,
+  "road_triangles": 196976,
   "road_draw_calls": 135,
   "terrain_triangles_per_tile": {
    "lod0": 8704,
@@ -5504,12 +5520,12 @@
    "lod3": 238
   },
   "download_bytes": {
-   "road": 3594312,
+   "road": 3735732,
    "terrain_lod0.glb": 4041348,
    "terrain_lod1.glb": 2733976,
    "terrain_lod2.glb": 1544192,
    "terrain_lod3.glb": 626560,
-   "ortho": 5380788,
+   "ortho": 5364973,
    "lookup": 280020,
    "trees": 1023468,
    "buildings": 64364
