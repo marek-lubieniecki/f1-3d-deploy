@@ -11,10 +11,10 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Hybrid 26">
-  <script type="module" crossorigin src="./assets/main-C0Q_gtR2.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/ui-fual-FPW.js">
-  <link rel="stylesheet" crossorigin href="./assets/ui-BSqZkwx0.css">
-  <link rel="stylesheet" crossorigin href="./assets/main-CBB1_LQd.css">
+  <script type="module" crossorigin src="./assets/main-hPU_UG_H.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/ui-DjonqarI.js">
+  <link rel="stylesheet" crossorigin href="./assets/ui-451iF_J8.css">
+  <link rel="stylesheet" crossorigin href="./assets/main-BqZhVY7u.css">
 </head>
 <body>
   <canvas id="view"></canvas>
@@ -24,13 +24,14 @@
       <div class="big"><span class="v" id="hud-speed">–</span><span class="u">km/h</span></div>
       <div class="big"><span class="v" id="hud-gear">–</span><span class="u">gear</span></div>
       <div class="rows">
-        <div><span class="k">lap</span><span id="hud-lap">–</span></div>
-        <div><span class="k">last</span><span id="hud-last">–</span></div>
-        <div><span class="k">period</span><span id="hud-period">–</span></div>
-        <div><span class="k">car</span><span id="hud-model">–</span></div>
-        <div><span class="k">SM</span><span id="hud-sm" class="sm" title="Straight Mode (active aero)">–</span></div>
-        <div><span class="k">TC</span><span id="hud-tc" class="tc" title="Traction control (game assist): ◆ = cutting drive torque">–</span></div>
-        <div><span class="k">PIT</span><span id="hud-pit" class="pit" title="Pit lane: ◆ LIM = pit limiter on (L key / gamepad B), ▲ = above the pit-lane speed limit">–</span></div>
+        <div data-row="lap"><span class="k">lap</span><span id="hud-lap">–</span></div>
+        <div data-row="gap" data-shown="0"><span class="k">ghost</span><span id="hud-gap" class="gap" title="Gap to the ghost car: ▼ + = behind, ▲ − = ahead">–</span></div>
+        <div data-row="last"><span class="k">last</span><span id="hud-last">–</span></div>
+        <div data-row="period"><span class="k">period</span><span id="hud-period">–</span></div>
+        <div data-row="car"><span class="k">car</span><span id="hud-model">–</span></div>
+        <div data-row="sm"><span class="k">SM</span><span id="hud-sm" class="sm" title="Straight Mode (active aero)">–</span></div>
+        <div data-row="tc"><span class="k">TC</span><span id="hud-tc" class="tc" title="Traction control (game assist): ◆ = cutting drive torque">–</span></div>
+        <div data-row="pit"><span class="k">PIT</span><span id="hud-pit" class="pit" title="Pit lane: ◆ LIM = pit limiter on (L key / gamepad B / PIT button), ▲ = above the pit-lane speed limit">–</span></div>
       </div>
       <div class="bars">
         <div class="bar"><span class="k">steer</span><div class="track mid"><div id="bar-steer" class="fill steer"></div><div id="tick-steer-ref" class="tick"></div></div><span id="hud-steer">–</span></div>
@@ -40,6 +41,7 @@
   <div id="energy" aria-label="energy"></div>
   <div id="refhud"></div>
   <div id="warn" class="warn"></div>
+  <button id="reset-btn" class="resetbtn" hidden aria-label="reset to track">↺ RESET</button>
   <div id="touch" class="touch">
     <div id="t-steer" class="steerzone" role="slider" aria-label="steering: slide the thumb left or right"
       aria-valuemin="-1" aria-valuemax="1"><div class="st-track"><i class="st-knob"></i></div><span class="lbl">◀ slide to steer ▶</span></div>
@@ -67,7 +69,7 @@
         <select id="model"><option value="v1">V1 two-track (steering)</option><option value="v0">V0 on the racing line</option></select>
       </label>
       <label>Assists
-        <select id="assists"><option>casual</option><option>intermediate</option><option>pro</option><option>realistic</option><option>off</option></select>
+        <select id="assists"><option>casual</option><option>intermediate</option><option>pro</option><option>realistic</option><option>off</option><option value="custom" disabled>custom</option></select>
       </label>
       <label>TC
         <select id="tc"><option value="preset">as preset</option><option>off</option><option>low</option><option>medium</option><option>high</option></select>
@@ -78,10 +80,11 @@
   </div>
   <div id="sound" class="sound"><button id="sound-toggle" aria-pressed="true" title="Car sound (M)">Sound</button><input id="sound-volume" type="range" min="0" max="100" value="70" aria-label="sound volume"></div>
   <div id="status" class="status">loading…</div>
-  <button id="pause-btn" class="pausebtn" aria-label="pause menu" title="Pause (Esc / P)">II</button>
-  <div id="watch-btns" class="watchbtns">
-    <button id="cam-btn" class="wbtn" aria-label="next camera" title="Camera (C)">CAM</button>
-    <button id="fs-btn" class="wbtn" aria-label="full screen" title="Full screen">□</button>
+  <div id="play-btns" class="playbtns" role="toolbar" aria-label="driving buttons">
+    <button id="pause-btn" class="pbtn pausebtn" aria-label="pause menu" title="Pause (Esc / P)">II</button>
+    <button id="cam-btn" class="pbtn" aria-label="next camera" title="Camera (C)">CAM</button>
+    <button id="fs-btn" class="pbtn" aria-label="full screen" title="Full screen">□</button>
+    <button id="pit-btn" class="pbtn pitbtn" aria-label="pit limiter" aria-pressed="false" title="Pit limiter (L / gamepad B)" hidden>PIT</button>
   </div>
   <div id="rotate" class="rotate" role="note">↻ Turn the phone sideways for a wider view <button aria-label="dismiss">✕</button></div>
   <div id="menu" class="screen menu hidden"></div>
