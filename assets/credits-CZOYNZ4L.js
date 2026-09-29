@@ -1,0 +1,1 @@
+import"./ui-fual-FPW.js";import{c as e}from"./credits-BZD8AtGY.js";const n=document.getElementById("credits");fetch("./tracks/spa/manifest.json").then(t=>t.json()).then(t=>{n.innerHTML=e(t.attribution)}).catch(()=>{n.innerHTML=e([])});
