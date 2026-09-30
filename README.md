@@ -3,5 +3,5 @@
 Built site of a browser racing simulator (test preview, not indexed): https://marek-lubieniecki.github.io/f1-3d-deploy/
 
 This repository holds build output only and is replaced on every deploy; the source is private.
-Build: 3b94f6cfee00, built 2026-09-30T11:21:50Z (also in `version.json` and on the credits page). Licences and attributions: `credits.html`
+Build: 179fffaa04e0, built 2026-09-30T14:58:13Z (also in `version.json` and on the credits page). Licences and attributions: `credits.html`
 and `textures/LICENSES.md`.
