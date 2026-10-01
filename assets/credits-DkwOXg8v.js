@@ -1,0 +1,1 @@
+import"./ui-BmIrYL1D.js";import{c as e}from"./credits-BnTW9ay8.js";const n=document.getElementById("credits");fetch("./tracks/spa/manifest.json").then(t=>t.json()).then(t=>{n.innerHTML=e(t.attribution)}).catch(()=>{n.innerHTML=e([])});
