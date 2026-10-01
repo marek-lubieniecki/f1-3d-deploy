@@ -4,42 +4,42 @@
   <meta charset="utf-8">
   <meta name="robots" content="noindex,nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
-  <title>Hybrid 26 · v0.1 preview</title>
+  <title>Hybrid 26 · v0.2 preview</title>
   <meta name="description" content="Drive a car built to the 2026 single-seater regulations, with its hybrid energy controller, on an Ardennes circuit rebuilt from open data.">
   <meta name="theme-color" content="#10151c">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Hybrid 26">
-  <script type="module" crossorigin src="./assets/main-BTFNfaXX.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/ui-B2QQqENj.js">
-  <link rel="stylesheet" crossorigin href="./assets/ui-73uGIqJG.css">
-  <link rel="stylesheet" crossorigin href="./assets/main-ChTdQXAV.css">
+  <script type="module" crossorigin src="./assets/main-DFgJJEcR.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/ui-BmIrYL1D.js">
+  <link rel="stylesheet" crossorigin href="./assets/ui-DsGzWDea.css">
+  <link rel="stylesheet" crossorigin href="./assets/main-Bm0eWaK-.css">
 </head>
 <body>
   <canvas id="view"></canvas>
-  <div id="hud" class="hud">
-    <div class="perf" id="perf">–</div>
-    <div class="dash">
-      <div class="big"><span class="v" id="hud-speed">–</span><span class="u">km/h</span></div>
-      <div class="big"><span class="v" id="hud-gear">–</span><span class="u">gear</span></div>
-      <div class="rows">
-        <div data-row="lap"><span class="k">lap</span><span id="hud-lap">–</span></div>
-        <div data-row="gap" data-shown="0"><span class="k">ghost</span><span id="hud-gap" class="gap" title="Gap to the ghost car: ▼ + = behind, ▲ − = ahead">–</span></div>
-        <div data-row="last"><span class="k">last</span><span id="hud-last">–</span></div>
-        <div data-row="period"><span class="k">period</span><span id="hud-period">–</span></div>
-        <div data-row="car"><span class="k">car</span><span id="hud-model">–</span></div>
-        <div data-row="sm"><span class="k">SM</span><span id="hud-sm" class="sm" title="Straight Mode (active aero)">–</span></div>
-        <div data-row="tc"><span class="k">TC</span><span id="hud-tc" class="tc" title="Traction control (game assist): ◆ = cutting drive torque">–</span></div>
-        <div data-row="pit"><span class="k">PIT</span><span id="hud-pit" class="pit" title="Pit lane: ◆ LIM = pit limiter on (L key / gamepad B / PIT button), ▲ = above the pit-lane speed limit">–</span></div>
-      </div>
-      <div class="bars">
-        <div class="bar"><span class="k">steer</span><div class="track mid"><div id="bar-steer" class="fill steer"></div><div id="tick-steer-ref" class="tick"></div></div><span id="hud-steer">–</span></div>
-      </div>
-    </div>
+  <div id="perf" class="perf">–</div>
+  <!-- HUD (C9-web.md §8.21): car panel (carpanel.js), lap time + gap line, replay bar (replays and watch) -->
+  <div id="carpanel" class="carpanel" role="group" aria-label="car panel"></div>
+  <div id="lapbox" class="lapbox" aria-live="off">
+    <div class="lb-lap"><span class="k">LAP</span> <b id="lb-lapn">–</b> <b id="lb-time">--:--.---</b> <span class="k">· last</span> <span id="lb-last">--:--.---</span></div>
+    <div class="lb-gap" id="lb-gap" data-k="none"><b class="d">–</b> <span class="k">to</span> <span class="r">reference lap</span></div>
   </div>
-  <div id="energy" aria-label="energy"></div>
-  <div id="refhud"></div>
+  <div id="replaybar" class="replaybar" role="toolbar" aria-label="replay">
+    <button id="rb-menu" class="rb-btn" aria-label="leave to the menu" title="Menu (Esc)">◀<span class="rb-wide">&nbsp;Menu</span></button>
+    <button id="rb-cam" class="rb-btn" aria-label="next camera" title="Camera (C)">CAM</button>
+    <button id="rb-fs" class="rb-btn" aria-label="full screen" title="Full screen">□</button>
+    <button id="rb-snd" class="rb-btn" aria-label="sound on (M)" aria-pressed="true" title="Sound on / off (M)">🔊</button>
+    <span class="rb-sep" aria-hidden="true"></span>
+    <button id="rb-back5" class="rb-btn" aria-label="back 5 seconds" title="Back 5 s (←)">−5<span class="rb-wide">&nbsp;s</span></button>
+    <button id="rb-stepb" class="rb-btn" aria-label="back one step" title="Back 0.1 s (,)"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M5 4v12"/><path d="M16 4 8 10l8 6z"/></svg></button>
+    <button id="rb-play" class="rb-btn rb-play" aria-label="pause" title="Play / pause (Space)">II</button>
+    <button id="rb-stepf" class="rb-btn" aria-label="forward one step" title="Forward 0.1 s (.)"><svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M15 4v12"/><path d="M4 4l8 6-8 6z"/></svg></button>
+    <button id="rb-fwd5" class="rb-btn" aria-label="forward 5 seconds" title="Forward 5 s (→)">+5<span class="rb-wide">&nbsp;s</span></button>
+    <div class="rb-time"><input id="rb-seek" class="rb-seek" type="range" min="0" max="1000" step="1" value="0" aria-label="replay position"><div class="rb-t"><span id="rb-label">replay</span><b id="rb-clock">–</b></div></div>
+    <button id="rb-speed" class="rb-btn rb-speed" aria-label="replay speed, tap to change" title="Speed">1×</button>
+  </div>
+  <div id="pausehint" class="pausehint">PAUSED <span>· drag to orbit · CAM: next view</span></div>
   <div id="warn" class="warn"></div>
   <button id="reset-btn" class="resetbtn" hidden aria-label="reset to track">↺ RESET</button>
   <div id="touch" class="touch">
@@ -74,7 +74,7 @@
       <label>TC
         <select id="tc"><option value="preset">as preset</option><option>off</option><option>low</option><option>medium</option><option>high</option></select>
       </label>
-      <div class="help">W/↑ throttle · S/↓ brake · A/← D/→ steer · E/Q shift up/down · F Straight Mode · B Boost · 1-3 energy mode · T reset to track · R restart · C camera · H driving references · M sound. Gamepad: left stick steer, RT/LT pedals, RB/LB shift, Back reset to track</div>
+      <div class="help">W/↑ throttle · S/↓ brake · A/← D/→ steer · E/Q shift up/down · F Straight Mode · B Boost · 1-3 energy mode · T reset to track · R restart · C camera · M sound. Gamepad: left stick steer, RT/LT pedals, RB/LB shift, Back reset to track</div>
       <div class="attrib" id="attrib"></div>
     </div>
   </div>
@@ -87,11 +87,11 @@
     <button id="snd-btn" class="pbtn" aria-label="sound on (M)" aria-pressed="true" title="Sound on / off (M)">🔊</button>
     <button id="pit-btn" class="pbtn pitbtn" aria-label="pit limiter" aria-pressed="false" title="Pit limiter (L / gamepad B)" hidden>PIT</button>
   </div>
-  <div id="rotate" class="rotate" role="note">↻ Turn the phone sideways for a wider view <button aria-label="dismiss">✕</button></div>
+  <div id="rotate" class="rotate" role="note">↻ Turn the phone sideways to drive or watch <button aria-label="dismiss">✕</button></div>
   <div id="menu" class="screen menu hidden"></div>
   <div id="screen-loading" class="screen loading">
     <div class="card">
-      <h1>Hybrid 26 <small>v0.1 preview</small></h1>
+      <h1>Hybrid 26 <small>v0.2 preview</small></h1>
       <p class="sub">A car built to the 2026 single-seater regulations, with its hybrid energy controller, on an Ardennes circuit rebuilt from open data</p>
       <div class="progress" role="progressbar" aria-label="loading" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
       <div class="stage" aria-live="polite">starting…</div>
