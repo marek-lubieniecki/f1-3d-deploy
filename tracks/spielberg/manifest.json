@@ -141,7 +141,7 @@
      5,
      7
     ],
-    "primitives": 4
+    "primitives": 5
    },
    {
     "tile": [
@@ -225,7 +225,7 @@
      9,
      4
     ],
-    "primitives": 4
+    "primitives": 5
    },
    {
     "tile": [
@@ -235,17 +235,17 @@
     "primitives": 4
    }
   ],
-  "triangles": 122616,
-  "vertices": 75510,
+  "triangles": 122252,
+  "vertices": 75395,
   "node_count": 18,
   "by_material": {
-   "asphalt": 9432,
-   "line": 9432,
-   "kerb": 6756,
-   "verge": 96750,
-   "kerb_yellow": 246
+   "asphalt": 9404,
+   "line": 9404,
+   "kerb": 7278,
+   "verge": 95824,
+   "kerb_yellow": 342
   },
-  "bytes": 2301920,
+  "bytes": 2298928,
   "materials": {
    "asphalt": "inside the white lines (uv = ortho tile coordinates)",
    "line": "white line (uv = |n|, s in m)",
@@ -3625,7 +3625,7 @@
    "O1": 7,
    "O2": 20
   },
-  "bytes": 4767931,
+  "bytes": 4767297,
   "margin_m": 8.0,
   "attribution": "Land Steiermark - GIS-Steiermark, Orthofotos Befliegung 2022-2024 (20 cm), CC BY 4.0 AT",
   "tone": {
@@ -3644,7 +3644,7 @@
    "end_m": 1.0,
    "step_m": 0.1
   },
-  "photo_kerb_painted_m2": 2915.5
+  "photo_kerb_painted_m2": 3400.0
  },
  "ground": {
   "format": "f1-3d ground masks v1",
@@ -3658,7 +3658,7 @@
    "road": 6
   },
   "tiles": 25,
-  "bytes": 198686,
+  "bytes": 198477,
   "mask_px": 544,
   "mask_lo_px": 272,
   "m_per_px": 0.5,
@@ -3713,11 +3713,11 @@
   ],
   "area_m2_in_masks": {
    "none": 1018944,
-   "grass": 335124,
-   "gravel": 69092,
-   "paved": 323469,
-   "paint": 9943,
-   "other": 93029
+   "grass": 335244,
+   "gravel": 69192,
+   "paved": 323093,
+   "paint": 9990,
+   "other": 93138
   }
  },
  "objects": {
@@ -3887,18 +3887,18 @@
  "checks": {
   "seam": {
    "edge_minus_terrain_left": {
-    "rows": 2358,
-    "rms_m": 0.3992442895383003,
-    "p99_abs_m": 0.7703502680618447,
+    "rows": 2351,
+    "rms_m": 0.4002590149046699,
+    "p99_abs_m": 0.7742199854986893,
     "max_abs_m": 7.364501069009634
    },
    "edge_minus_terrain_right": {
-    "rows": 2087,
-    "rms_m": 0.4222055340936171,
-    "p99_abs_m": 1.15264436328963,
+    "rows": 2081,
+    "rms_m": 0.4233463294099008,
+    "p99_abs_m": 1.1528597576365194,
     "max_abs_m": 6.938873182481871
    },
-   "paved_minus_lod_mesh_min_m": 0.24941631043725465,
+   "paved_minus_lod_mesh_min_m": 0.24623142640871265,
    "verge_skirt_minus_lod01_min_m": 0.0
   }
  },
@@ -4243,8 +4243,8 @@
   }
  },
  "budgets": {
-  "road_triangles": 122616,
-  "road_draw_calls": 68,
+  "road_triangles": 122252,
+  "road_draw_calls": 70,
   "terrain_triangles_per_tile": {
    "lod0": 8704,
    "lod1": 2304,
@@ -4258,13 +4258,13 @@
    "lod3": 168
   },
   "download_bytes": {
-   "road": 2301920,
+   "road": 2298928,
    "terrain_lod0.glb": 2228224,
    "terrain_lod1.glb": 1779844,
    "terrain_lod2.glb": 1090924,
    "terrain_lod3.glb": 442492,
-   "ortho": 4767931,
-   "ground": 198686,
+   "ortho": 4767297,
+   "ground": 198477,
    "lookup": 172380,
    "trees": 743220,
    "buildings": 7484
