@@ -2507,32 +2507,80 @@
   "T_full_load": {
    "x": [
     4000.0,
+    5000.0,
     6000.0,
+    6250.0,
+    6500.0,
+    6750.0,
+    7000.0,
+    7250.0,
+    7500.0,
+    7750.0,
     8000.0,
+    8250.0,
+    8500.0,
+    8750.0,
+    9000.0,
+    9250.0,
     9500.0,
+    9750.0,
+    10000.0,
+    10250.0,
     10500.0,
+    10750.0,
+    11000.0,
+    11250.0,
     11500.0,
-    12500.0
+    11750.0,
+    12000.0,
+    12250.0,
+    12500.0,
+    12750.0,
+    13000.0
    ],
    "x_unit": "rpm",
    "y": [
     290.0,
+    327.5,
     365.0,
-    400.0,
-    402.0,
-    364.0,
-    332.0,
-    300.0
+    369.375,
+    373.75,
+    378.125,
+    381.947,
+    381.431,
+    380.912,
+    380.382,
+    379.838,
+    379.275,
+    378.69,
+    378.08,
+    377.441,
+    376.77,
+    376.067,
+    375.328,
+    374.552,
+    373.738,
+    372.877,
+    363.183,
+    353.808,
+    344.742,
+    335.968,
+    327.47,
+    319.233,
+    311.245,
+    303.493,
+    295.964,
+    288.648
    ],
    "y_unit": "Nm",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.torque_curve (held beyond the ends, as the optimizer clips rpm)"
+   "kind": "calibration",
+   "source": "f1-3d calibration 2026-10-02 (owner-approved, SPEC v0.70; power-unit-ice.md 'Adopted 2026-10-02') (tools/params/ice_fuel_line.py): min(the v16 curve's rising part to 8000 rpm (290 / 365 / 400 Nm at 4000 / 6000 / 8000), the torque at which the efficiency map burns 0.994 x the fuel-flow limit (R-FUEL-02 line 0.27 N + 165 MJ/h below 10500 rpm, R-FUEL-01 3000 MJ/h above), P_max / omega): the full-load power follows the rule line to 410 kW at 10500 rpm, then falls with the map's friction term to 393 kW at 13000. Evidence: 2026 Q upshifts land at 10250-10700 rpm (tools/analysis/ice_shift_evidence.py). Was the optimizer's powertrain.torque_curve 290/365/400/402/364/332/300 Nm at 4000/6000/8000/9500/10500/11500/12500 rpm"
   },
   "P_max": {
-   "value": 400.0,
+   "value": 410.0,
    "unit": "kW",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.P_ICE_max"
+   "kind": "calibration",
+   "source": "f1-3d calibration 2026-10-02 (owner-approved, SPEC v0.70; power-unit-ice.md 'Adopted 2026-10-02'): owner 'approaching 410 kW now'; peak of the full-load curve on the fuel-flow line at its 10500 rpm knee (R-FUEL-01/02); was 400 kW (racing_optimizer mercedes_2026_chassis powertrain.P_ICE_max)"
   },
   "T_max": {
    "value": 550.0,
@@ -2577,10 +2625,10 @@
    "source": "estimate: first-order ICE torque response; a full-load step (~550 Nm) is within 5 Nm of the demand after 50 ms (R-PED-04, C5.13.1: 550 e^-5 = 3.7 Nm; 15 ms left 20 Nm)"
   },
   "eta_peak": {
-   "value": 0.52,
+   "value": 0.5412,
    "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.eta_ICE_peak"
+   "kind": "calibration",
+   "source": "f1-3d calibration 2026-10-02 (owner-approved, SPEC v0.70; power-unit-ice.md 'Adopted 2026-10-02'): efficiency map refitted so the full-load burn is 0.994 x the R-FUEL-01/02 line from 7000 to 13 000 rpm (tools/params/ice_fuel_line.py); was 0.52 (racing_optimizer mercedes_2026_chassis)"
   },
   "eta_min": {
    "value": 0.24,
@@ -2619,10 +2667,10 @@
    "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.eta_lowload_penalty"
   },
   "eff_speed_penalty": {
-   "value": 0.01,
+   "value": 0.0065,
    "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.eta_speed_penalty"
+   "kind": "calibration",
+   "source": "f1-3d calibration 2026-10-02 (owner-approved, SPEC v0.70; power-unit-ice.md 'Adopted 2026-10-02'): efficiency map refitted so the full-load burn is 0.994 x the R-FUEL-01/02 line from 7000 to 13 000 rpm (tools/params/ice_fuel_line.py); was 0.01 (racing_optimizer mercedes_2026_chassis)"
   },
   "eff_torque_penalty": {
    "value": 0.006,
@@ -2637,10 +2685,10 @@
    "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.fuel_parasitic_base_W"
   },
   "fuel_parasitic_speed": {
-   "value": 2000.0,
+   "value": 34600.0,
    "unit": "W",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.fuel_parasitic_speed_W (x (omega/omega_opt)^2)"
+   "kind": "calibration",
+   "source": "f1-3d calibration 2026-10-02 (owner-approved, SPEC v0.70; power-unit-ice.md 'Adopted 2026-10-02'): efficiency map refitted so the full-load burn is 0.994 x the R-FUEL-01/02 line from 7000 to 13 000 rpm (tools/params/ice_fuel_line.py); was 2000 (racing_optimizer mercedes_2026_chassis)"
   },
   "fuel_quad_power": {
    "value": 8e-07,
@@ -2783,17 +2831,17 @@
   },
   "shift_speeds": {
    "value": [
-    26.551733386851094,
-    36.00183301665298,
-    44.29476861643431,
-    52.143750385919304,
-    61.572587459861424,
-    69.71194470553607,
-    80.58892133740233
+    29.86189356766367,
+    40.09999999999986,
+    47.64999999999943,
+    56.24999999999894,
+    64.1499999999985,
+    73.89999999999795,
+    83.4499999999974
    ],
    "unit": "m/s",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json drivetrain.gear_shift_speeds (1->2 ... 7->8; driver model only)"
+   "kind": "calibration",
+   "source": "f1-3d calibration 2026-10-02 (owner-approved, SPEC v0.70; power-unit-ice.md 'Adopted 2026-10-02'): optimal upshift speeds of the revised full-load curve (core/api/assists.cpp optimal_upshift_speeds, driver-assists.md \u00a75, ported in tools/params/ice_fuel_line.py); was the optimizer's drivetrain.gear_shift_speeds (26.55 / 36.00 / 44.29 / 52.14 / 61.57 / 69.71 / 80.59 m/s)"
   }
  },
  "brakes": {
