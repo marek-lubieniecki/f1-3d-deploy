@@ -21,7 +21,7 @@
   {
    "id": 1,
    "name": "Kerb",
-   "grip": 0.9
+   "grip": 1.0
   },
   {
    "id": 2,
@@ -36,7 +36,7 @@
   {
    "id": 4,
    "name": "RunoffAsphalt",
-   "grip": 0.95
+   "grip": 1.0
   },
   {
    "id": 5,

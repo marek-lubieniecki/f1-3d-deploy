@@ -5033,16 +5033,16 @@
    }
   }
  },
- "triangles": 39975,
+ "triangles": 39871,
  "files": {
   "car.glb": {
-   "bytes": 1074560,
-   "triangles": 39975,
+   "bytes": 1071416,
+   "triangles": 39871,
    "draw_primitives": 36
   },
   "car_lod1.glb": {
-   "bytes": 616476,
-   "triangles": 19791,
+   "bytes": 610200,
+   "triangles": 19539,
    "draw_primitives": 36
   }
  }

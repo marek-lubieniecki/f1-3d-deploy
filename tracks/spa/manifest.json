@@ -5493,22 +5493,22 @@
   "osm": "private/opendata/osm/spa_t3.json",
   "trackside": {
    "file": "trackside.glb",
-   "bytes": 4635328,
+   "bytes": 4608176,
    "nodes": 16,
    "primitives": 41,
    "triangles": {
     "t3_board": 36,
-    "t3_fence": 11366,
-    "t3_solid": 128392
+    "t3_fence": 11400,
+    "t3_solid": 127414
    },
    "triangles_by_object": {
-    "wall_osm": 20542,
+    "wall_osm": 21088,
     "armco_osm": 5208,
     "catch_fence_osm": 22484,
     "fence_osm": 27162,
-    "armco_rule": 18320,
-    "catch_fence_rule": 9056,
-    "hoardings": 626,
+    "armco_rule": 16592,
+    "catch_fence_rule": 9210,
+    "hoardings": 710,
     "tyres_rule": 35112,
     "boards": 468,
     "marshal_posts": 690,
@@ -5516,14 +5516,14 @@
    },
    "lines_m": {
     "armco_osm": 815.3,
-    "armco_rule": 2908.0,
+    "armco_rule": 2623.2,
     "catch_fence_osm": 8752.7,
-    "catch_fence_rule": 3514.0,
+    "catch_fence_rule": 3574.3,
     "fence_osm": 8390.7,
-    "wall_osm": 12252.8
+    "wall_osm": 12601.6
    },
    "osm_ways_used": 134,
-   "hoardings_m": 2094.9,
+   "hoardings_m": 2407.5,
    "braking_zones": [
     {
      "s_min": 384.999519,
@@ -5717,7 +5717,7 @@
     "sample_m": 4.0,
     "osm_max_n_m": 70.0,
     "osm_fence_max_n_m": 120.0,
-    "line_clear_m": 1.0,
+    "face_min_m": 0.9,
     "catch_fence_max_m": 15.0,
     "cover_n_m": 45.0,
     "cover_along_m": 12.0,
@@ -5769,10 +5769,10 @@
   },
   "barriers": {
    "file": "barriers.json",
-   "bytes": 102890,
-   "lines": 99,
-   "points": 5751,
-   "length_m": 19653.5
+   "bytes": 102956,
+   "lines": 96,
+   "points": 5765,
+   "length_m": 19711.2
   },
   "buildings": {
    "file": "buildings_t3.glb",

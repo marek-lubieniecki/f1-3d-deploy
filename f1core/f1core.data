@@ -143,13 +143,13 @@
  },
  "chassis": {
   "mass": {
-   "value": 798.0,
+   "value": 798,
    "unit": "kg",
    "kind": "optimizer",
    "source": "racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json chassis.m (incl. driver, without fuel)"
   },
   "fuel_mass_start": {
-   "value": 10.0,
+   "value": 10,
    "unit": "kg",
    "kind": "optimizer",
    "source": "racing_optimizer src/main.py: fuel_start_kg default 10 kg in qualifying mode (run files leave it unset)"
@@ -173,7 +173,7 @@
    "source": "racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json chassis.front_axle_fraction"
   },
   "rotating_mass_factor": {
-   "value": 1.0,
+   "value": 1,
    "unit": "-",
    "kind": "optimizer",
    "source": "racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json drivetrain.rotating_mass_factor (absent = 1.0 in v14)"
@@ -197,7 +197,7 @@
    "source": "V1 estimate: 1900 mm width minus a ~350 mm rear tyre"
   },
   "yaw_inertia": {
-   "value": 1000.0,
+   "value": 1000,
    "unit": "kg m^2",
    "kind": "optimizer",
    "source": "racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json chassis.I_z (stage4 bicycle); V1 yaw inertia"
@@ -206,7 +206,7 @@
    "value": 0.45,
    "unit": "-",
    "kind": "calibration",
-   "source": "V1 calibration step 1 (C2-vehicle.md \u00a77): with tire.mu_y_scale, the flattest V1 / point-mass lateral ratio over 20-90 m/s (0.4-0.5 all within 3 %); V2 sets it from roll-stiffness targets"
+   "source": "V1 calibration step 1 (C2-vehicle.md §7): with tire.mu_y_scale, the flattest V1 / point-mass lateral ratio over 20-90 m/s (0.4-0.5 all within 3 %); V2 sets it from roll-stiffness targets"
   }
  },
  "steering": {
@@ -217,13 +217,13 @@
    "source": "V1 estimate: about +-150 deg at the wheel for +-20 deg road-wheel lock"
   },
   "max_road_wheel_angle": {
-   "value": 23.0,
+   "value": 23,
    "unit": "deg",
    "kind": "estimate",
    "source": "V1 estimate: F1 steering lock ~20-25 deg (hairpins of ~10 m radius)"
   },
   "ackermann": {
-   "value": 0.0,
+   "value": 0,
    "unit": "-",
    "kind": "estimate",
    "source": "V1 estimate: parallel steer (F1 cars run near-parallel or anti-Ackermann)"
@@ -231,7 +231,7 @@
  },
  "differential": {
   "preload": {
-   "value": 50.0,
+   "value": 50,
    "unit": "Nm",
    "kind": "estimate",
    "source": "V1 estimate: clutch-pack LSD preload"
@@ -249,10 +249,10 @@
    "source": "V1 estimate: locking torque 15 % of overrun input torque"
   },
   "clutch_gain": {
-   "value": 5000.0,
+   "value": 5000,
    "unit": "Nm s/rad",
    "kind": "design",
-   "source": "V1 numerical: clutch sticks below its capacity (implicit viscous law, C2-vehicle.md \u00a75)"
+   "source": "V1 numerical: clutch sticks below its capacity (implicit viscous law, C2-vehicle.md §5)"
   }
  },
  "aero": {
@@ -295,31 +295,31 @@
    "source": "estimate: Pacejka longitudinal shape factor C (typical 1.6-1.7)"
   },
   "rear_axle_inertia": {
-   "value": 3.0,
+   "value": 3,
    "unit": "kg m^2",
    "kind": "estimate",
    "source": "estimate: two rear wheels + tyres (~1.2 kg m^2 each) + brake discs and driveshafts; engine and MGU-K inertia are not included (they act through the gear ratio in the plant)"
   },
   "front_axle_inertia": {
-   "value": 2.0,
+   "value": 2,
    "unit": "kg m^2",
    "kind": "estimate",
    "source": "estimate: two front wheels + tyres + brake discs"
   },
   "v_slip_min": {
-   "value": 3.0,
+   "value": 3,
    "unit": "m/s",
    "kind": "estimate",
-   "source": "SPEC \u00a76: low-speed slip regularisation ~3-5 m/s"
+   "source": "SPEC §6: low-speed slip regularisation ~3-5 m/s"
   },
   "cornering_stiffness_front": {
-   "value": 150000.0,
+   "value": 150000,
    "unit": "N/rad",
    "kind": "optimizer",
    "source": "racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json tires.C_f (axle, at mu_fz_nom_front); V1 lateral tyre"
   },
   "cornering_stiffness_rear": {
-   "value": 195000.0,
+   "value": 195000,
    "unit": "N/rad",
    "kind": "calibration",
    "source": "racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json tires.C_r x cstiff_rear_factor (absent = 1.0) x 1.3: V1 calibration override (owner OK 2026-09-28): 1.3 x the optimizer's tires.C_r (150 kN/rad) to cut V1's fast-corner oversteer (body slip median 2.4 -> 1.7 deg, Spa V1 lap -0.5 s)"
@@ -337,13 +337,13 @@
    "source": "racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json tires.C_shape (Pacejka C, lateral); V1 lateral tyre"
   },
   "lat_curvature": {
-   "value": 0.0,
+   "value": 0,
    "unit": "-",
    "kind": "optimizer",
    "source": "racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json tires.pacejka_E; V1 lateral tyre"
   },
   "mu_x_scale": {
-   "value": 1.0,
+   "value": 1,
    "unit": "-",
    "kind": "optimizer",
    "source": "V1: longitudinal peak = optimizer mu law (stage2 axle friction circle)"
@@ -352,13 +352,13 @@
    "value": 1.04,
    "unit": "-",
    "kind": "calibration",
-   "source": "V1 calibration step 1 (C2-vehicle.md \u00a77): lateral peak 4 % above the point-mass mu to make up the two-track losses the point mass does not have (slip-angle drag, steer drag and yaw moments, inner-wheel traction)"
+   "source": "V1 calibration step 1 (C2-vehicle.md §7): lateral peak 4 % above the point-mass mu to make up the two-track losses the point mass does not have (slip-angle drag, steer drag and yaw moments, inner-wheel traction)"
   },
   "load_basis": {
    "value": "axle",
    "unit": "-",
    "kind": "design",
-   "source": "V1, C2-vehicle.md \u00a76: the optimizer's mu and cornering-stiffness laws (and its fitted mu_0) are axle laws; 'axle' spreads the axle curve over its two wheels by load ('wheel' = per-wheel laws)"
+   "source": "V1, C2-vehicle.md §6: the optimizer's mu and cornering-stiffness laws (and its fitted mu_0) are axle laws; 'axle' spreads the axle curve over its two wheels by load ('wheel' = per-wheel laws)"
   },
   "fz_nom_front": {
    "value": 3522.771,
@@ -376,36 +376,36 @@
  "ice": {
   "T_full_load": {
    "x": [
-    4000.0,
-    6000.0,
-    8000.0,
-    9500.0,
-    10500.0,
-    11500.0,
-    12500.0
+    4000,
+    6000,
+    8000,
+    9500,
+    10500,
+    11500,
+    12500
    ],
    "x_unit": "rpm",
    "y": [
-    290.0,
-    365.0,
-    400.0,
-    402.0,
-    364.0,
-    332.0,
-    300.0
+    290,
+    365,
+    400,
+    402,
+    364,
+    332,
+    300
    ],
    "y_unit": "Nm",
    "kind": "optimizer",
    "source": "racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json powertrain.torque_curve (held beyond the ends, as the optimizer clips rpm)"
   },
   "P_max": {
-   "value": 400.0,
+   "value": 400,
    "unit": "kW",
    "kind": "optimizer",
    "source": "racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json powertrain.P_ICE_max"
   },
   "T_max": {
-   "value": 550.0,
+   "value": 550,
    "unit": "Nm",
    "kind": "optimizer",
    "source": "racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json powertrain.T_ICE_max; clips the full-load curve and is the load reference of the efficiency map (IceParams::eff_T_load_ref)"
@@ -429,7 +429,7 @@
    "source": "estimate: closed-throttle friction and pumping torque of a 1.6 l V6 (fuel cut); the optimizer has no engine-braking curve (powertrain.engine_brake_curve absent). Kept above the C5.12.3 zero-pedal floor so the MGU-K fills the lift-off demand (C4 Q3 option B)"
   },
   "omega_idle": {
-   "value": 4000.0,
+   "value": 4000,
    "unit": "rpm",
    "kind": "optimizer",
    "source": "racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json drivetrain.omega_ice_idle_rpm"
@@ -459,25 +459,25 @@
    "source": "racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json powertrain.eta_ICE_min"
   },
   "eff_omega_opt": {
-   "value": 10500.0,
+   "value": 10500,
    "unit": "rpm",
    "kind": "optimizer",
    "source": "racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json efficiency_map.omega_ice_opt_rpm"
   },
   "eff_T_opt": {
-   "value": 340.0,
+   "value": 340,
    "unit": "Nm",
    "kind": "optimizer",
    "source": "racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json efficiency_map.T_ice_opt"
   },
   "eff_omega_span": {
-   "value": 320.0,
+   "value": 320,
    "unit": "rad/s",
    "kind": "optimizer",
    "source": "racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json efficiency_map.omega_ice_span (used against omega in rad/s in vehicle_model.py)"
   },
   "eff_T_span": {
-   "value": 150.0,
+   "value": 150,
    "unit": "Nm",
    "kind": "optimizer",
    "source": "racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json efficiency_map.T_ice_span"
@@ -501,19 +501,19 @@
    "source": "racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json efficiency_map.eta_torque_penalty"
   },
   "fuel_parasitic_base": {
-   "value": 4000.0,
+   "value": 4000,
    "unit": "W",
    "kind": "optimizer",
    "source": "racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json efficiency_map.fuel_parasitic_base_W"
   },
   "fuel_parasitic_speed": {
-   "value": 2000.0,
+   "value": 2000,
    "unit": "W",
    "kind": "optimizer",
    "source": "racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json efficiency_map.fuel_parasitic_speed_W (x (omega/omega_opt)^2)"
   },
   "fuel_quad_power": {
-   "value": 8e-07,
+   "value": 8e-7,
    "unit": "1/W",
    "kind": "optimizer",
    "source": "racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json efficiency_map.fuel_quad_power (stored but unused by vehicle_model.py in v14)"
@@ -525,7 +525,7 @@
    "source": "racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json efficiency_map.fuel_quad_torque (stored but unused by vehicle_model.py in v14)"
   },
   "fuel_lhv": {
-   "value": 40.0,
+   "value": 40,
    "unit": "MJ/kg",
    "kind": "rule-compliant override",
    "source": "C16.2 (R-FUEL-05, 38-41 MJ/kg): 40.0 MJ/kg replaces racing_optimizer src/vehicle/configs/mercedes_pacejka_cstiff_uk_icecurve_mu165_eta95.json powertrain.fuel_lhv_MJ_per_kg = 44.0 (outside the range); fuel mass per lap +10 % vs v14, fuel energy flow unchanged, see docs/models/params.md"
@@ -571,7 +571,7 @@
  },
  "battery": {
   "E_capacity": {
-   "value": 5.0,
+   "value": 5,
    "unit": "MJ",
    "kind": "estimate",
    "source": "estimate: physical store capacity above the 4 MJ usable swing (R-ES-01)"
@@ -584,15 +584,15 @@
   },
   "V_ocv": {
    "x": [
-    0.0,
+    0,
     2.5,
-    5.0
+    5
    ],
    "x_unit": "MJ",
    "y": [
-    650.0,
-    800.0,
-    900.0
+    650,
+    800,
+    900
    ],
    "y_unit": "V",
    "kind": "estimate",
@@ -689,7 +689,7 @@
    "value": 30,
    "unit": "ms",
    "kind": "estimate",
-   "source": "estimate: calliper pressure first-order lag (tens of ms, C4 \u00a75.5)"
+   "source": "estimate: calliper pressure first-order lag (tens of ms, C4 §5.5)"
   },
   "balance_default": {
    "value": 0.6,
@@ -822,30 +822,29 @@
  "generated_by": "tools/export/export_pedal_plan.py --car-out (do not edit by hand; rerun tools/export/update_calibrated_plans.sh)",
  "calibration": {
   "plan": {
-   "run": "spa_qual_tt_rgf108_df085_ls012_g105_ds10_rad_tl",
-   "pipeline_results": "outputs/Spa/pedal/calib_tt/spa_qual_tt_rgf108_df085_ls012_g105_ds10_rad_tl/qual/pipeline_results.pkl",
-   "pipeline_results_sha1": "73c88f4a3f4ed963393d90452e85969bf3eae928",
-   "run_config": "runs/pedal/calib_tt/spa_rgf108_df085_ls012_g105_ds10_rad_tl.toml",
-   "run_config_sha1": "49fda5ccbda5b5017bea1564b7cec025b129448e",
-   "lap_time_s": 105.915888,
+   "run": "calib_v4_13_cap_e_spa",
+   "pipeline_results": "outputs/Spa/calib_v4/13_cap/e/spa/qual/pipeline_results.pkl",
+   "pipeline_results_sha1": "1f5599beeeea23c53c9788b58cadf11b42b29801",
+   "run_config": "runs/calib_v4/13_cap/e/spa.toml",
+   "run_config_sha1": "1a81fccfb4206dab92e9811818043ee500669322",
+   "lap_time_s": 104.458221,
    "trims": {
-    "grip_scale": 1.05,
+    "grip_scale": 1.0968,
     "rear_grip_factor": 1.08,
     "mu_load_sensitivity": 0.12,
     "downforce_scale": 0.85,
-    "drag_scale": 0.864,
+    "drag_scale": 0.95,
     "drag_scale_closed": 0.9,
     "tire_compound": "soft",
-    "edge_geometry": "halfwidth_tracklimits",
+    "edge_geometry": "halfwidth_kerbs_edge",
     "ds": 10.0,
-    "surface": "lidar",
     "vertical_curvature": true,
     "rolling_resistance_coeff": 0.015,
     "drivetrain_efficiency": 0.95,
     "lap_start": "last_corner"
    },
    "map": "maps/spa_qual_tt_calib.json",
-   "two_track_params_sha1": "e82fabbe6ae94a7c04ec76f4dddf78e933ebba95",
+   "two_track_params_sha1": "6dce3899d03786ddbc99f7085a5b570e3b44798a",
    "two_track_params": {
     "m_dry": 768.0,
     "L": 3.4,
@@ -855,21 +854,21 @@
     "r_w": 0.33,
     "f_rot": 1.05,
     "C_rr": 0.015,
-    "rho": 1.1775607335990508,
+    "rho": 1.141067671264051,
     "A": 1.5,
-    "C_D_hi": 1.01088,
-    "C_D_lo": 0.6048,
+    "C_D_hi": 1.1115,
+    "C_D_lo": 0.6649999999999999,
     "C_L_hi": 2.975,
     "C_L_lo": 1.8275,
     "b_a": 0.45,
-    "mu0_f": 1.7030474999999998,
-    "mu0_r": 1.8392913,
+    "mu0_f": 1.7463798,
+    "mu0_r": 1.886090184,
     "mu_sens": 0.12,
     "mu_min_factor": 0.81836,
     "F_nom_f": 3390.3360000000002,
     "F_nom_r": 4143.744000000001,
-    "C_f": 147750.0,
-    "C_r": 195000.0,
+    "C_f": 221625.0,
+    "C_r": 288112.5,
     "e_c": 0.8,
     "C_y": 1.5,
     "E_y": 0.0,
@@ -878,13 +877,16 @@
     "lam": 0.45,
     "i_s": 7.5,
     "delta_max": 0.4014257279586958,
-    "k_x": 1.0,
+    "k_x": 1.05,
     "k_y": 1.04,
     "kappa_pk": 0.1,
     "C_x": 1.65,
     "T_pre": 50.0,
-    "k_p": 0.25,
-    "k_c": 0.15
+    "k_p": 0.6,
+    "k_c": 0.15,
+    "yaw_cl_loss_per_deg2": 0.0,
+    "diff_w0": 0.5,
+    "bank_turn_load": 1.0
    }
   },
   "base_car": "params/car/car_2026_v16.json",
@@ -1008,10 +1010,10 @@
    "source": "V1 estimate: clutch-pack LSD preload"
   },
   "power_ramp": {
-   "value": 0.25,
+   "value": 0.6,
    "unit": "-",
-   "kind": "estimate",
-   "source": "V1 estimate: locking torque 25 % of drive input torque"
+   "kind": "optimizer",
+   "source": "two-track plan result['two_track']['params']['k_p'] (was 0.25 in car_2026_v16.json); V1 estimate: locking torque 25 % of drive input torque"
   },
   "coast_ramp": {
    "value": 0.15,
@@ -1084,16 +1086,16 @@
    "source": "SPEC \u00a76: low-speed slip regularisation ~3-5 m/s"
   },
   "cornering_stiffness_front": {
-   "value": 147750.0,
+   "value": 221625.0,
    "unit": "N/rad",
    "kind": "optimizer",
    "source": "two-track plan result['two_track']['params']['C_f'] (was 150000.0 in car_2026_v16.json); racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.C_f (axle, at mu_fz_nom_front); V1 lateral tyre"
   },
   "cornering_stiffness_rear": {
-   "value": 195000.0,
+   "value": 288112.5,
    "unit": "N/rad",
-   "kind": "calibration",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.C_r x cstiff_rear_factor (absent = 1.0) x 1.3: V1 calibration override (owner OK 2026-09-28): 1.3 x the optimizer's tires.C_r (150 kN/rad) to cut V1's fast-corner oversteer (body slip median 2.4 -> 1.7 deg, Spa V1 lap -0.5 s)"
+   "kind": "optimizer",
+   "source": "two-track plan result['two_track']['params']['C_r'] (was 195000.0 in car_2026_v16.json); racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.C_r x cstiff_rear_factor (absent = 1.0) x 1.3: V1 calibration override (owner OK 2026-09-28): 1.3 x the optimizer's tires.C_r (150 kN/rad) to cut V1's fast-corner oversteer (body slip median 2.4 -> 1.7 deg, Spa V1 lap -0.5 s)"
   },
   "cstiff_load_exp": {
    "value": 0.8,
@@ -1114,1369 +1116,10 @@
    "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.pacejka_E; V1 lateral tyre"
   },
   "mu_x_scale": {
-   "value": 1.0,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "V1: longitudinal peak = optimizer mu law (stage2 axle friction circle)"
-  },
-  "mu_y_scale": {
-   "value": 1.04,
-   "unit": "-",
-   "kind": "calibration",
-   "source": "V1 calibration step 1 (C2-vehicle.md \u00a77): lateral peak 4 % above the point-mass mu to make up the two-track losses the point mass does not have (slip-angle drag, steer drag and yaw moments, inner-wheel traction)"
-  },
-  "load_basis": {
-   "value": "axle",
-   "unit": "-",
-   "kind": "design",
-   "source": "V1, C2-vehicle.md \u00a76: the optimizer's mu and cornering-stiffness laws (and its fitted mu_0) are axle laws; 'axle' spreads the axle curve over its two wheels by load ('wheel' = per-wheel laws)"
-  },
-  "fz_nom_front": {
-   "value": 3390.3360000000002,
-   "unit": "N",
-   "kind": "derived",
-   "source": "informational (not loaded): optimizer mu_fz_nom_front = m * 9.81 * front_axle_fraction (mass without fuel)"
-  },
-  "fz_nom_rear": {
-   "value": 4143.744000000001,
-   "unit": "N",
-   "kind": "derived",
-   "source": "informational (not loaded): optimizer mu_fz_nom_rear = m * 9.81 * (1 - front_axle_fraction)"
-  }
- },
- "ice": {
-  "T_full_load": {
-   "x": [
-    4000.0,
-    6000.0,
-    8000.0,
-    9500.0,
-    10500.0,
-    11500.0,
-    12500.0
-   ],
-   "x_unit": "rpm",
-   "y": [
-    290.0,
-    365.0,
-    400.0,
-    402.0,
-    364.0,
-    332.0,
-    300.0
-   ],
-   "y_unit": "Nm",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.torque_curve (held beyond the ends, as the optimizer clips rpm)"
-  },
-  "P_max": {
-   "value": 400.0,
-   "unit": "kW",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.P_ICE_max"
-  },
-  "T_max": {
-   "value": 550.0,
-   "unit": "Nm",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.T_ICE_max; clips the full-load curve and is the load reference of the efficiency map (IceParams::eff_T_load_ref)"
-  },
-  "T_overrun": {
-   "x": [
-    4000,
-    8000,
-    12500,
-    15000
-   ],
-   "x_unit": "rpm",
-   "y": [
-    -25,
-    -35,
-    -45,
-    -50
-   ],
-   "y_unit": "Nm",
-   "kind": "estimate",
-   "source": "estimate: closed-throttle friction and pumping torque of a 1.6 l V6 (fuel cut); the optimizer has no engine-braking curve (powertrain.engine_brake_curve absent). Kept above the C5.12.3 zero-pedal floor so the MGU-K fills the lift-off demand (C4 Q3 option B)"
-  },
-  "omega_idle": {
-   "value": 4000.0,
-   "unit": "rpm",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json drivetrain.omega_ice_idle_rpm"
-  },
-  "omega_max": {
-   "value": 13000,
-   "unit": "rpm",
-   "kind": "estimate",
-   "source": "estimate: rev limit above the 8th-gear top speed (12 000 rpm at 350 km/h) and the 12 500 rpm end of the torque curve"
-  },
-  "torque_time_constant": {
-   "value": 10,
-   "unit": "ms",
-   "kind": "estimate",
-   "source": "estimate: first-order ICE torque response; a full-load step (~550 Nm) is within 5 Nm of the demand after 50 ms (R-PED-04, C5.13.1: 550 e^-5 = 3.7 Nm; 15 ms left 20 Nm)"
-  },
-  "eta_peak": {
-   "value": 0.52,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.eta_ICE_peak"
-  },
-  "eta_min": {
-   "value": 0.24,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.eta_ICE_min"
-  },
-  "eff_omega_opt": {
-   "value": 10500.0,
-   "unit": "rpm",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.omega_ice_opt_rpm"
-  },
-  "eff_T_opt": {
-   "value": 340.0,
-   "unit": "Nm",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.T_ice_opt"
-  },
-  "eff_omega_span": {
-   "value": 320.0,
-   "unit": "rad/s",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.omega_ice_span (used against omega in rad/s in vehicle_model.py)"
-  },
-  "eff_T_span": {
-   "value": 150.0,
-   "unit": "Nm",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.T_ice_span"
-  },
-  "eff_lowload_penalty": {
-   "value": 0.018,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.eta_lowload_penalty"
-  },
-  "eff_speed_penalty": {
-   "value": 0.01,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.eta_speed_penalty"
-  },
-  "eff_torque_penalty": {
-   "value": 0.006,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.eta_torque_penalty"
-  },
-  "fuel_parasitic_base": {
-   "value": 4000.0,
-   "unit": "W",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.fuel_parasitic_base_W"
-  },
-  "fuel_parasitic_speed": {
-   "value": 2000.0,
-   "unit": "W",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.fuel_parasitic_speed_W (x (omega/omega_opt)^2)"
-  },
-  "fuel_quad_power": {
-   "value": 8e-07,
-   "unit": "1/W",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.fuel_quad_power (stored but unused by vehicle_model.py in v16)"
-  },
-  "fuel_quad_torque": {
-   "value": 0.45,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.fuel_quad_torque (stored but unused by vehicle_model.py in v16)"
-  },
-  "fuel_lhv": {
-   "value": 40.0,
-   "unit": "MJ/kg",
-   "kind": "rule-compliant override",
-   "source": "C16.2 (R-FUEL-05, 38-41 MJ/kg): 40.0 MJ/kg replaces racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.fuel_lhv_MJ_per_kg = 44.0 (outside the range); fuel mass per lap +10 % vs v14, fuel energy flow unchanged, see docs/models/params.md"
-  }
- },
- "mguk": {
-  "ratio_to_crank": {
-   "value": 3.5,
-   "unit": "-",
-   "kind": "estimate",
-   "source": "estimate: fixed MGU-K : crank speed ratio (R-ERS-07); 3.5 x 13 000 rpm = 45 500 rpm < 60 000 rpm (R-ERS-09)"
-  },
-  "eta_deploy": {
-   "value": 0.95,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.eta_deploy (mech = eta x DC)"
-  },
-  "eta_regen": {
-   "value": 0.95,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.eta_regen (DC = eta x mech)"
-  },
-  "T_max_mech": {
-   "value": 520,
-   "unit": "Nm",
-   "kind": "estimate",
-   "source": "estimate: physical limit = passive torque limiter threshold C5.18.4 (R-ERS-08), above the 500 Nm rule (R-ERS-02)"
-  },
-  "P_max_elec": {
-   "value": 380,
-   "unit": "kW",
-   "kind": "estimate",
-   "source": "estimate: physical DC limit above the 350 kW rule (R-ERS-01) so rule violations are observable"
-  },
-  "torque_time_constant": {
-   "value": 5,
-   "unit": "ms",
-   "kind": "estimate",
-   "source": "estimate: electric machine torque response (current loop), ms scale"
-  }
- },
- "battery": {
-  "E_capacity": {
-   "value": 5.0,
-   "unit": "MJ",
-   "kind": "estimate",
-   "source": "estimate: physical store capacity above the 4 MJ usable swing (R-ES-01)"
-  },
-  "E_start": {
-   "value": 4.5,
-   "unit": "MJ",
-   "kind": "estimate",
-   "source": "estimate: qualifying start near full (v14: start charge free up to the full 4 MJ window); 4 MJ swing down to 0.5 MJ"
-  },
-  "V_ocv": {
-   "x": [
-    0.0,
-    2.5,
-    5.0
-   ],
-   "x_unit": "MJ",
-   "y": [
-    650.0,
-    800.0,
-    900.0
-   ],
-   "y_unit": "V",
-   "kind": "estimate",
-   "source": "estimate: ~800 V class HV store, linear-ish open-circuit voltage vs stored energy"
-  },
-  "R_internal": {
-   "value": 0.05,
-   "unit": "ohm",
-   "kind": "estimate",
-   "source": "estimate: ~3 % loss at 350 kW and 800 V (I = 440 A, I^2 R = 9.7 kW)"
-  },
-  "P_dis_max": {
-   "value": 400,
-   "unit": "kW",
-   "kind": "estimate",
-   "source": "estimate: BMS discharge limit above the 350 kW rule so the rule binds (R-ES-10 input)"
-  },
-  "P_chg_max": {
-   "value": 400,
-   "unit": "kW",
-   "kind": "estimate",
-   "source": "estimate: BMS charge limit above the 350 kW rule so the rule binds"
-  }
- },
- "drivetrain": {
-  "gear_ratios": {
-   "value": [
-    14.592856142629868,
-    10.760279620623136,
-    8.74572330355119,
-    7.429265966622276,
-    6.291595109052273,
-    5.557007364383473,
-    4.806985671048621,
-    4.278383080245159
-   ],
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json drivetrain.gear_ratios (overall crank : wheel, gears 1-8)"
-  },
-  "efficiency": {
-   "value": 0.95,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer runs/canonical/v16/spa.toml (same value for every track) drivetrain_efficiency (ICE to wheel)"
-  },
-  "shift_time_up": {
-   "value": 20,
-   "unit": "ms",
-   "kind": "calibration",
-   "source": "f1-3d calibration 2026-09-28 (owner-approved, SPEC v0.22): torque-cut window of an upshift, below the 200 ms rule (R-GSH-02); replaces the 60 ms estimate"
-  },
-  "shift_time_down": {
-   "value": 30,
-   "unit": "ms",
-   "kind": "calibration",
-   "source": "f1-3d calibration 2026-09-28 (owner-approved, SPEC v0.22): torque-cut window of a downshift, below the 300 ms rule (R-GSH-02); replaces the 80 ms estimate"
-  },
-  "shift_speeds": {
-   "value": [
-    26.551733386851094,
-    36.00183301665298,
-    44.29476861643431,
-    52.143750385919304,
-    61.572587459861424,
-    69.71194470553607,
-    80.58892133740233
-   ],
-   "unit": "m/s",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json drivetrain.gear_shift_speeds (1->2 ... 7->8; driver model only)"
-  }
- },
- "brakes": {
-  "p_mc_max": {
-   "value": 100,
-   "unit": "bar",
-   "kind": "estimate",
-   "source": "estimate: front master-cylinder pressure at full pedal"
-  },
-  "k_front": {
-   "value": 120,
-   "unit": "Nm/bar",
-   "kind": "estimate",
-   "source": "estimate: front axle torque per bar; 12 000 Nm at 100 bar covers the 60 % front share of the optimizer's 50 kN brake_force_max (9 900 Nm at 0.33 m) with 20 % margin"
-  },
-  "k_rear": {
-   "value": 50,
-   "unit": "Nm/bar",
-   "kind": "estimate",
-   "source": "estimate: rear axle torque per bar; 150 bar gives 7 500 Nm = 3 750 Nm per wheel >= 2 500 Nm (R-BRK-02, C11.1.1)"
-  },
-  "tau_hydraulic": {
-   "value": 30,
-   "unit": "ms",
-   "kind": "estimate",
-   "source": "estimate: calliper pressure first-order lag (tens of ms, C4 \u00a75.5)"
-  },
-  "balance_default": {
-   "value": 0.6,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.brake_bias_rear 0.4 -> front share 1 - bias"
-  }
- },
- "tracks": {
-  "Spa": {
-   "source": "calibrated two-track plan spa_qual_tt_rgf108_df085_ls012_g105_ds10_rad_tl",
-   "run_file": "runs/canonical/v16/spa.toml",
-   "tyre_compound": "C4",
-   "aero": {
-    "rho": {
-     "value": 1.1775607335990508,
-     "unit": "kg/m^3",
-     "kind": "optimizer",
-     "source": "two-track plan result['two_track']['params']['rho'] (was 1.1776783744329329 in car_2026_v16.json); ISA at mean centreline altitude 408.47 m (track/Belgium/Spa.csv), rho0 1.225 (preset environment.rho); racing_optimizer main.py use_altitude_density"
-    },
-    "cda_corner": {
-     "value": 1.51632,
-     "unit": "m^2",
-     "kind": "optimizer",
-     "source": "two-track plan result['two_track']['params']['C_D_hi'] (was 1.676025 in car_2026_v16.json); preset aero.C_D_hi 1.3 x drag_scale 0.955 x drag_scale_closed 0.9 x A 1.5"
-    },
-    "cla_corner": {
-     "value": 4.4625,
-     "unit": "m^2",
-     "kind": "optimizer",
-     "source": "two-track plan result['two_track']['params']['C_L_hi'] (was 5.25 in car_2026_v16.json); preset aero.C_L_hi 3.5 x downforce_scale 1.0 x A 1.5"
-    },
-    "cda_straight": {
-     "value": 0.9072,
-     "unit": "m^2",
-     "kind": "optimizer",
-     "source": "two-track plan result['two_track']['params']['C_D_lo'] (was 1.00275 in car_2026_v16.json); preset aero.C_D_lo 0.7 x drag_scale 0.955 x drag_scale_straight 1.0 x A 1.5"
-    },
-    "cla_straight": {
-     "value": 2.74125,
-     "unit": "m^2",
-     "kind": "optimizer",
-     "source": "two-track plan result['two_track']['params']['C_L_lo'] (was 3.2249999999999996 in car_2026_v16.json); preset aero.C_L_lo 2.15 x downforce_scale 1.0 x A 1.5"
-    }
-   },
-   "tire": {
-    "mu_0_front": {
-     "value": 1.7030474999999998,
-     "unit": "-",
-     "kind": "optimizer",
-     "source": "two-track plan result['two_track']['params']['mu0_f'] (was 1.6126237874999996 in car_2026_v16.json); preset tires.mu_0 1.65 x compound x grip_scale x f1-3d calibration 2026-09-28 (owner-approved, SPEC v0.22) mu_front_scale 0.97"
-    },
-    "mu_0_rear": {
-     "value": 1.8392913,
-     "unit": "-",
-     "kind": "optimizer",
-     "source": "two-track plan result['two_track']['params']['mu0_r'] (was 1.7123737124999998 in car_2026_v16.json); preset tires.mu_0 x mu_rear_grip_factor 1.08 x compound x grip_scale, rear_grip_factor override 1.0 x f1-3d calibration 2026-09-28 (owner-approved, SPEC v0.22) mu_rear_scale 1.03"
-    },
-    "mu_min_factor": {
-     "value": 0.81836,
-     "unit": "-",
-     "kind": "optimizer",
-     "source": "preset tires.mu_min_factor 0.82 x compound multiplier"
-    }
-   }
-  }
- }
-}
-{
- "schema": "f1-3d car params v1 (docs/models/params.md)",
- "name": "mercedes_2026_tt_spielberg",
- "source": "car_2026_v16.json with every parameter of the calibrated two-track plan for Spielberg (tools/export/export_pedal_plan.py --car-out; params.md 'Calibrated two-track cars')",
- "generated_by": "tools/export/export_pedal_plan.py --car-out (do not edit by hand; rerun tools/export/update_calibrated_plans.sh)",
- "calibration": {
-  "plan": {
-   "run": "spielberg_qual_tt_rgf108_df085_ls012_g105_ds10_rad_tl",
-   "pipeline_results": "outputs/Spielberg/pedal/calib_tt/spielberg_qual_tt_rgf108_df085_ls012_g105_ds10_rad_tl/qual/pipeline_results.pkl",
-   "pipeline_results_sha1": "f1d1b05486bf7ff80b4b8ca5ee688411fb17c6d3",
-   "run_config": "runs/pedal/calib_tt/spielberg_rgf108_df085_ls012_g105_ds10_rad_tl.toml",
-   "run_config_sha1": "64e0eb4e2d32e690ec9898dd9049c2243da27627",
-   "lap_time_s": 66.223688,
-   "trims": {
-    "grip_scale": 1.05,
-    "rear_grip_factor": 1.08,
-    "mu_load_sensitivity": 0.12,
-    "downforce_scale": 0.85,
-    "drag_scale": 0.976,
-    "drag_scale_closed": 0.9,
-    "tire_compound": "soft",
-    "edge_geometry": "halfwidth_tracklimits",
-    "ds": 10.0,
-    "surface": "lidar",
-    "vertical_curvature": true,
-    "rolling_resistance_coeff": 0.015,
-    "drivetrain_efficiency": 0.95,
-    "lap_start": "last_corner"
-   },
-   "map": "maps/spielberg_qual_tt_calib.json",
-   "two_track_params_sha1": "688c2adb07b5e2e739e820ed3259f844f04dca33",
-   "two_track_params": {
-    "m_dry": 768.0,
-    "L": 3.4,
-    "h": 0.28,
-    "w_f": 0.45,
-    "I_z": 1000.0,
-    "r_w": 0.33,
-    "f_rot": 1.05,
-    "C_rr": 0.015,
-    "rho": 1.1444184385347471,
-    "A": 1.5,
-    "C_D_hi": 1.14192,
-    "C_D_lo": 0.6831999999999999,
-    "C_L_hi": 2.975,
-    "C_L_lo": 1.8275,
-    "b_a": 0.45,
-    "mu0_f": 1.7325,
-    "mu0_r": 1.8711000000000002,
-    "mu_sens": 0.12,
-    "mu_min_factor": 0.82,
-    "F_nom_f": 3390.3360000000002,
-    "F_nom_r": 4143.744000000001,
-    "C_f": 150000.0,
-    "C_r": 195000.0,
-    "e_c": 0.8,
-    "C_y": 1.5,
-    "E_y": 0.0,
-    "t_f": 1.6,
-    "t_r": 1.55,
-    "lam": 0.45,
-    "i_s": 7.5,
-    "delta_max": 0.4014257279586958,
-    "k_x": 1.0,
-    "k_y": 1.04,
-    "kappa_pk": 0.1,
-    "C_x": 1.65,
-    "T_pre": 50.0,
-    "k_p": 0.25,
-    "k_c": 0.15
-   }
-  },
-  "base_car": "params/car/car_2026_v16.json",
-  "base_calibration": {
-   "version_used": "v16",
-   "run_files": {
-    "Spa": "runs/canonical/v16/spa.toml",
-    "Spielberg": "runs/canonical/v16/spielberg.toml"
-   },
-   "vehicle_preset": "mercedes_2026_chassis",
-   "calibration_file": "racing_optimizer calibration/car_2026.json",
-   "calibration_file_version": "v15",
-   "calibration_file_preset": "mercedes_2026_chassis",
-   "lap_start": "last_corner",
-   "note": "The IPOPT reference solutions are v16 (outputs/<Track>/baseline_2026/<track>_qual_v16/), built from runs/canonical/v16/*.toml with preset mercedes_2026_chassis (calibration/car_2026.json v15 preset mercedes_2026_chassis; its shared and per-track trims equal the v16 run files). Differences to the v14 car in 'v14_differences' and 'v14_run_differences'. lap_start = 'last_corner': the qualifying lap is flown from a run-up that starts at the last braking corner's apex (racing_optimizer ocp_solver._runup_start_node), so the lap starts on the line with the speed and charge the run-up hands over (docs/models/reference-traces.md).",
-   "v14_differences": [
-    "chassis.L: v14 3.6 vs v16 3.4",
-    "chassis.h: v14 0.35 vs v16 0.28",
-    "chassis.m: v14 798.0 vs v16 768.0",
-    "drivetrain.rotating_mass_factor: v14 None vs v16 1.05"
-   ],
-   "v14_run_differences": [
-    "Spa lap_start: v14 None vs v16 'last_corner'",
-    "Spielberg lap_start: v14 None vs v16 'last_corner'"
-   ]
-  }
- },
- "chassis": {
-  "mass": {
-   "value": 768.0,
-   "unit": "kg",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.m (incl. driver, without fuel)"
-  },
-  "fuel_mass_start": {
-   "value": 10.0,
-   "unit": "kg",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/main.py: fuel_start_kg default 10 kg in qualifying mode (run files leave it unset)"
-  },
-  "wheelbase": {
-   "value": 3.4,
-   "unit": "m",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.L"
-  },
-  "h_cg": {
-   "value": 0.28,
-   "unit": "m",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.h"
-  },
-  "front_weight_fraction": {
-   "value": 0.45,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.front_axle_fraction"
-  },
-  "rotating_mass_factor": {
    "value": 1.05,
    "unit": "-",
    "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json drivetrain.rotating_mass_factor (absent = 1.0 in v16)"
-  },
-  "rolling_resistance_coeff": {
-   "value": 0.015,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer runs/canonical/v16/spa.toml (same value for every track) rolling_resistance_coeff"
-  },
-  "track_front": {
-   "value": 1.6,
-   "unit": "m",
-   "kind": "estimate",
-   "source": "V1 estimate: 2026 overall width 1900 mm (racing_optimizer chassis car_width_m 1.9) minus a ~300 mm front tyre"
-  },
-  "track_rear": {
-   "value": 1.55,
-   "unit": "m",
-   "kind": "estimate",
-   "source": "V1 estimate: 1900 mm width minus a ~350 mm rear tyre"
-  },
-  "yaw_inertia": {
-   "value": 1000.0,
-   "unit": "kg m^2",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.I_z (stage4 bicycle); V1 yaw inertia"
-  },
-  "roll_stiffness_front_share": {
-   "value": 0.45,
-   "unit": "-",
-   "kind": "calibration",
-   "source": "V1 calibration step 1 (C2-vehicle.md \u00a77): with tire.mu_y_scale, the flattest V1 / point-mass lateral ratio over 20-90 m/s (0.4-0.5 all within 3 %); V2 sets it from roll-stiffness targets"
-  }
- },
- "steering": {
-  "ratio": {
-   "value": 7.5,
-   "unit": "-",
-   "kind": "estimate",
-   "source": "V1 estimate: about +-150 deg at the wheel for +-20 deg road-wheel lock"
-  },
-  "max_road_wheel_angle": {
-   "value": 23.0,
-   "unit": "deg",
-   "kind": "estimate",
-   "source": "V1 estimate: F1 steering lock ~20-25 deg (hairpins of ~10 m radius)"
-  },
-  "ackermann": {
-   "value": 0.0,
-   "unit": "-",
-   "kind": "estimate",
-   "source": "V1 estimate: parallel steer (F1 cars run near-parallel or anti-Ackermann)"
-  }
- },
- "differential": {
-  "preload": {
-   "value": 50.0,
-   "unit": "Nm",
-   "kind": "estimate",
-   "source": "V1 estimate: clutch-pack LSD preload"
-  },
-  "power_ramp": {
-   "value": 0.25,
-   "unit": "-",
-   "kind": "estimate",
-   "source": "V1 estimate: locking torque 25 % of drive input torque"
-  },
-  "coast_ramp": {
-   "value": 0.15,
-   "unit": "-",
-   "kind": "estimate",
-   "source": "V1 estimate: locking torque 15 % of overrun input torque"
-  },
-  "clutch_gain": {
-   "value": 5000.0,
-   "unit": "Nm s/rad",
-   "kind": "design",
-   "source": "V1 numerical: clutch sticks below its capacity (implicit viscous law, C2-vehicle.md \u00a75)"
-  }
- },
- "aero": {
-  "front_balance": {
-   "value": 0.45,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json aero.w_f"
-  },
-  "flap_transition_time": {
-   "value": 300,
-   "unit": "ms",
-   "kind": "estimate",
-   "source": "estimate: actuator time below the 400 ms rule limit (R-AERO-02, C3.10.10 o); the optimizer switches flaps instantly"
-  }
- },
- "tire": {
-  "mu_load_exp": {
-   "value": 0.12,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "two-track plan result['two_track']['params']['mu_sens'] (was 0.06 in car_2026_v16.json); racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.mu_load_sensitivity"
-  },
-  "wheel_radius": {
-   "value": 0.33,
-   "unit": "m",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json drivetrain.tire_radius"
-  },
-  "peak_slip_ratio": {
-   "value": 0.1,
-   "unit": "-",
-   "kind": "estimate",
-   "source": "estimate: typical racing-slick longitudinal peak slip 8-12 %"
-  },
-  "slip_shape": {
-   "value": 1.65,
-   "unit": "-",
-   "kind": "estimate",
-   "source": "estimate: Pacejka longitudinal shape factor C (typical 1.6-1.7)"
-  },
-  "rear_axle_inertia": {
-   "value": 3.0,
-   "unit": "kg m^2",
-   "kind": "estimate",
-   "source": "estimate: two rear wheels + tyres (~1.2 kg m^2 each) + brake discs and driveshafts; engine and MGU-K inertia are not included (they act through the gear ratio in the plant)"
-  },
-  "front_axle_inertia": {
-   "value": 2.0,
-   "unit": "kg m^2",
-   "kind": "estimate",
-   "source": "estimate: two front wheels + tyres + brake discs"
-  },
-  "v_slip_min": {
-   "value": 3.0,
-   "unit": "m/s",
-   "kind": "estimate",
-   "source": "SPEC \u00a76: low-speed slip regularisation ~3-5 m/s"
-  },
-  "cornering_stiffness_front": {
-   "value": 150000.0,
-   "unit": "N/rad",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.C_f (axle, at mu_fz_nom_front); V1 lateral tyre"
-  },
-  "cornering_stiffness_rear": {
-   "value": 195000.0,
-   "unit": "N/rad",
-   "kind": "calibration",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.C_r x cstiff_rear_factor (absent = 1.0) x 1.3: V1 calibration override (owner OK 2026-09-28): 1.3 x the optimizer's tires.C_r (150 kN/rad) to cut V1's fast-corner oversteer (body slip median 2.4 -> 1.7 deg, Spa V1 lap -0.5 s)"
-  },
-  "cstiff_load_exp": {
-   "value": 0.8,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.cstiff_load_exp; V1 lateral tyre"
-  },
-  "lat_shape": {
-   "value": 1.5,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.C_shape (Pacejka C, lateral); V1 lateral tyre"
-  },
-  "lat_curvature": {
-   "value": 0.0,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.pacejka_E; V1 lateral tyre"
-  },
-  "mu_x_scale": {
-   "value": 1.0,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "V1: longitudinal peak = optimizer mu law (stage2 axle friction circle)"
-  },
-  "mu_y_scale": {
-   "value": 1.04,
-   "unit": "-",
-   "kind": "calibration",
-   "source": "V1 calibration step 1 (C2-vehicle.md \u00a77): lateral peak 4 % above the point-mass mu to make up the two-track losses the point mass does not have (slip-angle drag, steer drag and yaw moments, inner-wheel traction)"
-  },
-  "load_basis": {
-   "value": "axle",
-   "unit": "-",
-   "kind": "design",
-   "source": "V1, C2-vehicle.md \u00a76: the optimizer's mu and cornering-stiffness laws (and its fitted mu_0) are axle laws; 'axle' spreads the axle curve over its two wheels by load ('wheel' = per-wheel laws)"
-  },
-  "fz_nom_front": {
-   "value": 3390.3360000000002,
-   "unit": "N",
-   "kind": "derived",
-   "source": "informational (not loaded): optimizer mu_fz_nom_front = m * 9.81 * front_axle_fraction (mass without fuel)"
-  },
-  "fz_nom_rear": {
-   "value": 4143.744000000001,
-   "unit": "N",
-   "kind": "derived",
-   "source": "informational (not loaded): optimizer mu_fz_nom_rear = m * 9.81 * (1 - front_axle_fraction)"
-  }
- },
- "ice": {
-  "T_full_load": {
-   "x": [
-    4000.0,
-    6000.0,
-    8000.0,
-    9500.0,
-    10500.0,
-    11500.0,
-    12500.0
-   ],
-   "x_unit": "rpm",
-   "y": [
-    290.0,
-    365.0,
-    400.0,
-    402.0,
-    364.0,
-    332.0,
-    300.0
-   ],
-   "y_unit": "Nm",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.torque_curve (held beyond the ends, as the optimizer clips rpm)"
-  },
-  "P_max": {
-   "value": 400.0,
-   "unit": "kW",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.P_ICE_max"
-  },
-  "T_max": {
-   "value": 550.0,
-   "unit": "Nm",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.T_ICE_max; clips the full-load curve and is the load reference of the efficiency map (IceParams::eff_T_load_ref)"
-  },
-  "T_overrun": {
-   "x": [
-    4000,
-    8000,
-    12500,
-    15000
-   ],
-   "x_unit": "rpm",
-   "y": [
-    -25,
-    -35,
-    -45,
-    -50
-   ],
-   "y_unit": "Nm",
-   "kind": "estimate",
-   "source": "estimate: closed-throttle friction and pumping torque of a 1.6 l V6 (fuel cut); the optimizer has no engine-braking curve (powertrain.engine_brake_curve absent). Kept above the C5.12.3 zero-pedal floor so the MGU-K fills the lift-off demand (C4 Q3 option B)"
-  },
-  "omega_idle": {
-   "value": 4000.0,
-   "unit": "rpm",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json drivetrain.omega_ice_idle_rpm"
-  },
-  "omega_max": {
-   "value": 13000,
-   "unit": "rpm",
-   "kind": "estimate",
-   "source": "estimate: rev limit above the 8th-gear top speed (12 000 rpm at 350 km/h) and the 12 500 rpm end of the torque curve"
-  },
-  "torque_time_constant": {
-   "value": 10,
-   "unit": "ms",
-   "kind": "estimate",
-   "source": "estimate: first-order ICE torque response; a full-load step (~550 Nm) is within 5 Nm of the demand after 50 ms (R-PED-04, C5.13.1: 550 e^-5 = 3.7 Nm; 15 ms left 20 Nm)"
-  },
-  "eta_peak": {
-   "value": 0.52,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.eta_ICE_peak"
-  },
-  "eta_min": {
-   "value": 0.24,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.eta_ICE_min"
-  },
-  "eff_omega_opt": {
-   "value": 10500.0,
-   "unit": "rpm",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.omega_ice_opt_rpm"
-  },
-  "eff_T_opt": {
-   "value": 340.0,
-   "unit": "Nm",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.T_ice_opt"
-  },
-  "eff_omega_span": {
-   "value": 320.0,
-   "unit": "rad/s",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.omega_ice_span (used against omega in rad/s in vehicle_model.py)"
-  },
-  "eff_T_span": {
-   "value": 150.0,
-   "unit": "Nm",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.T_ice_span"
-  },
-  "eff_lowload_penalty": {
-   "value": 0.018,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.eta_lowload_penalty"
-  },
-  "eff_speed_penalty": {
-   "value": 0.01,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.eta_speed_penalty"
-  },
-  "eff_torque_penalty": {
-   "value": 0.006,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.eta_torque_penalty"
-  },
-  "fuel_parasitic_base": {
-   "value": 4000.0,
-   "unit": "W",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.fuel_parasitic_base_W"
-  },
-  "fuel_parasitic_speed": {
-   "value": 2000.0,
-   "unit": "W",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.fuel_parasitic_speed_W (x (omega/omega_opt)^2)"
-  },
-  "fuel_quad_power": {
-   "value": 8e-07,
-   "unit": "1/W",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.fuel_quad_power (stored but unused by vehicle_model.py in v16)"
-  },
-  "fuel_quad_torque": {
-   "value": 0.45,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.fuel_quad_torque (stored but unused by vehicle_model.py in v16)"
-  },
-  "fuel_lhv": {
-   "value": 40.0,
-   "unit": "MJ/kg",
-   "kind": "rule-compliant override",
-   "source": "C16.2 (R-FUEL-05, 38-41 MJ/kg): 40.0 MJ/kg replaces racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.fuel_lhv_MJ_per_kg = 44.0 (outside the range); fuel mass per lap +10 % vs v14, fuel energy flow unchanged, see docs/models/params.md"
-  }
- },
- "mguk": {
-  "ratio_to_crank": {
-   "value": 3.5,
-   "unit": "-",
-   "kind": "estimate",
-   "source": "estimate: fixed MGU-K : crank speed ratio (R-ERS-07); 3.5 x 13 000 rpm = 45 500 rpm < 60 000 rpm (R-ERS-09)"
-  },
-  "eta_deploy": {
-   "value": 0.95,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.eta_deploy (mech = eta x DC)"
-  },
-  "eta_regen": {
-   "value": 0.95,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.eta_regen (DC = eta x mech)"
-  },
-  "T_max_mech": {
-   "value": 520,
-   "unit": "Nm",
-   "kind": "estimate",
-   "source": "estimate: physical limit = passive torque limiter threshold C5.18.4 (R-ERS-08), above the 500 Nm rule (R-ERS-02)"
-  },
-  "P_max_elec": {
-   "value": 380,
-   "unit": "kW",
-   "kind": "estimate",
-   "source": "estimate: physical DC limit above the 350 kW rule (R-ERS-01) so rule violations are observable"
-  },
-  "torque_time_constant": {
-   "value": 5,
-   "unit": "ms",
-   "kind": "estimate",
-   "source": "estimate: electric machine torque response (current loop), ms scale"
-  }
- },
- "battery": {
-  "E_capacity": {
-   "value": 5.0,
-   "unit": "MJ",
-   "kind": "estimate",
-   "source": "estimate: physical store capacity above the 4 MJ usable swing (R-ES-01)"
-  },
-  "E_start": {
-   "value": 4.5,
-   "unit": "MJ",
-   "kind": "estimate",
-   "source": "estimate: qualifying start near full (v14: start charge free up to the full 4 MJ window); 4 MJ swing down to 0.5 MJ"
-  },
-  "V_ocv": {
-   "x": [
-    0.0,
-    2.5,
-    5.0
-   ],
-   "x_unit": "MJ",
-   "y": [
-    650.0,
-    800.0,
-    900.0
-   ],
-   "y_unit": "V",
-   "kind": "estimate",
-   "source": "estimate: ~800 V class HV store, linear-ish open-circuit voltage vs stored energy"
-  },
-  "R_internal": {
-   "value": 0.05,
-   "unit": "ohm",
-   "kind": "estimate",
-   "source": "estimate: ~3 % loss at 350 kW and 800 V (I = 440 A, I^2 R = 9.7 kW)"
-  },
-  "P_dis_max": {
-   "value": 400,
-   "unit": "kW",
-   "kind": "estimate",
-   "source": "estimate: BMS discharge limit above the 350 kW rule so the rule binds (R-ES-10 input)"
-  },
-  "P_chg_max": {
-   "value": 400,
-   "unit": "kW",
-   "kind": "estimate",
-   "source": "estimate: BMS charge limit above the 350 kW rule so the rule binds"
-  }
- },
- "drivetrain": {
-  "gear_ratios": {
-   "value": [
-    14.592856142629868,
-    10.760279620623136,
-    8.74572330355119,
-    7.429265966622276,
-    6.291595109052273,
-    5.557007364383473,
-    4.806985671048621,
-    4.278383080245159
-   ],
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json drivetrain.gear_ratios (overall crank : wheel, gears 1-8)"
-  },
-  "efficiency": {
-   "value": 0.95,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer runs/canonical/v16/spa.toml (same value for every track) drivetrain_efficiency (ICE to wheel)"
-  },
-  "shift_time_up": {
-   "value": 20,
-   "unit": "ms",
-   "kind": "calibration",
-   "source": "f1-3d calibration 2026-09-28 (owner-approved, SPEC v0.22): torque-cut window of an upshift, below the 200 ms rule (R-GSH-02); replaces the 60 ms estimate"
-  },
-  "shift_time_down": {
-   "value": 30,
-   "unit": "ms",
-   "kind": "calibration",
-   "source": "f1-3d calibration 2026-09-28 (owner-approved, SPEC v0.22): torque-cut window of a downshift, below the 300 ms rule (R-GSH-02); replaces the 80 ms estimate"
-  },
-  "shift_speeds": {
-   "value": [
-    26.551733386851094,
-    36.00183301665298,
-    44.29476861643431,
-    52.143750385919304,
-    61.572587459861424,
-    69.71194470553607,
-    80.58892133740233
-   ],
-   "unit": "m/s",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json drivetrain.gear_shift_speeds (1->2 ... 7->8; driver model only)"
-  }
- },
- "brakes": {
-  "p_mc_max": {
-   "value": 100,
-   "unit": "bar",
-   "kind": "estimate",
-   "source": "estimate: front master-cylinder pressure at full pedal"
-  },
-  "k_front": {
-   "value": 120,
-   "unit": "Nm/bar",
-   "kind": "estimate",
-   "source": "estimate: front axle torque per bar; 12 000 Nm at 100 bar covers the 60 % front share of the optimizer's 50 kN brake_force_max (9 900 Nm at 0.33 m) with 20 % margin"
-  },
-  "k_rear": {
-   "value": 50,
-   "unit": "Nm/bar",
-   "kind": "estimate",
-   "source": "estimate: rear axle torque per bar; 150 bar gives 7 500 Nm = 3 750 Nm per wheel >= 2 500 Nm (R-BRK-02, C11.1.1)"
-  },
-  "tau_hydraulic": {
-   "value": 30,
-   "unit": "ms",
-   "kind": "estimate",
-   "source": "estimate: calliper pressure first-order lag (tens of ms, C4 \u00a75.5)"
-  },
-  "balance_default": {
-   "value": 0.6,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.brake_bias_rear 0.4 -> front share 1 - bias"
-  }
- },
- "tracks": {
-  "Spielberg": {
-   "source": "calibrated two-track plan spielberg_qual_tt_rgf108_df085_ls012_g105_ds10_rad_tl",
-   "run_file": "runs/canonical/v16/spielberg.toml",
-   "tyre_compound": "C5",
-   "aero": {
-    "rho": {
-     "value": 1.1444184385347471,
-     "unit": "kg/m^3",
-     "kind": "optimizer",
-     "source": "two-track plan result['two_track']['params']['rho'] (was 1.139531244267122 in car_2026_v16.json); ISA at mean centreline altitude 746.98 m (track/Austria/spielberg_registered.csv), rho0 1.225 (preset environment.rho); racing_optimizer main.py use_altitude_density"
-    },
-    "cda_corner": {
-     "value": 1.7128800000000002,
-     "unit": "m^2",
-     "kind": "optimizer",
-     "source": "two-track plan result['two_track']['params']['C_D_hi'] (was 1.8416970000000004 in car_2026_v16.json); preset aero.C_D_hi 1.3 x drag_scale 1.0494 x drag_scale_closed 0.9 x A 1.5"
-    },
-    "cla_corner": {
-     "value": 4.4625,
-     "unit": "m^2",
-     "kind": "optimizer",
-     "source": "two-track plan result['two_track']['params']['C_L_hi'] (was 5.25 in car_2026_v16.json); preset aero.C_L_hi 3.5 x downforce_scale 1.0 x A 1.5"
-    },
-    "cda_straight": {
-     "value": 1.0248,
-     "unit": "m^2",
-     "kind": "optimizer",
-     "source": "two-track plan result['two_track']['params']['C_D_lo'] (was 1.10187 in car_2026_v16.json); preset aero.C_D_lo 0.7 x drag_scale 1.0494 x drag_scale_straight 1.0 x A 1.5"
-    },
-    "cla_straight": {
-     "value": 2.74125,
-     "unit": "m^2",
-     "kind": "optimizer",
-     "source": "two-track plan result['two_track']['params']['C_L_lo'] (was 3.2249999999999996 in car_2026_v16.json); preset aero.C_L_lo 2.15 x downforce_scale 1.0 x A 1.5"
-    }
-   },
-   "tire": {
-    "mu_0_front": {
-     "value": 1.7325,
-     "unit": "-",
-     "kind": "optimizer",
-     "source": "two-track plan result['two_track']['params']['mu0_f'] (was 1.6405124999999996 in car_2026_v16.json); preset tires.mu_0 1.65 x compound x grip_scale x f1-3d calibration 2026-09-28 (owner-approved, SPEC v0.22) mu_front_scale 0.97"
-    },
-    "mu_0_rear": {
-     "value": 1.8711000000000002,
-     "unit": "-",
-     "kind": "optimizer",
-     "source": "two-track plan result['two_track']['params']['mu0_r'] (was 1.7419874999999998 in car_2026_v16.json); preset tires.mu_0 x mu_rear_grip_factor 1.08 x compound x grip_scale, rear_grip_factor override 1.0 x f1-3d calibration 2026-09-28 (owner-approved, SPEC v0.22) mu_rear_scale 1.03"
-    },
-    "mu_min_factor": {
-     "value": 0.82,
-     "unit": "-",
-     "kind": "optimizer",
-     "source": "preset tires.mu_min_factor 0.82 x compound multiplier"
-    }
-   }
-  }
- }
-}
-{
- "schema": "f1-3d car params v1 (docs/models/params.md)",
- "name": "mercedes_2026_v16",
- "source": "racing_optimizer calibration v16, preset mercedes_2026_chassis; per-track trims under 'tracks'",
- "generated_by": "tools/params/export_car_params.py (do not edit by hand; rerun the exporter)",
- "calibration": {
-  "version_used": "v16",
-  "run_files": {
-   "Spa": "runs/canonical/v16/spa.toml",
-   "Spielberg": "runs/canonical/v16/spielberg.toml"
-  },
-  "vehicle_preset": "mercedes_2026_chassis",
-  "calibration_file": "racing_optimizer calibration/car_2026.json",
-  "calibration_file_version": "v15",
-  "calibration_file_preset": "mercedes_2026_chassis",
-  "lap_start": "last_corner",
-  "note": "The IPOPT reference solutions are v16 (outputs/<Track>/baseline_2026/<track>_qual_v16/), built from runs/canonical/v16/*.toml with preset mercedes_2026_chassis (calibration/car_2026.json v15 preset mercedes_2026_chassis; its shared and per-track trims equal the v16 run files). Differences to the v14 car in 'v14_differences' and 'v14_run_differences'. lap_start = 'last_corner': the qualifying lap is flown from a run-up that starts at the last braking corner's apex (racing_optimizer ocp_solver._runup_start_node), so the lap starts on the line with the speed and charge the run-up hands over (docs/models/reference-traces.md).",
-  "v14_differences": [
-   "chassis.L: v14 3.6 vs v16 3.4",
-   "chassis.h: v14 0.35 vs v16 0.28",
-   "chassis.m: v14 798.0 vs v16 768.0",
-   "drivetrain.rotating_mass_factor: v14 None vs v16 1.05"
-  ],
-  "v14_run_differences": [
-   "Spa lap_start: v14 None vs v16 'last_corner'",
-   "Spielberg lap_start: v14 None vs v16 'last_corner'"
-  ]
- },
- "chassis": {
-  "mass": {
-   "value": 768.0,
-   "unit": "kg",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.m (incl. driver, without fuel)"
-  },
-  "fuel_mass_start": {
-   "value": 10.0,
-   "unit": "kg",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/main.py: fuel_start_kg default 10 kg in qualifying mode (run files leave it unset)"
-  },
-  "wheelbase": {
-   "value": 3.4,
-   "unit": "m",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.L"
-  },
-  "h_cg": {
-   "value": 0.28,
-   "unit": "m",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.h"
-  },
-  "front_weight_fraction": {
-   "value": 0.45,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.front_axle_fraction"
-  },
-  "rotating_mass_factor": {
-   "value": 1.05,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json drivetrain.rotating_mass_factor (absent = 1.0 in v16)"
-  },
-  "rolling_resistance_coeff": {
-   "value": 0.015,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer runs/canonical/v16/spa.toml (same value for every track) rolling_resistance_coeff"
-  },
-  "track_front": {
-   "value": 1.6,
-   "unit": "m",
-   "kind": "estimate",
-   "source": "V1 estimate: 2026 overall width 1900 mm (racing_optimizer chassis car_width_m 1.9) minus a ~300 mm front tyre"
-  },
-  "track_rear": {
-   "value": 1.55,
-   "unit": "m",
-   "kind": "estimate",
-   "source": "V1 estimate: 1900 mm width minus a ~350 mm rear tyre"
-  },
-  "yaw_inertia": {
-   "value": 1000.0,
-   "unit": "kg m^2",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.I_z (stage4 bicycle); V1 yaw inertia"
-  },
-  "roll_stiffness_front_share": {
-   "value": 0.45,
-   "unit": "-",
-   "kind": "calibration",
-   "source": "V1 calibration step 1 (C2-vehicle.md \u00a77): with tire.mu_y_scale, the flattest V1 / point-mass lateral ratio over 20-90 m/s (0.4-0.5 all within 3 %); V2 sets it from roll-stiffness targets"
-  }
- },
- "steering": {
-  "ratio": {
-   "value": 7.5,
-   "unit": "-",
-   "kind": "estimate",
-   "source": "V1 estimate: about +-150 deg at the wheel for +-20 deg road-wheel lock"
-  },
-  "max_road_wheel_angle": {
-   "value": 23.0,
-   "unit": "deg",
-   "kind": "estimate",
-   "source": "V1 estimate: F1 steering lock ~20-25 deg (hairpins of ~10 m radius)"
-  },
-  "ackermann": {
-   "value": 0.0,
-   "unit": "-",
-   "kind": "estimate",
-   "source": "V1 estimate: parallel steer (F1 cars run near-parallel or anti-Ackermann)"
-  }
- },
- "differential": {
-  "preload": {
-   "value": 50.0,
-   "unit": "Nm",
-   "kind": "estimate",
-   "source": "V1 estimate: clutch-pack LSD preload"
-  },
-  "power_ramp": {
-   "value": 0.25,
-   "unit": "-",
-   "kind": "estimate",
-   "source": "V1 estimate: locking torque 25 % of drive input torque"
-  },
-  "coast_ramp": {
-   "value": 0.15,
-   "unit": "-",
-   "kind": "estimate",
-   "source": "V1 estimate: locking torque 15 % of overrun input torque"
-  },
-  "clutch_gain": {
-   "value": 5000.0,
-   "unit": "Nm s/rad",
-   "kind": "design",
-   "source": "V1 numerical: clutch sticks below its capacity (implicit viscous law, C2-vehicle.md \u00a75)"
-  }
- },
- "aero": {
-  "front_balance": {
-   "value": 0.45,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json aero.w_f"
-  },
-  "flap_transition_time": {
-   "value": 300,
-   "unit": "ms",
-   "kind": "estimate",
-   "source": "estimate: actuator time below the 400 ms rule limit (R-AERO-02, C3.10.10 o); the optimizer switches flaps instantly"
-  }
- },
- "tire": {
-  "mu_load_exp": {
-   "value": 0.06,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.mu_load_sensitivity"
-  },
-  "wheel_radius": {
-   "value": 0.33,
-   "unit": "m",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json drivetrain.tire_radius"
-  },
-  "peak_slip_ratio": {
-   "value": 0.1,
-   "unit": "-",
-   "kind": "estimate",
-   "source": "estimate: typical racing-slick longitudinal peak slip 8-12 %"
-  },
-  "slip_shape": {
-   "value": 1.65,
-   "unit": "-",
-   "kind": "estimate",
-   "source": "estimate: Pacejka longitudinal shape factor C (typical 1.6-1.7)"
-  },
-  "rear_axle_inertia": {
-   "value": 3.0,
-   "unit": "kg m^2",
-   "kind": "estimate",
-   "source": "estimate: two rear wheels + tyres (~1.2 kg m^2 each) + brake discs and driveshafts; engine and MGU-K inertia are not included (they act through the gear ratio in the plant)"
-  },
-  "front_axle_inertia": {
-   "value": 2.0,
-   "unit": "kg m^2",
-   "kind": "estimate",
-   "source": "estimate: two front wheels + tyres + brake discs"
-  },
-  "v_slip_min": {
-   "value": 3.0,
-   "unit": "m/s",
-   "kind": "estimate",
-   "source": "SPEC \u00a76: low-speed slip regularisation ~3-5 m/s"
-  },
-  "cornering_stiffness_front": {
-   "value": 150000.0,
-   "unit": "N/rad",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.C_f (axle, at mu_fz_nom_front); V1 lateral tyre"
-  },
-  "cornering_stiffness_rear": {
-   "value": 195000.0,
-   "unit": "N/rad",
-   "kind": "calibration",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.C_r x cstiff_rear_factor (absent = 1.0) x 1.3: V1 calibration override (owner OK 2026-09-28): 1.3 x the optimizer's tires.C_r (150 kN/rad) to cut V1's fast-corner oversteer (body slip median 2.4 -> 1.7 deg, Spa V1 lap -0.5 s)"
-  },
-  "cstiff_load_exp": {
-   "value": 0.8,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.cstiff_load_exp; V1 lateral tyre"
-  },
-  "lat_shape": {
-   "value": 1.5,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.C_shape (Pacejka C, lateral); V1 lateral tyre"
-  },
-  "lat_curvature": {
-   "value": 0.0,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.pacejka_E; V1 lateral tyre"
-  },
-  "mu_x_scale": {
-   "value": 1.0,
-   "unit": "-",
-   "kind": "optimizer",
-   "source": "V1: longitudinal peak = optimizer mu law (stage2 axle friction circle)"
+   "source": "two-track plan result['two_track']['params']['k_x'] (was 1.0 in car_2026_v16.json); V1: longitudinal peak = optimizer mu law (stage2 axle friction circle)"
   },
   "mu_y_scale": {
    "value": 1.04,
@@ -2573,14 +1216,14 @@
     288.648
    ],
    "y_unit": "Nm",
-   "kind": "calibration",
-   "source": "f1-3d calibration 2026-10-02 (owner-approved, SPEC v0.70; power-unit-ice.md 'Adopted 2026-10-02') (tools/params/ice_fuel_line.py): min(the v16 curve's rising part to 8000 rpm (290 / 365 / 400 Nm at 4000 / 6000 / 8000), the torque at which the efficiency map burns 0.994 x the fuel-flow limit (R-FUEL-02 line 0.27 N + 165 MJ/h below 10500 rpm, R-FUEL-01 3000 MJ/h above), P_max / omega): the full-load power follows the rule line to 410 kW at 10500 rpm, then falls with the map's friction term to 393 kW at 13000. Evidence: 2026 Q upshifts land at 10250-10700 rpm (tools/analysis/ice_shift_evidence.py). Was the optimizer's powertrain.torque_curve 290/365/400/402/364/332/300 Nm at 4000/6000/8000/9500/10500/11500/12500 rpm"
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis_ice410.json powertrain.torque_curve (held beyond the ends, as the optimizer clips rpm)"
   },
   "P_max": {
    "value": 410.0,
    "unit": "kW",
-   "kind": "calibration",
-   "source": "f1-3d calibration 2026-10-02 (owner-approved, SPEC v0.70; power-unit-ice.md 'Adopted 2026-10-02'): owner 'approaching 410 kW now'; peak of the full-load curve on the fuel-flow line at its 10500 rpm knee (R-FUEL-01/02); was 400 kW (racing_optimizer mercedes_2026_chassis powertrain.P_ICE_max)"
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis_ice410.json powertrain.P_ICE_max"
   },
   "T_max": {
    "value": 550.0,
@@ -2627,8 +1270,8 @@
   "eta_peak": {
    "value": 0.5412,
    "unit": "-",
-   "kind": "calibration",
-   "source": "f1-3d calibration 2026-10-02 (owner-approved, SPEC v0.70; power-unit-ice.md 'Adopted 2026-10-02'): efficiency map refitted so the full-load burn is 0.994 x the R-FUEL-01/02 line from 7000 to 13 000 rpm (tools/params/ice_fuel_line.py); was 0.52 (racing_optimizer mercedes_2026_chassis)"
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis_ice410.json powertrain.eta_ICE_peak"
   },
   "eta_min": {
    "value": 0.24,
@@ -2669,8 +1312,8 @@
   "eff_speed_penalty": {
    "value": 0.0065,
    "unit": "-",
-   "kind": "calibration",
-   "source": "f1-3d calibration 2026-10-02 (owner-approved, SPEC v0.70; power-unit-ice.md 'Adopted 2026-10-02'): efficiency map refitted so the full-load burn is 0.994 x the R-FUEL-01/02 line from 7000 to 13 000 rpm (tools/params/ice_fuel_line.py); was 0.01 (racing_optimizer mercedes_2026_chassis)"
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis_ice410.json efficiency_map.eta_speed_penalty"
   },
   "eff_torque_penalty": {
    "value": 0.006,
@@ -2687,8 +1330,8 @@
   "fuel_parasitic_speed": {
    "value": 34600.0,
    "unit": "W",
-   "kind": "calibration",
-   "source": "f1-3d calibration 2026-10-02 (owner-approved, SPEC v0.70; power-unit-ice.md 'Adopted 2026-10-02'): efficiency map refitted so the full-load burn is 0.994 x the R-FUEL-01/02 line from 7000 to 13 000 rpm (tools/params/ice_fuel_line.py); was 2000 (racing_optimizer mercedes_2026_chassis)"
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis_ice410.json efficiency_map.fuel_parasitic_speed_W (x (omega/omega_opt)^2)"
   },
   "fuel_quad_power": {
    "value": 8e-07,
@@ -2840,8 +1483,8 @@
     83.4499999999974
    ],
    "unit": "m/s",
-   "kind": "calibration",
-   "source": "f1-3d calibration 2026-10-02 (owner-approved, SPEC v0.70; power-unit-ice.md 'Adopted 2026-10-02'): optimal upshift speeds of the revised full-load curve (core/api/assists.cpp optimal_upshift_speeds, driver-assists.md \u00a75, ported in tools/params/ice_fuel_line.py); was the optimizer's drivetrain.gear_shift_speeds (26.55 / 36.00 / 44.29 / 52.14 / 61.57 / 69.71 / 80.59 m/s)"
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis_ice410.json drivetrain.gear_shift_speeds (1->2 ... 7->8; driver model only)"
   }
  },
  "brakes": {
@@ -2868,6 +1511,1464 @@
    "unit": "ms",
    "kind": "estimate",
    "source": "estimate: calliper pressure first-order lag (tens of ms, C4 \u00a75.5)"
+  },
+  "balance_default": {
+   "value": 0.6,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.brake_bias_rear 0.4 -> front share 1 - bias"
+  }
+ },
+ "tracks": {
+  "Spa": {
+   "source": "calibrated two-track plan calib_v4_13_cap_e_spa",
+   "run_file": "runs/canonical/v16/spa.toml",
+   "tyre_compound": "C4",
+   "aero": {
+    "rho": {
+     "value": 1.141067671264051,
+     "unit": "kg/m^3",
+     "kind": "optimizer",
+     "source": "two-track plan result['two_track']['params']['rho'] (was 1.1776783744329329 in car_2026_v16.json); ISA at mean centreline altitude 408.47 m (track/Belgium/Spa.csv), rho0 1.225 (preset environment.rho); racing_optimizer main.py use_altitude_density"
+    },
+    "cda_corner": {
+     "value": 1.66725,
+     "unit": "m^2",
+     "kind": "optimizer",
+     "source": "two-track plan result['two_track']['params']['C_D_hi'] (was 1.676025 in car_2026_v16.json); preset aero.C_D_hi 1.3 x drag_scale 0.955 x drag_scale_closed 0.9 x A 1.5"
+    },
+    "cla_corner": {
+     "value": 4.4625,
+     "unit": "m^2",
+     "kind": "optimizer",
+     "source": "two-track plan result['two_track']['params']['C_L_hi'] (was 5.25 in car_2026_v16.json); preset aero.C_L_hi 3.5 x downforce_scale 1.0 x A 1.5"
+    },
+    "cda_straight": {
+     "value": 0.9974999999999998,
+     "unit": "m^2",
+     "kind": "optimizer",
+     "source": "two-track plan result['two_track']['params']['C_D_lo'] (was 1.00275 in car_2026_v16.json); preset aero.C_D_lo 0.7 x drag_scale 0.955 x drag_scale_straight 1.0 x A 1.5"
+    },
+    "cla_straight": {
+     "value": 2.74125,
+     "unit": "m^2",
+     "kind": "optimizer",
+     "source": "two-track plan result['two_track']['params']['C_L_lo'] (was 3.2249999999999996 in car_2026_v16.json); preset aero.C_L_lo 2.15 x downforce_scale 1.0 x A 1.5"
+    }
+   },
+   "tire": {
+    "mu_0_front": {
+     "value": 1.7463798,
+     "unit": "-",
+     "kind": "optimizer",
+     "source": "two-track plan result['two_track']['params']['mu0_f'] (was 1.6126237874999996 in car_2026_v16.json); preset tires.mu_0 1.65 x compound x grip_scale x f1-3d calibration 2026-09-28 (owner-approved, SPEC v0.22) mu_front_scale 0.97"
+    },
+    "mu_0_rear": {
+     "value": 1.886090184,
+     "unit": "-",
+     "kind": "optimizer",
+     "source": "two-track plan result['two_track']['params']['mu0_r'] (was 1.7123737124999998 in car_2026_v16.json); preset tires.mu_0 x mu_rear_grip_factor 1.08 x compound x grip_scale, rear_grip_factor override 1.0 x f1-3d calibration 2026-09-28 (owner-approved, SPEC v0.22) mu_rear_scale 1.03"
+    },
+    "mu_min_factor": {
+     "value": 0.81836,
+     "unit": "-",
+     "kind": "optimizer",
+     "source": "preset tires.mu_min_factor 0.82 x compound multiplier"
+    }
+   }
+  }
+ }
+}
+{
+ "schema": "f1-3d car params v1 (docs/models/params.md)",
+ "name": "mercedes_2026_tt_spielberg",
+ "source": "car_2026_v16.json with every parameter of the calibrated two-track plan for Spielberg (tools/export/export_pedal_plan.py --car-out; params.md 'Calibrated two-track cars')",
+ "generated_by": "tools/export/export_pedal_plan.py --car-out (do not edit by hand; rerun tools/export/update_calibrated_plans.sh)",
+ "calibration": {
+  "plan": {
+   "run": "calib_v4_13_cap_e_spielberg",
+   "pipeline_results": "outputs/Spielberg/calib_v4/13_cap/e/spielberg/qual/pipeline_results.pkl",
+   "pipeline_results_sha1": "47df4e2140e6a13aee4c1817dcc9419d447f67ba",
+   "run_config": "runs/calib_v4/13_cap/e/spielberg.toml",
+   "run_config_sha1": "1baf50759b2bf7282444d86e789f2e390c178865",
+   "lap_time_s": 65.927662,
+   "trims": {
+    "grip_scale": 1.0648,
+    "rear_grip_factor": 1.08,
+    "mu_load_sensitivity": 0.12,
+    "downforce_scale": 0.855,
+    "drag_scale": 1.06,
+    "drag_scale_closed": 0.9,
+    "tire_compound": "soft",
+    "edge_geometry": "halfwidth_kerbs",
+    "ds": 10.0,
+    "surface": "lidar",
+    "vertical_curvature": true,
+    "rolling_resistance_coeff": 0.015,
+    "drivetrain_efficiency": 0.95,
+    "lap_start": "last_corner"
+   },
+   "map": "maps/spielberg_qual_tt_calib.json",
+   "two_track_params_sha1": "76f84085c642d88ff6a42431a611b7ae44a18ffc",
+   "two_track_params": {
+    "m_dry": 768.0,
+    "L": 3.4,
+    "h": 0.28,
+    "w_f": 0.45,
+    "I_z": 1000.0,
+    "r_w": 0.33,
+    "f_rot": 1.05,
+    "C_rr": 0.015,
+    "rho": 1.0664751114741742,
+    "A": 1.5,
+    "C_D_hi": 1.2402000000000002,
+    "C_D_lo": 0.742,
+    "C_L_hi": 2.9924999999999997,
+    "C_L_lo": 1.83825,
+    "b_a": 0.45,
+    "mu0_f": 1.7569199999999998,
+    "mu0_r": 1.8974735999999999,
+    "mu_sens": 0.12,
+    "mu_min_factor": 0.82,
+    "F_nom_f": 3390.3360000000002,
+    "F_nom_r": 4143.744000000001,
+    "C_f": 225000.0,
+    "C_r": 292500.0,
+    "e_c": 0.8,
+    "C_y": 1.5,
+    "E_y": 0.0,
+    "t_f": 1.6,
+    "t_r": 1.55,
+    "lam": 0.45,
+    "i_s": 7.5,
+    "delta_max": 0.4014257279586958,
+    "k_x": 1.05,
+    "k_y": 1.04,
+    "kappa_pk": 0.1,
+    "C_x": 1.65,
+    "T_pre": 50.0,
+    "k_p": 0.6,
+    "k_c": 0.15,
+    "yaw_cl_loss_per_deg2": 0.0,
+    "diff_w0": 0.5,
+    "bank_turn_load": 1.0
+   }
+  },
+  "base_car": "params/car/car_2026_v16.json",
+  "base_calibration": {
+   "version_used": "v16",
+   "run_files": {
+    "Spa": "runs/canonical/v16/spa.toml",
+    "Spielberg": "runs/canonical/v16/spielberg.toml"
+   },
+   "vehicle_preset": "mercedes_2026_chassis",
+   "calibration_file": "racing_optimizer calibration/car_2026.json",
+   "calibration_file_version": "v15",
+   "calibration_file_preset": "mercedes_2026_chassis",
+   "lap_start": "last_corner",
+   "note": "The IPOPT reference solutions are v16 (outputs/<Track>/baseline_2026/<track>_qual_v16/), built from runs/canonical/v16/*.toml with preset mercedes_2026_chassis (calibration/car_2026.json v15 preset mercedes_2026_chassis; its shared and per-track trims equal the v16 run files). Differences to the v14 car in 'v14_differences' and 'v14_run_differences'. lap_start = 'last_corner': the qualifying lap is flown from a run-up that starts at the last braking corner's apex (racing_optimizer ocp_solver._runup_start_node), so the lap starts on the line with the speed and charge the run-up hands over (docs/models/reference-traces.md).",
+   "v14_differences": [
+    "chassis.L: v14 3.6 vs v16 3.4",
+    "chassis.h: v14 0.35 vs v16 0.28",
+    "chassis.m: v14 798.0 vs v16 768.0",
+    "drivetrain.rotating_mass_factor: v14 None vs v16 1.05"
+   ],
+   "v14_run_differences": [
+    "Spa lap_start: v14 None vs v16 'last_corner'",
+    "Spielberg lap_start: v14 None vs v16 'last_corner'"
+   ]
+  }
+ },
+ "chassis": {
+  "mass": {
+   "value": 768.0,
+   "unit": "kg",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.m (incl. driver, without fuel)"
+  },
+  "fuel_mass_start": {
+   "value": 10.0,
+   "unit": "kg",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/main.py: fuel_start_kg default 10 kg in qualifying mode (run files leave it unset)"
+  },
+  "wheelbase": {
+   "value": 3.4,
+   "unit": "m",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.L"
+  },
+  "h_cg": {
+   "value": 0.28,
+   "unit": "m",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.h"
+  },
+  "front_weight_fraction": {
+   "value": 0.45,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.front_axle_fraction"
+  },
+  "rotating_mass_factor": {
+   "value": 1.05,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json drivetrain.rotating_mass_factor (absent = 1.0 in v16)"
+  },
+  "rolling_resistance_coeff": {
+   "value": 0.015,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer runs/canonical/v16/spa.toml (same value for every track) rolling_resistance_coeff"
+  },
+  "track_front": {
+   "value": 1.6,
+   "unit": "m",
+   "kind": "estimate",
+   "source": "V1 estimate: 2026 overall width 1900 mm (racing_optimizer chassis car_width_m 1.9) minus a ~300 mm front tyre"
+  },
+  "track_rear": {
+   "value": 1.55,
+   "unit": "m",
+   "kind": "estimate",
+   "source": "V1 estimate: 1900 mm width minus a ~350 mm rear tyre"
+  },
+  "yaw_inertia": {
+   "value": 1000.0,
+   "unit": "kg m^2",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.I_z (stage4 bicycle); V1 yaw inertia"
+  },
+  "roll_stiffness_front_share": {
+   "value": 0.45,
+   "unit": "-",
+   "kind": "calibration",
+   "source": "V1 calibration step 1 (C2-vehicle.md \u00a77): with tire.mu_y_scale, the flattest V1 / point-mass lateral ratio over 20-90 m/s (0.4-0.5 all within 3 %); V2 sets it from roll-stiffness targets"
+  }
+ },
+ "steering": {
+  "ratio": {
+   "value": 7.5,
+   "unit": "-",
+   "kind": "estimate",
+   "source": "V1 estimate: about +-150 deg at the wheel for +-20 deg road-wheel lock"
+  },
+  "max_road_wheel_angle": {
+   "value": 23.0,
+   "unit": "deg",
+   "kind": "estimate",
+   "source": "V1 estimate: F1 steering lock ~20-25 deg (hairpins of ~10 m radius)"
+  },
+  "ackermann": {
+   "value": 0.0,
+   "unit": "-",
+   "kind": "estimate",
+   "source": "V1 estimate: parallel steer (F1 cars run near-parallel or anti-Ackermann)"
+  }
+ },
+ "differential": {
+  "preload": {
+   "value": 50.0,
+   "unit": "Nm",
+   "kind": "estimate",
+   "source": "V1 estimate: clutch-pack LSD preload"
+  },
+  "power_ramp": {
+   "value": 0.6,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "two-track plan result['two_track']['params']['k_p'] (was 0.25 in car_2026_v16.json); V1 estimate: locking torque 25 % of drive input torque"
+  },
+  "coast_ramp": {
+   "value": 0.15,
+   "unit": "-",
+   "kind": "estimate",
+   "source": "V1 estimate: locking torque 15 % of overrun input torque"
+  },
+  "clutch_gain": {
+   "value": 5000.0,
+   "unit": "Nm s/rad",
+   "kind": "design",
+   "source": "V1 numerical: clutch sticks below its capacity (implicit viscous law, C2-vehicle.md \u00a75)"
+  }
+ },
+ "aero": {
+  "front_balance": {
+   "value": 0.45,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json aero.w_f"
+  },
+  "flap_transition_time": {
+   "value": 300,
+   "unit": "ms",
+   "kind": "estimate",
+   "source": "estimate: actuator time below the 400 ms rule limit (R-AERO-02, C3.10.10 o); the optimizer switches flaps instantly"
+  }
+ },
+ "tire": {
+  "mu_load_exp": {
+   "value": 0.12,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "two-track plan result['two_track']['params']['mu_sens'] (was 0.06 in car_2026_v16.json); racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.mu_load_sensitivity"
+  },
+  "wheel_radius": {
+   "value": 0.33,
+   "unit": "m",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json drivetrain.tire_radius"
+  },
+  "peak_slip_ratio": {
+   "value": 0.1,
+   "unit": "-",
+   "kind": "estimate",
+   "source": "estimate: typical racing-slick longitudinal peak slip 8-12 %"
+  },
+  "slip_shape": {
+   "value": 1.65,
+   "unit": "-",
+   "kind": "estimate",
+   "source": "estimate: Pacejka longitudinal shape factor C (typical 1.6-1.7)"
+  },
+  "rear_axle_inertia": {
+   "value": 3.0,
+   "unit": "kg m^2",
+   "kind": "estimate",
+   "source": "estimate: two rear wheels + tyres (~1.2 kg m^2 each) + brake discs and driveshafts; engine and MGU-K inertia are not included (they act through the gear ratio in the plant)"
+  },
+  "front_axle_inertia": {
+   "value": 2.0,
+   "unit": "kg m^2",
+   "kind": "estimate",
+   "source": "estimate: two front wheels + tyres + brake discs"
+  },
+  "v_slip_min": {
+   "value": 3.0,
+   "unit": "m/s",
+   "kind": "estimate",
+   "source": "SPEC \u00a76: low-speed slip regularisation ~3-5 m/s"
+  },
+  "cornering_stiffness_front": {
+   "value": 225000.0,
+   "unit": "N/rad",
+   "kind": "optimizer",
+   "source": "two-track plan result['two_track']['params']['C_f'] (was 150000.0 in car_2026_v16.json); racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.C_f (axle, at mu_fz_nom_front); V1 lateral tyre"
+  },
+  "cornering_stiffness_rear": {
+   "value": 292500.0,
+   "unit": "N/rad",
+   "kind": "optimizer",
+   "source": "two-track plan result['two_track']['params']['C_r'] (was 195000.0 in car_2026_v16.json); racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.C_r x cstiff_rear_factor (absent = 1.0) x 1.3: V1 calibration override (owner OK 2026-09-28): 1.3 x the optimizer's tires.C_r (150 kN/rad) to cut V1's fast-corner oversteer (body slip median 2.4 -> 1.7 deg, Spa V1 lap -0.5 s)"
+  },
+  "cstiff_load_exp": {
+   "value": 0.8,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.cstiff_load_exp; V1 lateral tyre"
+  },
+  "lat_shape": {
+   "value": 1.5,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.C_shape (Pacejka C, lateral); V1 lateral tyre"
+  },
+  "lat_curvature": {
+   "value": 0.0,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.pacejka_E; V1 lateral tyre"
+  },
+  "mu_x_scale": {
+   "value": 1.05,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "two-track plan result['two_track']['params']['k_x'] (was 1.0 in car_2026_v16.json); V1: longitudinal peak = optimizer mu law (stage2 axle friction circle)"
+  },
+  "mu_y_scale": {
+   "value": 1.04,
+   "unit": "-",
+   "kind": "calibration",
+   "source": "V1 calibration step 1 (C2-vehicle.md \u00a77): lateral peak 4 % above the point-mass mu to make up the two-track losses the point mass does not have (slip-angle drag, steer drag and yaw moments, inner-wheel traction)"
+  },
+  "load_basis": {
+   "value": "axle",
+   "unit": "-",
+   "kind": "design",
+   "source": "V1, C2-vehicle.md \u00a76: the optimizer's mu and cornering-stiffness laws (and its fitted mu_0) are axle laws; 'axle' spreads the axle curve over its two wheels by load ('wheel' = per-wheel laws)"
+  },
+  "fz_nom_front": {
+   "value": 3390.3360000000002,
+   "unit": "N",
+   "kind": "derived",
+   "source": "informational (not loaded): optimizer mu_fz_nom_front = m * 9.81 * front_axle_fraction (mass without fuel)"
+  },
+  "fz_nom_rear": {
+   "value": 4143.744000000001,
+   "unit": "N",
+   "kind": "derived",
+   "source": "informational (not loaded): optimizer mu_fz_nom_rear = m * 9.81 * (1 - front_axle_fraction)"
+  }
+ },
+ "ice": {
+  "T_full_load": {
+   "x": [
+    4000.0,
+    5000.0,
+    6000.0,
+    6250.0,
+    6500.0,
+    6750.0,
+    7000.0,
+    7250.0,
+    7500.0,
+    7750.0,
+    8000.0,
+    8250.0,
+    8500.0,
+    8750.0,
+    9000.0,
+    9250.0,
+    9500.0,
+    9750.0,
+    10000.0,
+    10250.0,
+    10500.0,
+    10750.0,
+    11000.0,
+    11250.0,
+    11500.0,
+    11750.0,
+    12000.0,
+    12250.0,
+    12500.0,
+    12750.0,
+    13000.0
+   ],
+   "x_unit": "rpm",
+   "y": [
+    290.0,
+    327.5,
+    365.0,
+    369.375,
+    373.75,
+    378.125,
+    381.947,
+    381.431,
+    380.912,
+    380.382,
+    379.838,
+    379.275,
+    378.69,
+    378.08,
+    377.441,
+    376.77,
+    376.067,
+    375.328,
+    374.552,
+    373.738,
+    372.877,
+    363.183,
+    353.808,
+    344.742,
+    335.968,
+    327.47,
+    319.233,
+    311.245,
+    303.493,
+    295.964,
+    288.648
+   ],
+   "y_unit": "Nm",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis_ice410.json powertrain.torque_curve (held beyond the ends, as the optimizer clips rpm)"
+  },
+  "P_max": {
+   "value": 410.0,
+   "unit": "kW",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis_ice410.json powertrain.P_ICE_max"
+  },
+  "T_max": {
+   "value": 550.0,
+   "unit": "Nm",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.T_ICE_max; clips the full-load curve and is the load reference of the efficiency map (IceParams::eff_T_load_ref)"
+  },
+  "T_overrun": {
+   "x": [
+    4000,
+    8000,
+    12500,
+    15000
+   ],
+   "x_unit": "rpm",
+   "y": [
+    -25,
+    -35,
+    -45,
+    -50
+   ],
+   "y_unit": "Nm",
+   "kind": "estimate",
+   "source": "estimate: closed-throttle friction and pumping torque of a 1.6 l V6 (fuel cut); the optimizer has no engine-braking curve (powertrain.engine_brake_curve absent). Kept above the C5.12.3 zero-pedal floor so the MGU-K fills the lift-off demand (C4 Q3 option B)"
+  },
+  "omega_idle": {
+   "value": 4000.0,
+   "unit": "rpm",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json drivetrain.omega_ice_idle_rpm"
+  },
+  "omega_max": {
+   "value": 13000,
+   "unit": "rpm",
+   "kind": "estimate",
+   "source": "estimate: rev limit above the 8th-gear top speed (12 000 rpm at 350 km/h) and the 12 500 rpm end of the torque curve"
+  },
+  "torque_time_constant": {
+   "value": 10,
+   "unit": "ms",
+   "kind": "estimate",
+   "source": "estimate: first-order ICE torque response; a full-load step (~550 Nm) is within 5 Nm of the demand after 50 ms (R-PED-04, C5.13.1: 550 e^-5 = 3.7 Nm; 15 ms left 20 Nm)"
+  },
+  "eta_peak": {
+   "value": 0.5412,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis_ice410.json powertrain.eta_ICE_peak"
+  },
+  "eta_min": {
+   "value": 0.24,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.eta_ICE_min"
+  },
+  "eff_omega_opt": {
+   "value": 10500.0,
+   "unit": "rpm",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.omega_ice_opt_rpm"
+  },
+  "eff_T_opt": {
+   "value": 340.0,
+   "unit": "Nm",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.T_ice_opt"
+  },
+  "eff_omega_span": {
+   "value": 320.0,
+   "unit": "rad/s",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.omega_ice_span (used against omega in rad/s in vehicle_model.py)"
+  },
+  "eff_T_span": {
+   "value": 150.0,
+   "unit": "Nm",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.T_ice_span"
+  },
+  "eff_lowload_penalty": {
+   "value": 0.018,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.eta_lowload_penalty"
+  },
+  "eff_speed_penalty": {
+   "value": 0.0065,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis_ice410.json efficiency_map.eta_speed_penalty"
+  },
+  "eff_torque_penalty": {
+   "value": 0.006,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.eta_torque_penalty"
+  },
+  "fuel_parasitic_base": {
+   "value": 4000.0,
+   "unit": "W",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.fuel_parasitic_base_W"
+  },
+  "fuel_parasitic_speed": {
+   "value": 34600.0,
+   "unit": "W",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis_ice410.json efficiency_map.fuel_parasitic_speed_W (x (omega/omega_opt)^2)"
+  },
+  "fuel_quad_power": {
+   "value": 8e-07,
+   "unit": "1/W",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.fuel_quad_power (stored but unused by vehicle_model.py in v16)"
+  },
+  "fuel_quad_torque": {
+   "value": 0.45,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.fuel_quad_torque (stored but unused by vehicle_model.py in v16)"
+  },
+  "fuel_lhv": {
+   "value": 40.0,
+   "unit": "MJ/kg",
+   "kind": "rule-compliant override",
+   "source": "C16.2 (R-FUEL-05, 38-41 MJ/kg): 40.0 MJ/kg replaces racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.fuel_lhv_MJ_per_kg = 44.0 (outside the range); fuel mass per lap +10 % vs v14, fuel energy flow unchanged, see docs/models/params.md"
+  }
+ },
+ "mguk": {
+  "ratio_to_crank": {
+   "value": 3.5,
+   "unit": "-",
+   "kind": "estimate",
+   "source": "estimate: fixed MGU-K : crank speed ratio (R-ERS-07); 3.5 x 13 000 rpm = 45 500 rpm < 60 000 rpm (R-ERS-09)"
+  },
+  "eta_deploy": {
+   "value": 0.95,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.eta_deploy (mech = eta x DC)"
+  },
+  "eta_regen": {
+   "value": 0.95,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.eta_regen (DC = eta x mech)"
+  },
+  "T_max_mech": {
+   "value": 520,
+   "unit": "Nm",
+   "kind": "estimate",
+   "source": "estimate: physical limit = passive torque limiter threshold C5.18.4 (R-ERS-08), above the 500 Nm rule (R-ERS-02)"
+  },
+  "P_max_elec": {
+   "value": 380,
+   "unit": "kW",
+   "kind": "estimate",
+   "source": "estimate: physical DC limit above the 350 kW rule (R-ERS-01) so rule violations are observable"
+  },
+  "torque_time_constant": {
+   "value": 5,
+   "unit": "ms",
+   "kind": "estimate",
+   "source": "estimate: electric machine torque response (current loop), ms scale"
+  }
+ },
+ "battery": {
+  "E_capacity": {
+   "value": 5.0,
+   "unit": "MJ",
+   "kind": "estimate",
+   "source": "estimate: physical store capacity above the 4 MJ usable swing (R-ES-01)"
+  },
+  "E_start": {
+   "value": 4.5,
+   "unit": "MJ",
+   "kind": "estimate",
+   "source": "estimate: qualifying start near full (v14: start charge free up to the full 4 MJ window); 4 MJ swing down to 0.5 MJ"
+  },
+  "V_ocv": {
+   "x": [
+    0.0,
+    2.5,
+    5.0
+   ],
+   "x_unit": "MJ",
+   "y": [
+    650.0,
+    800.0,
+    900.0
+   ],
+   "y_unit": "V",
+   "kind": "estimate",
+   "source": "estimate: ~800 V class HV store, linear-ish open-circuit voltage vs stored energy"
+  },
+  "R_internal": {
+   "value": 0.05,
+   "unit": "ohm",
+   "kind": "estimate",
+   "source": "estimate: ~3 % loss at 350 kW and 800 V (I = 440 A, I^2 R = 9.7 kW)"
+  },
+  "P_dis_max": {
+   "value": 400,
+   "unit": "kW",
+   "kind": "estimate",
+   "source": "estimate: BMS discharge limit above the 350 kW rule so the rule binds (R-ES-10 input)"
+  },
+  "P_chg_max": {
+   "value": 400,
+   "unit": "kW",
+   "kind": "estimate",
+   "source": "estimate: BMS charge limit above the 350 kW rule so the rule binds"
+  }
+ },
+ "drivetrain": {
+  "gear_ratios": {
+   "value": [
+    14.592856142629868,
+    10.760279620623136,
+    8.74572330355119,
+    7.429265966622276,
+    6.291595109052273,
+    5.557007364383473,
+    4.806985671048621,
+    4.278383080245159
+   ],
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json drivetrain.gear_ratios (overall crank : wheel, gears 1-8)"
+  },
+  "efficiency": {
+   "value": 0.95,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer runs/canonical/v16/spa.toml (same value for every track) drivetrain_efficiency (ICE to wheel)"
+  },
+  "shift_time_up": {
+   "value": 20,
+   "unit": "ms",
+   "kind": "calibration",
+   "source": "f1-3d calibration 2026-09-28 (owner-approved, SPEC v0.22): torque-cut window of an upshift, below the 200 ms rule (R-GSH-02); replaces the 60 ms estimate"
+  },
+  "shift_time_down": {
+   "value": 30,
+   "unit": "ms",
+   "kind": "calibration",
+   "source": "f1-3d calibration 2026-09-28 (owner-approved, SPEC v0.22): torque-cut window of a downshift, below the 300 ms rule (R-GSH-02); replaces the 80 ms estimate"
+  },
+  "shift_speeds": {
+   "value": [
+    29.86189356766367,
+    40.09999999999986,
+    47.64999999999943,
+    56.24999999999894,
+    64.1499999999985,
+    73.89999999999795,
+    83.4499999999974
+   ],
+   "unit": "m/s",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis_ice410.json drivetrain.gear_shift_speeds (1->2 ... 7->8; driver model only)"
+  }
+ },
+ "brakes": {
+  "p_mc_max": {
+   "value": 100,
+   "unit": "bar",
+   "kind": "estimate",
+   "source": "estimate: front master-cylinder pressure at full pedal"
+  },
+  "k_front": {
+   "value": 120,
+   "unit": "Nm/bar",
+   "kind": "estimate",
+   "source": "estimate: front axle torque per bar; 12 000 Nm at 100 bar covers the 60 % front share of the optimizer's 50 kN brake_force_max (9 900 Nm at 0.33 m) with 20 % margin"
+  },
+  "k_rear": {
+   "value": 50,
+   "unit": "Nm/bar",
+   "kind": "estimate",
+   "source": "estimate: rear axle torque per bar; 150 bar gives 7 500 Nm = 3 750 Nm per wheel >= 2 500 Nm (R-BRK-02, C11.1.1)"
+  },
+  "tau_hydraulic": {
+   "value": 30,
+   "unit": "ms",
+   "kind": "estimate",
+   "source": "estimate: calliper pressure first-order lag (tens of ms, C4 \u00a75.5)"
+  },
+  "balance_default": {
+   "value": 0.6,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.brake_bias_rear 0.4 -> front share 1 - bias"
+  }
+ },
+ "tracks": {
+  "Spielberg": {
+   "source": "calibrated two-track plan calib_v4_13_cap_e_spielberg",
+   "run_file": "runs/canonical/v16/spielberg.toml",
+   "tyre_compound": "C5",
+   "aero": {
+    "rho": {
+     "value": 1.0664751114741742,
+     "unit": "kg/m^3",
+     "kind": "optimizer",
+     "source": "two-track plan result['two_track']['params']['rho'] (was 1.139531244267122 in car_2026_v16.json); ISA at mean centreline altitude 746.98 m (track/Austria/spielberg_registered.csv), rho0 1.225 (preset environment.rho); racing_optimizer main.py use_altitude_density"
+    },
+    "cda_corner": {
+     "value": 1.8603000000000003,
+     "unit": "m^2",
+     "kind": "optimizer",
+     "source": "two-track plan result['two_track']['params']['C_D_hi'] (was 1.8416970000000004 in car_2026_v16.json); preset aero.C_D_hi 1.3 x drag_scale 1.0494 x drag_scale_closed 0.9 x A 1.5"
+    },
+    "cla_corner": {
+     "value": 4.48875,
+     "unit": "m^2",
+     "kind": "optimizer",
+     "source": "two-track plan result['two_track']['params']['C_L_hi'] (was 5.25 in car_2026_v16.json); preset aero.C_L_hi 3.5 x downforce_scale 1.0 x A 1.5"
+    },
+    "cda_straight": {
+     "value": 1.113,
+     "unit": "m^2",
+     "kind": "optimizer",
+     "source": "two-track plan result['two_track']['params']['C_D_lo'] (was 1.10187 in car_2026_v16.json); preset aero.C_D_lo 0.7 x drag_scale 1.0494 x drag_scale_straight 1.0 x A 1.5"
+    },
+    "cla_straight": {
+     "value": 2.7573749999999997,
+     "unit": "m^2",
+     "kind": "optimizer",
+     "source": "two-track plan result['two_track']['params']['C_L_lo'] (was 3.2249999999999996 in car_2026_v16.json); preset aero.C_L_lo 2.15 x downforce_scale 1.0 x A 1.5"
+    }
+   },
+   "tire": {
+    "mu_0_front": {
+     "value": 1.7569199999999998,
+     "unit": "-",
+     "kind": "optimizer",
+     "source": "two-track plan result['two_track']['params']['mu0_f'] (was 1.6405124999999996 in car_2026_v16.json); preset tires.mu_0 1.65 x compound x grip_scale x f1-3d calibration 2026-09-28 (owner-approved, SPEC v0.22) mu_front_scale 0.97"
+    },
+    "mu_0_rear": {
+     "value": 1.8974735999999999,
+     "unit": "-",
+     "kind": "optimizer",
+     "source": "two-track plan result['two_track']['params']['mu0_r'] (was 1.7419874999999998 in car_2026_v16.json); preset tires.mu_0 x mu_rear_grip_factor 1.08 x compound x grip_scale, rear_grip_factor override 1.0 x f1-3d calibration 2026-09-28 (owner-approved, SPEC v0.22) mu_rear_scale 1.03"
+    },
+    "mu_min_factor": {
+     "value": 0.82,
+     "unit": "-",
+     "kind": "optimizer",
+     "source": "preset tires.mu_min_factor 0.82 x compound multiplier"
+    }
+   }
+  }
+ }
+}
+{
+ "schema": "f1-3d car params v1 (docs/models/params.md)",
+ "name": "mercedes_2026_v16",
+ "source": "racing_optimizer calibration v16, preset mercedes_2026_chassis; per-track trims under 'tracks'",
+ "generated_by": "tools/params/export_car_params.py (do not edit by hand; rerun the exporter)",
+ "calibration": {
+  "version_used": "v16",
+  "run_files": {
+   "Spa": "runs/canonical/v16/spa.toml",
+   "Spielberg": "runs/canonical/v16/spielberg.toml"
+  },
+  "vehicle_preset": "mercedes_2026_chassis",
+  "calibration_file": "racing_optimizer calibration/car_2026.json",
+  "calibration_file_version": "v15",
+  "calibration_file_preset": "mercedes_2026_chassis",
+  "lap_start": "last_corner",
+  "note": "The IPOPT reference solutions are v16 (outputs/<Track>/baseline_2026/<track>_qual_v16/), built from runs/canonical/v16/*.toml with preset mercedes_2026_chassis (calibration/car_2026.json v15 preset mercedes_2026_chassis; its shared and per-track trims equal the v16 run files). Differences to the v14 car in 'v14_differences' and 'v14_run_differences'. lap_start = 'last_corner': the qualifying lap is flown from a run-up that starts at the last braking corner's apex (racing_optimizer ocp_solver._runup_start_node), so the lap starts on the line with the speed and charge the run-up hands over (docs/models/reference-traces.md).",
+  "v14_differences": [
+   "chassis.L: v14 3.6 vs v16 3.4",
+   "chassis.h: v14 0.35 vs v16 0.28",
+   "chassis.m: v14 798.0 vs v16 768.0",
+   "drivetrain.rotating_mass_factor: v14 None vs v16 1.05"
+  ],
+  "v14_run_differences": [
+   "Spa lap_start: v14 None vs v16 'last_corner'",
+   "Spielberg lap_start: v14 None vs v16 'last_corner'"
+  ]
+ },
+ "chassis": {
+  "mass": {
+   "value": 768,
+   "unit": "kg",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.m (incl. driver, without fuel)"
+  },
+  "fuel_mass_start": {
+   "value": 10,
+   "unit": "kg",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/main.py: fuel_start_kg default 10 kg in qualifying mode (run files leave it unset)"
+  },
+  "wheelbase": {
+   "value": 3.4,
+   "unit": "m",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.L"
+  },
+  "h_cg": {
+   "value": 0.28,
+   "unit": "m",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.h"
+  },
+  "front_weight_fraction": {
+   "value": 0.45,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.front_axle_fraction"
+  },
+  "rotating_mass_factor": {
+   "value": 1.05,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json drivetrain.rotating_mass_factor (absent = 1.0 in v16)"
+  },
+  "rolling_resistance_coeff": {
+   "value": 0.015,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer runs/canonical/v16/spa.toml (same value for every track) rolling_resistance_coeff"
+  },
+  "track_front": {
+   "value": 1.6,
+   "unit": "m",
+   "kind": "estimate",
+   "source": "V1 estimate: 2026 overall width 1900 mm (racing_optimizer chassis car_width_m 1.9) minus a ~300 mm front tyre"
+  },
+  "track_rear": {
+   "value": 1.55,
+   "unit": "m",
+   "kind": "estimate",
+   "source": "V1 estimate: 1900 mm width minus a ~350 mm rear tyre"
+  },
+  "yaw_inertia": {
+   "value": 1000,
+   "unit": "kg m^2",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json chassis.I_z (stage4 bicycle); V1 yaw inertia"
+  },
+  "roll_stiffness_front_share": {
+   "value": 0.45,
+   "unit": "-",
+   "kind": "calibration",
+   "source": "V1 calibration step 1 (C2-vehicle.md §7): with tire.mu_y_scale, the flattest V1 / point-mass lateral ratio over 20-90 m/s (0.4-0.5 all within 3 %); V2 sets it from roll-stiffness targets"
+  }
+ },
+ "steering": {
+  "ratio": {
+   "value": 7.5,
+   "unit": "-",
+   "kind": "estimate",
+   "source": "V1 estimate: about +-150 deg at the wheel for +-20 deg road-wheel lock"
+  },
+  "max_road_wheel_angle": {
+   "value": 23,
+   "unit": "deg",
+   "kind": "estimate",
+   "source": "V1 estimate: F1 steering lock ~20-25 deg (hairpins of ~10 m radius)"
+  },
+  "ackermann": {
+   "value": 0,
+   "unit": "-",
+   "kind": "estimate",
+   "source": "V1 estimate: parallel steer (F1 cars run near-parallel or anti-Ackermann)"
+  }
+ },
+ "differential": {
+  "preload": {
+   "value": 50,
+   "unit": "Nm",
+   "kind": "estimate",
+   "source": "V1 estimate: clutch-pack LSD preload"
+  },
+  "power_ramp": {
+   "value": 0.25,
+   "unit": "-",
+   "kind": "estimate",
+   "source": "V1 estimate: locking torque 25 % of drive input torque"
+  },
+  "coast_ramp": {
+   "value": 0.15,
+   "unit": "-",
+   "kind": "estimate",
+   "source": "V1 estimate: locking torque 15 % of overrun input torque"
+  },
+  "clutch_gain": {
+   "value": 5000,
+   "unit": "Nm s/rad",
+   "kind": "design",
+   "source": "V1 numerical: clutch sticks below its capacity (implicit viscous law, C2-vehicle.md §5)"
+  }
+ },
+ "aero": {
+  "front_balance": {
+   "value": 0.45,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json aero.w_f"
+  },
+  "flap_transition_time": {
+   "value": 300,
+   "unit": "ms",
+   "kind": "estimate",
+   "source": "estimate: actuator time below the 400 ms rule limit (R-AERO-02, C3.10.10 o); the optimizer switches flaps instantly"
+  }
+ },
+ "tire": {
+  "mu_load_exp": {
+   "value": 0.06,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.mu_load_sensitivity"
+  },
+  "wheel_radius": {
+   "value": 0.33,
+   "unit": "m",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json drivetrain.tire_radius"
+  },
+  "peak_slip_ratio": {
+   "value": 0.1,
+   "unit": "-",
+   "kind": "estimate",
+   "source": "estimate: typical racing-slick longitudinal peak slip 8-12 %"
+  },
+  "slip_shape": {
+   "value": 1.65,
+   "unit": "-",
+   "kind": "estimate",
+   "source": "estimate: Pacejka longitudinal shape factor C (typical 1.6-1.7)"
+  },
+  "rear_axle_inertia": {
+   "value": 3,
+   "unit": "kg m^2",
+   "kind": "estimate",
+   "source": "estimate: two rear wheels + tyres (~1.2 kg m^2 each) + brake discs and driveshafts; engine and MGU-K inertia are not included (they act through the gear ratio in the plant)"
+  },
+  "front_axle_inertia": {
+   "value": 2,
+   "unit": "kg m^2",
+   "kind": "estimate",
+   "source": "estimate: two front wheels + tyres + brake discs"
+  },
+  "v_slip_min": {
+   "value": 3,
+   "unit": "m/s",
+   "kind": "estimate",
+   "source": "SPEC §6: low-speed slip regularisation ~3-5 m/s"
+  },
+  "cornering_stiffness_front": {
+   "value": 150000,
+   "unit": "N/rad",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.C_f (axle, at mu_fz_nom_front); V1 lateral tyre"
+  },
+  "cornering_stiffness_rear": {
+   "value": 195000,
+   "unit": "N/rad",
+   "kind": "calibration",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.C_r x cstiff_rear_factor (absent = 1.0) x 1.3: V1 calibration override (owner OK 2026-09-28): 1.3 x the optimizer's tires.C_r (150 kN/rad) to cut V1's fast-corner oversteer (body slip median 2.4 -> 1.7 deg, Spa V1 lap -0.5 s)"
+  },
+  "cstiff_load_exp": {
+   "value": 0.8,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.cstiff_load_exp; V1 lateral tyre"
+  },
+  "lat_shape": {
+   "value": 1.5,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.C_shape (Pacejka C, lateral); V1 lateral tyre"
+  },
+  "lat_curvature": {
+   "value": 0,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json tires.pacejka_E; V1 lateral tyre"
+  },
+  "mu_x_scale": {
+   "value": 1,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "V1: longitudinal peak = optimizer mu law (stage2 axle friction circle)"
+  },
+  "mu_y_scale": {
+   "value": 1.04,
+   "unit": "-",
+   "kind": "calibration",
+   "source": "V1 calibration step 1 (C2-vehicle.md §7): lateral peak 4 % above the point-mass mu to make up the two-track losses the point mass does not have (slip-angle drag, steer drag and yaw moments, inner-wheel traction)"
+  },
+  "load_basis": {
+   "value": "axle",
+   "unit": "-",
+   "kind": "design",
+   "source": "V1, C2-vehicle.md §6: the optimizer's mu and cornering-stiffness laws (and its fitted mu_0) are axle laws; 'axle' spreads the axle curve over its two wheels by load ('wheel' = per-wheel laws)"
+  },
+  "fz_nom_front": {
+   "value": 3390.3360000000002,
+   "unit": "N",
+   "kind": "derived",
+   "source": "informational (not loaded): optimizer mu_fz_nom_front = m * 9.81 * front_axle_fraction (mass without fuel)"
+  },
+  "fz_nom_rear": {
+   "value": 4143.744000000001,
+   "unit": "N",
+   "kind": "derived",
+   "source": "informational (not loaded): optimizer mu_fz_nom_rear = m * 9.81 * (1 - front_axle_fraction)"
+  }
+ },
+ "ice": {
+  "T_full_load": {
+   "x": [
+    4000,
+    5000,
+    6000,
+    6250,
+    6500,
+    6750,
+    7000,
+    7250,
+    7500,
+    7750,
+    8000,
+    8250,
+    8500,
+    8750,
+    9000,
+    9250,
+    9500,
+    9750,
+    10000,
+    10250,
+    10500,
+    10750,
+    11000,
+    11250,
+    11500,
+    11750,
+    12000,
+    12250,
+    12500,
+    12750,
+    13000
+   ],
+   "x_unit": "rpm",
+   "y": [
+    290,
+    327.5,
+    365,
+    369.375,
+    373.75,
+    378.125,
+    381.947,
+    381.431,
+    380.912,
+    380.382,
+    379.838,
+    379.275,
+    378.69,
+    378.08,
+    377.441,
+    376.77,
+    376.067,
+    375.328,
+    374.552,
+    373.738,
+    372.877,
+    363.183,
+    353.808,
+    344.742,
+    335.968,
+    327.47,
+    319.233,
+    311.245,
+    303.493,
+    295.964,
+    288.648
+   ],
+   "y_unit": "Nm",
+   "kind": "calibration",
+   "source": "f1-3d calibration 2026-10-02 (owner-approved, SPEC v0.70; power-unit-ice.md 'Adopted 2026-10-02') (tools/params/ice_fuel_line.py): min(the v16 curve's rising part to 8000 rpm (290 / 365 / 400 Nm at 4000 / 6000 / 8000), the torque at which the efficiency map burns 0.994 x the fuel-flow limit (R-FUEL-02 line 0.27 N + 165 MJ/h below 10500 rpm, R-FUEL-01 3000 MJ/h above), P_max / omega): the full-load power follows the rule line to 410 kW at 10500 rpm, then falls with the map's friction term to 393 kW at 13000. Evidence: 2026 Q upshifts land at 10250-10700 rpm (tools/analysis/ice_shift_evidence.py). Was the optimizer's powertrain.torque_curve 290/365/400/402/364/332/300 Nm at 4000/6000/8000/9500/10500/11500/12500 rpm"
+  },
+  "P_max": {
+   "value": 410,
+   "unit": "kW",
+   "kind": "calibration",
+   "source": "f1-3d calibration 2026-10-02 (owner-approved, SPEC v0.70; power-unit-ice.md 'Adopted 2026-10-02'): owner 'approaching 410 kW now'; peak of the full-load curve on the fuel-flow line at its 10500 rpm knee (R-FUEL-01/02); was 400 kW (racing_optimizer mercedes_2026_chassis powertrain.P_ICE_max)"
+  },
+  "T_max": {
+   "value": 550,
+   "unit": "Nm",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.T_ICE_max; clips the full-load curve and is the load reference of the efficiency map (IceParams::eff_T_load_ref)"
+  },
+  "T_overrun": {
+   "x": [
+    4000,
+    8000,
+    12500,
+    15000
+   ],
+   "x_unit": "rpm",
+   "y": [
+    -25,
+    -35,
+    -45,
+    -50
+   ],
+   "y_unit": "Nm",
+   "kind": "estimate",
+   "source": "estimate: closed-throttle friction and pumping torque of a 1.6 l V6 (fuel cut); the optimizer has no engine-braking curve (powertrain.engine_brake_curve absent). Kept above the C5.12.3 zero-pedal floor so the MGU-K fills the lift-off demand (C4 Q3 option B)"
+  },
+  "omega_idle": {
+   "value": 4000,
+   "unit": "rpm",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json drivetrain.omega_ice_idle_rpm"
+  },
+  "omega_max": {
+   "value": 13000,
+   "unit": "rpm",
+   "kind": "estimate",
+   "source": "estimate: rev limit above the 8th-gear top speed (12 000 rpm at 350 km/h) and the 12 500 rpm end of the torque curve"
+  },
+  "torque_time_constant": {
+   "value": 10,
+   "unit": "ms",
+   "kind": "estimate",
+   "source": "estimate: first-order ICE torque response; a full-load step (~550 Nm) is within 5 Nm of the demand after 50 ms (R-PED-04, C5.13.1: 550 e^-5 = 3.7 Nm; 15 ms left 20 Nm)"
+  },
+  "eta_peak": {
+   "value": 0.5412,
+   "unit": "-",
+   "kind": "calibration",
+   "source": "f1-3d calibration 2026-10-02 (owner-approved, SPEC v0.70; power-unit-ice.md 'Adopted 2026-10-02'): efficiency map refitted so the full-load burn is 0.994 x the R-FUEL-01/02 line from 7000 to 13 000 rpm (tools/params/ice_fuel_line.py); was 0.52 (racing_optimizer mercedes_2026_chassis)"
+  },
+  "eta_min": {
+   "value": 0.24,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.eta_ICE_min"
+  },
+  "eff_omega_opt": {
+   "value": 10500,
+   "unit": "rpm",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.omega_ice_opt_rpm"
+  },
+  "eff_T_opt": {
+   "value": 340,
+   "unit": "Nm",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.T_ice_opt"
+  },
+  "eff_omega_span": {
+   "value": 320,
+   "unit": "rad/s",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.omega_ice_span (used against omega in rad/s in vehicle_model.py)"
+  },
+  "eff_T_span": {
+   "value": 150,
+   "unit": "Nm",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.T_ice_span"
+  },
+  "eff_lowload_penalty": {
+   "value": 0.018,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.eta_lowload_penalty"
+  },
+  "eff_speed_penalty": {
+   "value": 0.0065,
+   "unit": "-",
+   "kind": "calibration",
+   "source": "f1-3d calibration 2026-10-02 (owner-approved, SPEC v0.70; power-unit-ice.md 'Adopted 2026-10-02'): efficiency map refitted so the full-load burn is 0.994 x the R-FUEL-01/02 line from 7000 to 13 000 rpm (tools/params/ice_fuel_line.py); was 0.01 (racing_optimizer mercedes_2026_chassis)"
+  },
+  "eff_torque_penalty": {
+   "value": 0.006,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.eta_torque_penalty"
+  },
+  "fuel_parasitic_base": {
+   "value": 4000,
+   "unit": "W",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.fuel_parasitic_base_W"
+  },
+  "fuel_parasitic_speed": {
+   "value": 34600,
+   "unit": "W",
+   "kind": "calibration",
+   "source": "f1-3d calibration 2026-10-02 (owner-approved, SPEC v0.70; power-unit-ice.md 'Adopted 2026-10-02'): efficiency map refitted so the full-load burn is 0.994 x the R-FUEL-01/02 line from 7000 to 13 000 rpm (tools/params/ice_fuel_line.py); was 2000 (racing_optimizer mercedes_2026_chassis)"
+  },
+  "fuel_quad_power": {
+   "value": 8e-7,
+   "unit": "1/W",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.fuel_quad_power (stored but unused by vehicle_model.py in v16)"
+  },
+  "fuel_quad_torque": {
+   "value": 0.45,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json efficiency_map.fuel_quad_torque (stored but unused by vehicle_model.py in v16)"
+  },
+  "fuel_lhv": {
+   "value": 40,
+   "unit": "MJ/kg",
+   "kind": "rule-compliant override",
+   "source": "C16.2 (R-FUEL-05, 38-41 MJ/kg): 40.0 MJ/kg replaces racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.fuel_lhv_MJ_per_kg = 44.0 (outside the range); fuel mass per lap +10 % vs v14, fuel energy flow unchanged, see docs/models/params.md"
+  }
+ },
+ "mguk": {
+  "ratio_to_crank": {
+   "value": 3.5,
+   "unit": "-",
+   "kind": "estimate",
+   "source": "estimate: fixed MGU-K : crank speed ratio (R-ERS-07); 3.5 x 13 000 rpm = 45 500 rpm < 60 000 rpm (R-ERS-09)"
+  },
+  "eta_deploy": {
+   "value": 0.95,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.eta_deploy (mech = eta x DC)"
+  },
+  "eta_regen": {
+   "value": 0.95,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json powertrain.eta_regen (DC = eta x mech)"
+  },
+  "T_max_mech": {
+   "value": 520,
+   "unit": "Nm",
+   "kind": "estimate",
+   "source": "estimate: physical limit = passive torque limiter threshold C5.18.4 (R-ERS-08), above the 500 Nm rule (R-ERS-02)"
+  },
+  "P_max_elec": {
+   "value": 380,
+   "unit": "kW",
+   "kind": "estimate",
+   "source": "estimate: physical DC limit above the 350 kW rule (R-ERS-01) so rule violations are observable"
+  },
+  "torque_time_constant": {
+   "value": 5,
+   "unit": "ms",
+   "kind": "estimate",
+   "source": "estimate: electric machine torque response (current loop), ms scale"
+  }
+ },
+ "battery": {
+  "E_capacity": {
+   "value": 5,
+   "unit": "MJ",
+   "kind": "estimate",
+   "source": "estimate: physical store capacity above the 4 MJ usable swing (R-ES-01)"
+  },
+  "E_start": {
+   "value": 4.5,
+   "unit": "MJ",
+   "kind": "estimate",
+   "source": "estimate: qualifying start near full (v14: start charge free up to the full 4 MJ window); 4 MJ swing down to 0.5 MJ"
+  },
+  "V_ocv": {
+   "x": [
+    0,
+    2.5,
+    5
+   ],
+   "x_unit": "MJ",
+   "y": [
+    650,
+    800,
+    900
+   ],
+   "y_unit": "V",
+   "kind": "estimate",
+   "source": "estimate: ~800 V class HV store, linear-ish open-circuit voltage vs stored energy"
+  },
+  "R_internal": {
+   "value": 0.05,
+   "unit": "ohm",
+   "kind": "estimate",
+   "source": "estimate: ~3 % loss at 350 kW and 800 V (I = 440 A, I^2 R = 9.7 kW)"
+  },
+  "P_dis_max": {
+   "value": 400,
+   "unit": "kW",
+   "kind": "estimate",
+   "source": "estimate: BMS discharge limit above the 350 kW rule so the rule binds (R-ES-10 input)"
+  },
+  "P_chg_max": {
+   "value": 400,
+   "unit": "kW",
+   "kind": "estimate",
+   "source": "estimate: BMS charge limit above the 350 kW rule so the rule binds"
+  }
+ },
+ "drivetrain": {
+  "gear_ratios": {
+   "value": [
+    14.592856142629868,
+    10.760279620623136,
+    8.74572330355119,
+    7.429265966622276,
+    6.291595109052273,
+    5.557007364383473,
+    4.806985671048621,
+    4.278383080245159
+   ],
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer src/vehicle/configs/mercedes_2026_chassis.json drivetrain.gear_ratios (overall crank : wheel, gears 1-8)"
+  },
+  "efficiency": {
+   "value": 0.95,
+   "unit": "-",
+   "kind": "optimizer",
+   "source": "racing_optimizer runs/canonical/v16/spa.toml (same value for every track) drivetrain_efficiency (ICE to wheel)"
+  },
+  "shift_time_up": {
+   "value": 20,
+   "unit": "ms",
+   "kind": "calibration",
+   "source": "f1-3d calibration 2026-09-28 (owner-approved, SPEC v0.22): torque-cut window of an upshift, below the 200 ms rule (R-GSH-02); replaces the 60 ms estimate"
+  },
+  "shift_time_down": {
+   "value": 30,
+   "unit": "ms",
+   "kind": "calibration",
+   "source": "f1-3d calibration 2026-09-28 (owner-approved, SPEC v0.22): torque-cut window of a downshift, below the 300 ms rule (R-GSH-02); replaces the 80 ms estimate"
+  },
+  "shift_speeds": {
+   "value": [
+    29.86189356766367,
+    40.09999999999986,
+    47.64999999999943,
+    56.24999999999894,
+    64.1499999999985,
+    73.89999999999795,
+    83.4499999999974
+   ],
+   "unit": "m/s",
+   "kind": "calibration",
+   "source": "f1-3d calibration 2026-10-02 (owner-approved, SPEC v0.70; power-unit-ice.md 'Adopted 2026-10-02'): optimal upshift speeds of the revised full-load curve (core/api/assists.cpp optimal_upshift_speeds, driver-assists.md §5, ported in tools/params/ice_fuel_line.py); was the optimizer's drivetrain.gear_shift_speeds (26.55 / 36.00 / 44.29 / 52.14 / 61.57 / 69.71 / 80.59 m/s)"
+  }
+ },
+ "brakes": {
+  "p_mc_max": {
+   "value": 100,
+   "unit": "bar",
+   "kind": "estimate",
+   "source": "estimate: front master-cylinder pressure at full pedal"
+  },
+  "k_front": {
+   "value": 120,
+   "unit": "Nm/bar",
+   "kind": "estimate",
+   "source": "estimate: front axle torque per bar; 12 000 Nm at 100 bar covers the 60 % front share of the optimizer's 50 kN brake_force_max (9 900 Nm at 0.33 m) with 20 % margin"
+  },
+  "k_rear": {
+   "value": 50,
+   "unit": "Nm/bar",
+   "kind": "estimate",
+   "source": "estimate: rear axle torque per bar; 150 bar gives 7 500 Nm = 3 750 Nm per wheel >= 2 500 Nm (R-BRK-02, C11.1.1)"
+  },
+  "tau_hydraulic": {
+   "value": 30,
+   "unit": "ms",
+   "kind": "estimate",
+   "source": "estimate: calliper pressure first-order lag (tens of ms, C4 §5.5)"
   },
   "balance_default": {
    "value": 0.6,
@@ -3779,1555 +3880,738 @@
   "unit": "-",
   "kind": "design choice",
   "source": "C4 D66 (owner-approved 2026-09-28): ICE-assisted braking harvest, default off until the V1 driver takes the faster T9 entry at Spielberg (ecu-audit.md 4c). While the driver brakes at zero pedal the ICE tops the MGU-K harvest up to the strategy's zero-pedal split after the wheel regen (wheel regen first and in full, total PU torque = the zero-pedal demand, balance untouched); 0 = off"
+ },
+ "ice_zero_floor": {
+  "value": 0,
+  "unit": "-",
+  "kind": "design choice",
+  "source": "plan parity (docs/components/C5-plan-interface.md §9.8 item 11, 2026-10-05): 1 = at a negative demand (lift, braking at zero pedal) the default split holds the ICE at zero torque (fuelled, parasitic fuel only) and the MGU-K takes the demand, overrun only for what the MGU-K cannot take: the racing_optimizer two-track NLP's split (P_ice >= 0), which harvests the 30-60 kW the overrun otherwise loses; 0 = ICE first (fuel cut, overrun torque, the default). Set per run with --ecu-opt ice_zero_floor=1 (plan-following runs)"
  }
 }
 {
-  "schema": "rules_2026 draft v0.1",
-  "generated": "2026-09-27",
-  "doc": "docs/components/C4-ecu-regulations.md",
-  "primary_source": {
-    "title": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28",
-    "issue": 17,
-    "date": "2026-04-28",
-    "path": "racing_optimizer/docs/regulations/"
+ "schema": "rules_2026 draft v0.1",
+ "generated": "2026-09-27",
+ "doc": "docs/components/C4-ecu-regulations.md",
+ "primary_source": {
+  "title": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28",
+  "issue": 17,
+  "date": "2026-04-28",
+  "path": "racing_optimizer/docs/regulations/"
+ },
+ "conventions": {
+  "lap_distance": "FIA lap distance [m] from the timing line on the FIA centreline (not track s); windows may wrap past the line",
+  "power": "kW electrical DC at the CU-K HV DC bus unless stated",
+  "ref_format": "document + article; 'via PU sheet' = event value from the FIA PU Information sheet"
+ },
+ "global": {
+  "mguk_dc_power_abs_max": {
+   "value": 350,
+   "unit": "kW",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.7",
+   "note": "electrical DC, both directions"
   },
-  "conventions": {
-    "lap_distance": "FIA lap distance [m] from the timing line on the FIA centreline (not track s); windows may wrap past the line",
-    "power": "kW electrical DC at the CU-K HV DC bus unless stated",
-    "ref_format": "document + article; 'via PU sheet' = event value from the FIA PU Information sheet"
+  "mguk_torque_abs_max": {
+   "value": 500,
+   "unit": "Nm",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.11",
+   "note": "referenced to crankshaft speed"
   },
-  "global": {
-    "mguk_dc_power_abs_max": {
-      "value": 350,
-      "unit": "kW",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.7",
-      "note": "electrical DC, both directions"
-    },
-    "mguk_torque_abs_max": {
-      "value": 500,
-      "unit": "Nm",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.11",
-      "note": "referenced to crankshaft speed"
-    },
-    "mguk_torque_limiter_min_act": {
-      "value": 520,
-      "unit": "Nm",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.18.4"
-    },
-    "mguk_relative_speed_max": {
-      "value": 60000,
-      "unit": "rpm",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.18.5"
-    },
-    "secu_elec_to_mech_efficiency": {
-      "value": 0.97,
-      "unit": "-",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.21"
-    },
-    "standing_start_mguk_min_speed": {
-      "value": 50,
-      "unit": "km/h",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.12",
-      "note": "SECU may mandate positive torque below this (start safety net; gap)"
-    },
-    "es_soc_swing_max": {
-      "value": 4.0,
-      "unit": "MJ",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.9",
-      "note": "max-min at any time the car is on the track (running, not per lap)"
-    },
-    "recharge_per_lap_max": {
-      "value": 8.5,
-      "unit": "MJ",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.10",
-      "note": "measured at CU-K HV DC bus"
-    },
-    "recharge_per_lap_reduced": {
-      "value": 7.0,
-      "unit": "MJ",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.10 i",
-      "note": "Iss 17 changed 8 -> 7 MJ"
-    },
-    "recharge_per_lap_q_min": {
-      "value": 5.0,
-      "unit": "MJ",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.10 ii",
-      "note": "SQ and Q floor"
-    },
-    "recharge_overtake_extra_max": {
-      "value": 0.5,
-      "unit": "MJ",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.10 iii",
-      "note": "subject to Sporting B7.2 (gap)"
-    },
-    "garage_charge_max_q": {
-      "value": 100,
-      "unit": "kJ",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.13"
-    },
-    "non_ers_storage_max": {
-      "value": 300,
-      "unit": "kJ",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.18"
-    },
-    "non_ers_recovery_per_lap_max": {
-      "value": 20,
-      "unit": "kJ",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.18",
-      "note": "at a rate greater than 2 kW"
-    },
-    "fuel_energy_flow_max": {
-      "value": 3000,
-      "unit": "MJ/h",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.3"
-    },
-    "fuel_energy_flow_rpm_limit": {
-      "value": {
-        "coeff": 0.27,
-        "intercept": 165,
-        "below_rpm": 10500
-      },
-      "unit": "MJ/h, rpm",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.4",
-      "formula": "EF <= 0.27*N + 165 for N < 10500"
-    },
-    "fuel_energy_flow_partial_load": {
-      "value": {
-        "floor": 380,
-        "floor_below_power_kw": -50,
-        "slope": 9.78,
-        "intercept": 869
-      },
-      "unit": "MJ/h, kW",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.5",
-      "formula": "EF <= 380 if P_eng <= -50 kW else 9.78*P_eng + 869",
-      "note": "PDF: further discussions will take place on C5.2.5"
-    },
-    "fuel_lhv_range": {
-      "value": [
-        38.0,
-        41.0
-      ],
-      "unit": "MJ/kg",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C16.2"
-    },
-    "fuel_density_range_15C": {
-      "value": [
-        720.0,
-        785.0
-      ],
-      "unit": "kg/m3",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C16.2"
-    },
-    "fuel_constant_pressure_above_flow_fraction": {
-      "value": 0.9,
-      "unit": "-",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.9.5"
-    },
-    "intake_pressure_max": {
-      "value": 4.8,
-      "unit": "barA",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.3.2",
-      "note": "strictly less than"
-    },
-    "idle_target_max": {
-      "value": 4000,
-      "unit": "rpm",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.13.4"
-    },
-    "rev_limit_band": {
-      "value": 750,
-      "unit": "rpm",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.14"
-    },
-    "single_ice_mode_per_competitive_lap": {
-      "value": true,
-      "unit": "-",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.23",
-      "note": "except free practice; policing FIA-F1-DOC-054 (gap)"
-    },
-    "pedal_map_monotonic": {
-      "value": true,
-      "unit": "-",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.1"
-    },
-    "pedal_map_min_gradient": {
-      "value": {
-        "value": -0.045,
-        "above_rpm": 4000
-      },
-      "unit": "Nm/rpm",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.2"
-    },
-    "pedal_map_min_torque": {
-      "value": {
-        "coeff": -0.0027,
-        "intercept": -30
-      },
-      "unit": "Nm",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.3",
-      "formula": "T_min > -0.0027*N - 30 (strict)"
-    },
-    "pedal_to_output_delay_max": {
-      "value": 50,
-      "unit": "ms",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.13.1"
-    },
-    "pending_initial_reduction_max": {
-      "value": 150,
-      "unit": "kW",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.4",
-      "note": "on driver maximum power demand; exception: conforming to C5.2.8; sector exceptions per event"
-    },
-    "pending_reduction_hold_min": {
-      "value": 1.0,
-      "unit": "s",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.4"
-    },
-    "pending_no_increase": {
-      "value": true,
-      "unit": "-",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.5",
-      "note": "except Boost, or reset in FIA-listed sectors (B7.2.1)"
-    },
-    "reduction_rate_applies_above_dc_power": {
-      "value": 100,
-      "unit": "kW",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.6",
-      "note": "Iss 17 added"
-    },
-    "reduction_rate_options": {
-      "value": {
-        "long_pl_distance": 50,
-        "other": 100,
-        "pl_distance_threshold_m": 3500
-      },
-      "unit": "kW per any 1 s period",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.6 a/b",
-      "note": "per-event value on PU sheet"
-    },
-    "total_power_reduction_max": {
-      "value": 700,
-      "unit": "kW",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.6",
-      "note": "Iss 17: 600 -> 700 kW; -250 kW floor deleted"
-    },
-    "ers_drop_rate_exceptions": {
-      "value": [
-        "a: theoretical MGU-K power after reduction at C5.12.6 rate < 100 kW",
-        "b: ICE power negative and ERS-K must fall further to meet driver demand",
-        "c: ERS-K must fall further to meet C5.2.8",
-        "d: driver power demand negative",
-        "e: gearshift in progress",
-        "f: car speed below threshold"
-      ],
-      "unit": "-",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.7 a-f"
-    },
-    "ers_drop_speed_threshold_default": {
-      "value": 210,
-      "unit": "km/h",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.7 f",
-      "note": "higher thresholds on specified sectors (per event)"
-    },
-    "power_limited_state_definitions": {
-      "value": null,
-      "unit": "-",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.8 -> FIA-F1-DOC-058",
-      "note": "GAP: period start/end, pedal threshold, re-arm, hysteresis"
-    },
-    "brake_rear_min_torque_per_wheel_no_pu": {
-      "value": 2500,
-      "unit": "Nm",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C11.1.1",
-      "note": "at <= 150 barG calliper pressure"
-    },
-    "brake_rear_test_pressure_max": {
-      "value": 150,
-      "unit": "barG",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C11.1.1"
-    },
-    "brake_rear_bbw_pressure_ratio_max": {
-      "value": 1.2,
-      "unit": "x driver rear master-cylinder pressure",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C11.6 b"
-    },
-    "brake_antilock_prohibited": {
-      "value": true,
-      "unit": "-",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C11.4.1"
-    },
-    "traction_control_prohibited": {
-      "value": true,
-      "unit": "-",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C9.1.2"
-    },
-    "aero_transition_time_max": {
-      "value": 400,
-      "unit": "ms",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C3.10.10 (o); C3.11.6 (d)"
-    },
-    "aero_deploy_only_in_activation_zone": {
-      "value": true,
-      "unit": "-",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C3.10.10 (w); C3.11.6 (j)",
-      "note": "or stationary; zone per Sporting B7.1.1 (d) (gap); commanded by direct driver input (Appendix C1 'State of Deployment')"
-    },
-    "aero_failsafe": {
-      "value": "corner_mode",
-      "unit": "-",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C3.10.10 (v); C3.11.6 (i)"
-    },
-    "gearshift_up_duration_max": {
-      "value": 200,
-      "unit": "ms",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C9.8.4"
-    },
-    "gearshift_down_duration_max": {
-      "value": 300,
-      "unit": "ms",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C9.8.4"
-    },
-    "gearshift_up_delay_max": {
-      "value": 80,
-      "unit": "ms",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C9.8.4"
-    },
-    "overrev_protection_delay_max": {
-      "value": 50,
-      "unit": "ms",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C9.8.3"
-    },
-    "torque_not_under_driver_control_during_shift": {
-      "value": true,
-      "unit": "-",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C9.8.1"
-    },
-    "pu_protection_hold_min": {
-      "value": 9,
-      "unit": "s",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.13.5",
-      "note": "qualifying and race"
-    },
-    "ers_shutdown_time_max": {
-      "value": 2,
-      "unit": "s",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.17.1"
-    },
-    "stall_prevention_stop_max": {
-      "value": 10,
-      "unit": "s",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.16"
-    },
-    "lap_definition": {
-      "value": "timing line crossing; on pit entry lap ends and next starts at start of pit lane",
-      "unit": "-",
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.2"
-    },
-    "overtake_detection_gap": {
-      "value": 1.0,
-      "unit": "s",
-      "ref": "All 9 PU sheets in fia_pu_information/, box 'OVERTAKE Article B7.2'"
-    }
+  "mguk_torque_limiter_min_act": {
+   "value": 520,
+   "unit": "Nm",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.18.4"
   },
-  "mguk_power_curves": {
-    "_ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.8; curve names from PU sheets",
-    "base_standard": {
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.8 i",
-      "formula": "min(350, 1800-5v) for v<340; 6900-20v for 340<=v<345; 0 for v>=345",
-      "points_kph_kw": [
-        [
-          0,
-          350
-        ],
-        [
-          290,
-          350
-        ],
-        [
-          340,
-          100
-        ],
-        [
-          345,
-          0
-        ]
-      ]
-    },
-    "base_overtake": {
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.8 ii",
-      "formula": "min(350, 7100-20v) for v<355; 0 for v>=355",
-      "points_kph_kw": [
-        [
-          0,
-          350
-        ],
-        [
-          337.5,
-          350
-        ],
-        [
-          355,
-          0
-        ]
-      ]
-    },
-    "alt_1": {
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.8 iii",
-      "formula": "250 for v<310; 1800-5v for 310<=v<340; 6900-20v for 340<=v<345; 0 for v>=345",
-      "points_kph_kw": [
-        [
-          0,
-          250
-        ],
-        [
-          310,
-          250
-        ],
-        [
-          340,
-          100
-        ],
-        [
-          345,
-          0
-        ]
+  "mguk_relative_speed_max": {
+   "value": 60000,
+   "unit": "rpm",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.18.5"
+  },
+  "secu_elec_to_mech_efficiency": {
+   "value": 0.97,
+   "unit": "-",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.21"
+  },
+  "standing_start_mguk_min_speed": {
+   "value": 50,
+   "unit": "km/h",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.12",
+   "note": "SECU may mandate positive torque below this (start safety net; gap)"
+  },
+  "es_soc_swing_max": {
+   "value": 4,
+   "unit": "MJ",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.9",
+   "note": "max-min at any time the car is on the track (running, not per lap)"
+  },
+  "recharge_per_lap_max": {
+   "value": 8.5,
+   "unit": "MJ",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.10",
+   "note": "measured at CU-K HV DC bus"
+  },
+  "recharge_per_lap_reduced": {
+   "value": 7,
+   "unit": "MJ",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.10 i",
+   "note": "Iss 17 changed 8 -> 7 MJ"
+  },
+  "recharge_per_lap_q_min": {
+   "value": 5,
+   "unit": "MJ",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.10 ii",
+   "note": "SQ and Q floor"
+  },
+  "recharge_overtake_extra_max": {
+   "value": 0.5,
+   "unit": "MJ",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.10 iii",
+   "note": "subject to Sporting B7.2 (gap)"
+  },
+  "garage_charge_max_q": {
+   "value": 100,
+   "unit": "kJ",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.13"
+  },
+  "non_ers_storage_max": {
+   "value": 300,
+   "unit": "kJ",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.18"
+  },
+  "non_ers_recovery_per_lap_max": {
+   "value": 20,
+   "unit": "kJ",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.18",
+   "note": "at a rate greater than 2 kW"
+  },
+  "fuel_energy_flow_max": {
+   "value": 3000,
+   "unit": "MJ/h",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.3"
+  },
+  "fuel_energy_flow_rpm_limit": {
+   "value": {
+    "coeff": 0.27,
+    "intercept": 165,
+    "below_rpm": 10500
+   },
+   "unit": "MJ/h, rpm",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.4",
+   "formula": "EF <= 0.27*N + 165 for N < 10500"
+  },
+  "fuel_energy_flow_partial_load": {
+   "value": {
+    "floor": 380,
+    "floor_below_power_kw": -50,
+    "slope": 9.78,
+    "intercept": 869
+   },
+   "unit": "MJ/h, kW",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.5",
+   "formula": "EF <= 380 if P_eng <= -50 kW else 9.78*P_eng + 869",
+   "note": "PDF: further discussions will take place on C5.2.5"
+  },
+  "fuel_lhv_range": {
+   "value": [
+    38,
+    41
+   ],
+   "unit": "MJ/kg",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C16.2"
+  },
+  "fuel_density_range_15C": {
+   "value": [
+    720,
+    785
+   ],
+   "unit": "kg/m3",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C16.2"
+  },
+  "fuel_constant_pressure_above_flow_fraction": {
+   "value": 0.9,
+   "unit": "-",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.9.5"
+  },
+  "intake_pressure_max": {
+   "value": 4.8,
+   "unit": "barA",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.3.2",
+   "note": "strictly less than"
+  },
+  "idle_target_max": {
+   "value": 4000,
+   "unit": "rpm",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.13.4"
+  },
+  "rev_limit_band": {
+   "value": 750,
+   "unit": "rpm",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.14"
+  },
+  "single_ice_mode_per_competitive_lap": {
+   "value": true,
+   "unit": "-",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.23",
+   "note": "except free practice; policing FIA-F1-DOC-054 (gap)"
+  },
+  "pedal_map_monotonic": {
+   "value": true,
+   "unit": "-",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.1"
+  },
+  "pedal_map_min_gradient": {
+   "value": {
+    "value": -0.045,
+    "above_rpm": 4000
+   },
+   "unit": "Nm/rpm",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.2"
+  },
+  "pedal_map_min_torque": {
+   "value": {
+    "coeff": -0.0027,
+    "intercept": -30
+   },
+   "unit": "Nm",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.3",
+   "formula": "T_min > -0.0027*N - 30 (strict)"
+  },
+  "pedal_to_output_delay_max": {
+   "value": 50,
+   "unit": "ms",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.13.1"
+  },
+  "pending_initial_reduction_max": {
+   "value": 150,
+   "unit": "kW",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.4",
+   "note": "on driver maximum power demand; exception: conforming to C5.2.8; sector exceptions per event"
+  },
+  "pending_reduction_hold_min": {
+   "value": 1,
+   "unit": "s",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.4"
+  },
+  "pending_no_increase": {
+   "value": true,
+   "unit": "-",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.5",
+   "note": "except Boost, or reset in FIA-listed sectors (B7.2.1)"
+  },
+  "reduction_rate_applies_above_dc_power": {
+   "value": 100,
+   "unit": "kW",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.6",
+   "note": "Iss 17 added"
+  },
+  "reduction_rate_options": {
+   "value": {
+    "long_pl_distance": 50,
+    "other": 100,
+    "pl_distance_threshold_m": 3500
+   },
+   "unit": "kW per any 1 s period",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.6 a/b",
+   "note": "per-event value on PU sheet"
+  },
+  "total_power_reduction_max": {
+   "value": 700,
+   "unit": "kW",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.6",
+   "note": "Iss 17: 600 -> 700 kW; -250 kW floor deleted"
+  },
+  "ers_drop_rate_exceptions": {
+   "value": [
+    "a: theoretical MGU-K power after reduction at C5.12.6 rate < 100 kW",
+    "b: ICE power negative and ERS-K must fall further to meet driver demand",
+    "c: ERS-K must fall further to meet C5.2.8",
+    "d: driver power demand negative",
+    "e: gearshift in progress",
+    "f: car speed below threshold"
+   ],
+   "unit": "-",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.7 a-f"
+  },
+  "ers_drop_speed_threshold_default": {
+   "value": 210,
+   "unit": "km/h",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.7 f",
+   "note": "higher thresholds on specified sectors (per event)"
+  },
+  "power_limited_state_definitions": {
+   "value": null,
+   "unit": "-",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.12.8 -> FIA-F1-DOC-058",
+   "note": "GAP: period start/end, pedal threshold, re-arm, hysteresis"
+  },
+  "brake_rear_min_torque_per_wheel_no_pu": {
+   "value": 2500,
+   "unit": "Nm",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C11.1.1",
+   "note": "at <= 150 barG calliper pressure"
+  },
+  "brake_rear_test_pressure_max": {
+   "value": 150,
+   "unit": "barG",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C11.1.1"
+  },
+  "brake_rear_bbw_pressure_ratio_max": {
+   "value": 1.2,
+   "unit": "x driver rear master-cylinder pressure",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C11.6 b"
+  },
+  "brake_antilock_prohibited": {
+   "value": true,
+   "unit": "-",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C11.4.1"
+  },
+  "traction_control_prohibited": {
+   "value": true,
+   "unit": "-",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C9.1.2"
+  },
+  "aero_transition_time_max": {
+   "value": 400,
+   "unit": "ms",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C3.10.10 (o); C3.11.6 (d)"
+  },
+  "aero_deploy_only_in_activation_zone": {
+   "value": true,
+   "unit": "-",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C3.10.10 (w); C3.11.6 (j)",
+   "note": "or stationary; zone per Sporting B7.1.1 (d) (gap); commanded by direct driver input (Appendix C1 'State of Deployment')"
+  },
+  "aero_failsafe": {
+   "value": "corner_mode",
+   "unit": "-",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C3.10.10 (v); C3.11.6 (i)"
+  },
+  "gearshift_up_duration_max": {
+   "value": 200,
+   "unit": "ms",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C9.8.4"
+  },
+  "gearshift_down_duration_max": {
+   "value": 300,
+   "unit": "ms",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C9.8.4"
+  },
+  "gearshift_up_delay_max": {
+   "value": 80,
+   "unit": "ms",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C9.8.4"
+  },
+  "overrev_protection_delay_max": {
+   "value": 50,
+   "unit": "ms",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C9.8.3"
+  },
+  "torque_not_under_driver_control_during_shift": {
+   "value": true,
+   "unit": "-",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C9.8.1"
+  },
+  "pu_protection_hold_min": {
+   "value": 9,
+   "unit": "s",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.13.5",
+   "note": "qualifying and race"
+  },
+  "ers_shutdown_time_max": {
+   "value": 2,
+   "unit": "s",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.17.1"
+  },
+  "stall_prevention_stop_max": {
+   "value": 10,
+   "unit": "s",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.16"
+  },
+  "lap_definition": {
+   "value": "timing line crossing; on pit entry lap ends and next starts at start of pit lane",
+   "unit": "-",
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.2"
+  },
+  "overtake_detection_gap": {
+   "value": 1,
+   "unit": "s",
+   "ref": "All 9 PU sheets in fia_pu_information/, box 'OVERTAKE Article B7.2'"
+  }
+ },
+ "mguk_power_curves": {
+  "_ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.8; curve names from PU sheets",
+  "_event_override": "An event may override curves and selection: events.<key>.mguk_power_curves.<name> {ref, points_kph_kw} redefines base_standard / base_overtake / alt_1 or adds a named curve; events.<key>.mguk_power_curves.selection.<role> (any_practice_incl_qualifying, race_sprint_main_overtaking_zones.overtake_not_active / overtake_active, race_sprint_other_parts_of_lap) names the curve for that role. Anything not overridden falls back to this table (docs/models/params.md, MGU-K taper curves per event)",
+  "base_standard": {
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.8 i",
+   "formula": "min(350, 1800-5v) for v<340; 6900-20v for 340<=v<345; 0 for v>=345",
+   "points_kph_kw": [
+    [
+     0,
+     350
+    ],
+    [
+     290,
+     350
+    ],
+    [
+     340,
+     100
+    ],
+    [
+     345,
+     0
+    ]
+   ]
+  },
+  "base_overtake": {
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.8 ii",
+   "formula": "min(350, 7100-20v) for v<355; 0 for v>=355",
+   "points_kph_kw": [
+    [
+     0,
+     350
+    ],
+    [
+     337.5,
+     350
+    ],
+    [
+     355,
+     0
+    ]
+   ]
+  },
+  "alt_1": {
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.8 iii",
+   "formula": "250 for v<310; 1800-5v for 310<=v<340; 6900-20v for 340<=v<345; 0 for v>=345",
+   "points_kph_kw": [
+    [
+     0,
+     250
+    ],
+    [
+     310,
+     250
+    ],
+    [
+     340,
+     100
+    ],
+    [
+     345,
+     0
+    ]
+   ],
+   "sessions": [
+    "race",
+    "sprint"
+   ]
+  },
+  "low_grip": {
+   "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.8 iv -> FIA-F1-DOC-111",
+   "points_kph_kw": null,
+   "note": "GAP"
+  },
+  "selection": {
+   "ref": "PU sheets, table 'Article C5.2.8' (identical on all 9 sheets)",
+   "race_sprint_main_overtaking_zones": {
+    "overtake_not_active": "base_standard",
+    "overtake_active": "base_overtake"
+   },
+   "race_sprint_other_parts_of_lap": "alt_1 (inside C5.2.8 iii sectors)",
+   "any_practice_incl_qualifying": "base_overtake"
+  }
+ },
+ "assumptions": {
+  "_note": "Power-limited-pending period model. Start/end/re-arm are defined in FIA-F1-DOC-058 (not available); adopted from press reporting (source below) as the project's working rule. Keep configurable.",
+  "period_start_pedal_threshold": {
+   "value": 0.98,
+   "unit": "-",
+   "ref": "press: The Race, 2026-03-24, 'Charles Leclerc lap F1 2026 qualifying ruined, cars confused' (Chinese GP SQ3, T10 exit): https://www.the-race.com/formula-1/charles-leclerc-lap-f1-2026-qualifying-ruined-cars-confused/ -- 'throttle registered at 98% or greater'; owner input; racing_optimizer _stage_helpers.py uses >= 0.98",
+   "status": "adopted (press source, DOC-058 unverified)"
+  },
+  "reference_power_for_reduction": {
+   "value": "P_ICE_available + 350 kW",
+   "unit": "-",
+   "ref": "assumption; C5.12 does not define the reference",
+   "status": "assumption"
+  },
+  "min_deploy_during_hold": {
+   "value": 200,
+   "unit": "kW",
+   "ref": "press: The Race, 2026-03-24, 'Charles Leclerc lap F1 2026 qualifying ruined, cars confused' (Chinese GP SQ3, T10 exit): https://www.the-race.com/formula-1/charles-leclerc-lap-f1-2026-qualifying-ruined-cars-confused/ -- deployment 'cut to a minimum of 200kW'; consistent with 350 - 150 (C5.12.4)",
+   "status": "adopted (press source, DOC-058 unverified)"
+  },
+  "rearm_on_lift": {
+   "value": true,
+   "unit": "-",
+   "ref": "press: The Race, 2026-03-24, 'Charles Leclerc lap F1 2026 qualifying ruined, cars confused' (Chinese GP SQ3, T10 exit): https://www.the-race.com/formula-1/charles-leclerc-lap-f1-2026-qualifying-ruined-cars-confused/ -- lift to 95% reset the sequence; owner input",
+   "status": "adopted (press source, DOC-058 unverified)",
+   "note": "Article predates Section C Iss 17 (2026-04-28) and later in-season changes; re-check if newer evidence appears. Open detail: article says '98% or greater for at least one second' -- whether 1 s at >=98% is needed before the period counts is ambiguous; config key period_start_min_time_s."
+  },
+  "rearm_hysteresis": {
+   "value": null,
+   "unit": "-",
+   "ref": "no source",
+   "status": "gap"
+  },
+  "min_lift_time": {
+   "value": null,
+   "unit": "s",
+   "ref": "no source",
+   "status": "gap"
+  },
+  "period_start_min_time_s": {
+   "value": 0,
+   "unit": "s",
+   "ref": "press: The Race, 2026-03-24, 'Charles Leclerc lap F1 2026 qualifying ruined, cars confused' (Chinese GP SQ3, T10 exit): https://www.the-race.com/formula-1/charles-leclerc-lap-f1-2026-qualifying-ruined-cars-confused/ -- ambiguous wording '98% or greater for at least one second'; 0 = period starts on the crossing, hold of 1 s per C5.12.4",
+   "status": "assumption"
+  }
+ },
+ "events": {
+  "Spa": {
+   "round": 10,
+   "sources": {
+    "pu_sheet": "fia_pu_information/2026_belgian_grand_prix_power_unit_information.pdf, Doc 4, 16 July 2026",
+    "circuit_map": "fia_circuit_maps/2026_belgian_grand_prix_circuit_map.pdf, Doc 7, 16 July 2026, v4 16.07.26"
+   },
+   "centreline_m": 7004,
+   "format": "Standard",
+   "recharge_mj_per_lap": {
+    "ref": "C5.2.10 via PU sheet",
+    "race": 8.5,
+    "race_overtake_active": 9,
+    "qualifying": 7,
+    "free_practice": 9,
+    "out_laps_not_race": 9
+   },
+   "power_limited_distance_m": {
+    "value": 4594,
+    "ref": "C5.12.6 a / FIA-F1-DOC-034 via PU sheet"
+   },
+   "reduction_rate_kw_per_s": {
+    "value": 50,
+    "ref": "C5.12.6 via PU sheet (sheet heading says C5.12.8)"
+   },
+   "alt_curve_sectors_m": {
+    "ref": "C5.2.8 iii via PU sheet",
+    "race_sprint": [
+     [
+      2400,
+      4900
+     ]
+    ]
+   },
+   "pending_reduction_sectors_m": {
+    "ref": "C5.12.4 via PU sheet",
+    "max_reduction_kw": 350,
+    "all_sessions": [
+     [
+      2350,
+      3250
+     ],
+     [
+      3750,
+      4000
+     ],
+     [
+      4450,
+      4850
+     ]
+    ],
+    "sq_q_only": [
+     [
+      6730,
+      6900
+     ]
+    ]
+   },
+   "reset_sectors_m": {
+    "ref": "C5.12.5 via PU sheet",
+    "all_sessions": [
+     [
+      1150,
+      1400
+     ],
+     [
+      2650,
+      2750
+     ],
+     [
+      3800,
+      4000
+     ],
+     [
+      6150,
+      6350
+     ]
+    ],
+    "sq_q_only": [
+     [
+      6800,
+      7000
+     ]
+    ]
+   },
+   "speed_threshold_sectors": {
+    "ref": "C5.12.7 f via PU sheet",
+    "items": [
+     {
+      "window_m": [
+       2500,
+       2680
       ],
-      "sessions": [
-        "race",
-        "sprint"
-      ]
+      "threshold_kph": 240
+     },
+     {
+      "window_m": [
+       4450,
+       4650
+      ],
+      "threshold_kph": 240
+     }
+    ]
+   },
+   "overtake": {
+    "ref": "PU sheet 'Article B7.2'; map OVERTAKE box",
+    "detection_gap_s": 1,
+    "detection_m": 6745,
+    "detection_loop": "L27/SC1",
+    "detection_desc": "Entry T19",
+    "activation_m": 6885,
+    "activation_loop": "L28",
+    "activation_desc": "130m after T19"
+   },
+   "straight_mode": {
+    "ref": "circuit map STRAIGHT MODE table; zone ends drawn only",
+    "normal_grip": {
+     "A1": "190m after T19",
+     "A2": "140m after T1",
+     "A3": "60m after T4",
+     "A4": "140m after T15",
+     "A5": "80m after T17"
     },
     "low_grip": {
-      "ref": "FIA 2026 F1 Regulations - Section C [Technical] - Iss 17 - 2026-04-28 C5.2.8 iv -> FIA-F1-DOC-111",
-      "points_kph_kw": null,
-      "note": "GAP"
-    },
-    "selection": {
-      "ref": "PU sheets, table 'Article C5.2.8' (identical on all 9 sheets)",
-      "race_sprint_main_overtaking_zones": {
-        "overtake_not_active": "base_standard",
-        "overtake_active": "base_overtake"
-      },
-      "race_sprint_other_parts_of_lap": "alt_1 (inside C5.2.8 iii sectors)",
-      "any_practice_incl_qualifying": "base_overtake"
+     "A1": "240m after T19",
+     "A2": "195m after T1",
+     "A3": "360m after T4",
+     "A4": "190m after T15",
+     "A5": "110m after T17"
     }
+   },
+   "role": "main track",
+   "pit_lane_speed_limit_kph": {
+    "value": 80,
+    "ref": "(A) verify: pit-lane speed limit of the FIA Sporting Regulations / the event notes; not in the local event documents (circuit map Doc 7 v4 16.07.26: the pit lane drawing labels FAST LANE, Pit Entry, Pit Exit, Safety Car Lines, no speed value)",
+    "status": "assumption (verify)",
+    "rule_id": "R-PIT-01"
+   }
   },
-  "assumptions": {
-    "_note": "Power-limited-pending period model. Start/end/re-arm are defined in FIA-F1-DOC-058 (not available); adopted from press reporting (source below) as the project's working rule. Keep configurable.",
-    "period_start_pedal_threshold": {
-      "value": 0.98,
-      "unit": "-",
-      "ref": "press: The Race, 2026-03-24, 'Charles Leclerc lap F1 2026 qualifying ruined, cars confused' (Chinese GP SQ3, T10 exit): https://www.the-race.com/formula-1/charles-leclerc-lap-f1-2026-qualifying-ruined-cars-confused/ -- 'throttle registered at 98% or greater'; owner input; racing_optimizer _stage_helpers.py uses >= 0.98",
-      "status": "adopted (press source, DOC-058 unverified)"
+  "Spielberg": {
+   "round": 8,
+   "sources": {
+    "pu_sheet": "fia_pu_information/2026_austrian_grand_prix_power_unit_information.pdf, Doc 5, 25 June 2026",
+    "circuit_map": "fia_circuit_maps/2026_austrian_grand_prix_circuit_map.pdf, Doc 7, 25 June 2026, v3 22.06.26"
+   },
+   "centreline_m": 4326,
+   "format": "Standard",
+   "recharge_mj_per_lap": {
+    "ref": "C5.2.10 via PU sheet",
+    "race": 8,
+    "race_overtake_active": 8.5,
+    "qualifying": 6,
+    "free_practice": 8.5,
+    "out_laps_not_race": 8.5
+   },
+   "power_limited_distance_m": {
+    "value": 2923,
+    "ref": "C5.12.6 a / FIA-F1-DOC-034 via PU sheet"
+   },
+   "reduction_rate_kw_per_s": {
+    "value": 100,
+    "ref": "C5.12.6 via PU sheet (sheet heading says C5.12.8)"
+   },
+   "alt_curve_sectors_m": {
+    "ref": "C5.2.8 iii via PU sheet",
+    "race_sprint": [
+     [
+      2170,
+      2960
+     ],
+     [
+      3720,
+      3920
+     ]
+    ]
+   },
+   "pending_reduction_sectors_m": {
+    "ref": "C5.12.4 via PU sheet",
+    "max_reduction_kw": 350,
+    "all_sessions": [
+     [
+      2700,
+      3000
+     ],
+     [
+      3750,
+      3900
+     ]
+    ],
+    "sq_q_only": [
+     [
+      3950,
+      4150
+     ]
+    ]
+   },
+   "reset_sectors_m": {
+    "ref": "C5.12.5 via PU sheet",
+    "all_sessions": [],
+    "sq_q_only": [
+     [
+      4100,
+      4400
+     ]
+    ]
+   },
+   "speed_threshold_sectors": {
+    "ref": "C5.12.7 f via PU sheet",
+    "items": []
+   },
+   "overtake": {
+    "ref": "PU sheet 'Article B7.2'; map OVERTAKE box",
+    "detection_gap_s": 1,
+    "detection_m": 3936,
+    "detection_loop": "L19",
+    "detection_desc": "50m before T10",
+    "activation_m": 4088,
+    "activation_loop": "L20",
+    "activation_desc": "110m after T10"
+   },
+   "straight_mode": {
+    "ref": "circuit map STRAIGHT MODE table; zone ends drawn only",
+    "normal_grip": {
+     "A1": "110m after T10",
+     "A2": "110m after T1",
+     "A3": "90m after T3",
+     "A4": "10m after T8"
     },
-    "reference_power_for_reduction": {
-      "value": "P_ICE_available + 350 kW",
-      "unit": "-",
-      "ref": "assumption; C5.12 does not define the reference",
-      "status": "assumption"
-    },
-    "min_deploy_during_hold": {
-      "value": 200,
-      "unit": "kW",
-      "ref": "press: The Race, 2026-03-24, 'Charles Leclerc lap F1 2026 qualifying ruined, cars confused' (Chinese GP SQ3, T10 exit): https://www.the-race.com/formula-1/charles-leclerc-lap-f1-2026-qualifying-ruined-cars-confused/ -- deployment 'cut to a minimum of 200kW'; consistent with 350 - 150 (C5.12.4)",
-      "status": "adopted (press source, DOC-058 unverified)"
-    },
-    "rearm_on_lift": {
-      "value": true,
-      "unit": "-",
-      "ref": "press: The Race, 2026-03-24, 'Charles Leclerc lap F1 2026 qualifying ruined, cars confused' (Chinese GP SQ3, T10 exit): https://www.the-race.com/formula-1/charles-leclerc-lap-f1-2026-qualifying-ruined-cars-confused/ -- lift to 95% reset the sequence; owner input",
-      "status": "adopted (press source, DOC-058 unverified)",
-      "note": "Article predates Section C Iss 17 (2026-04-28) and later in-season changes; re-check if newer evidence appears. Open detail: article says '98% or greater for at least one second' -- whether 1 s at >=98% is needed before the period counts is ambiguous; config key period_start_min_time_s."
-    },
-    "rearm_hysteresis": {
-      "value": null,
-      "unit": "-",
-      "ref": "no source",
-      "status": "gap"
-    },
-    "min_lift_time": {
-      "value": null,
-      "unit": "s",
-      "ref": "no source",
-      "status": "gap"
-    },
-    "period_start_min_time_s": {
-      "value": 0.0,
-      "unit": "s",
-      "ref": "press: The Race, 2026-03-24, 'Charles Leclerc lap F1 2026 qualifying ruined, cars confused' (Chinese GP SQ3, T10 exit): https://www.the-race.com/formula-1/charles-leclerc-lap-f1-2026-qualifying-ruined-cars-confused/ -- ambiguous wording '98% or greater for at least one second'; 0 = period starts on the crossing, hold of 1 s per C5.12.4",
-      "status": "assumption"
+    "low_grip": {
+     "A1": "160m after T10",
+     "A2": "170m after T1",
+     "A3": "160m after T3",
+     "A4": "60m after T8"
     }
-  },
-  "events": {
-    "Spa": {
-      "round": 10,
-      "sources": {
-        "pu_sheet": "fia_pu_information/2026_belgian_grand_prix_power_unit_information.pdf, Doc 4, 16 July 2026",
-        "circuit_map": "fia_circuit_maps/2026_belgian_grand_prix_circuit_map.pdf, Doc 7, 16 July 2026, v4 16.07.26"
-      },
-      "centreline_m": 7004,
-      "format": "Standard",
-      "recharge_mj_per_lap": {
-        "ref": "C5.2.10 via PU sheet",
-        "race": 8.5,
-        "race_overtake_active": 9.0,
-        "qualifying": 7.0,
-        "free_practice": 9.0,
-        "out_laps_not_race": 9.0
-      },
-      "power_limited_distance_m": {
-        "value": 4594,
-        "ref": "C5.12.6 a / FIA-F1-DOC-034 via PU sheet"
-      },
-      "reduction_rate_kw_per_s": {
-        "value": 50,
-        "ref": "C5.12.6 via PU sheet (sheet heading says C5.12.8)"
-      },
-      "alt_curve_sectors_m": {
-        "ref": "C5.2.8 iii via PU sheet",
-        "race_sprint": [
-          [
-            2400,
-            4900
-          ]
-        ]
-      },
-      "pending_reduction_sectors_m": {
-        "ref": "C5.12.4 via PU sheet",
-        "max_reduction_kw": 350,
-        "all_sessions": [
-          [
-            2350,
-            3250
-          ],
-          [
-            3750,
-            4000
-          ],
-          [
-            4450,
-            4850
-          ]
-        ],
-        "sq_q_only": [
-          [
-            6730,
-            6900
-          ]
-        ]
-      },
-      "reset_sectors_m": {
-        "ref": "C5.12.5 via PU sheet",
-        "all_sessions": [
-          [
-            1150,
-            1400
-          ],
-          [
-            2650,
-            2750
-          ],
-          [
-            3800,
-            4000
-          ],
-          [
-            6150,
-            6350
-          ]
-        ],
-        "sq_q_only": [
-          [
-            6800,
-            7000
-          ]
-        ]
-      },
-      "speed_threshold_sectors": {
-        "ref": "C5.12.7 f via PU sheet",
-        "items": [
-          {
-            "window_m": [
-              2500,
-              2680
-            ],
-            "threshold_kph": 240
-          },
-          {
-            "window_m": [
-              4450,
-              4650
-            ],
-            "threshold_kph": 240
-          }
-        ]
-      },
-      "overtake": {
-        "ref": "PU sheet 'Article B7.2'; map OVERTAKE box",
-        "detection_gap_s": 1.0,
-        "detection_m": 6745,
-        "detection_loop": "L27/SC1",
-        "detection_desc": "Entry T19",
-        "activation_m": 6885,
-        "activation_loop": "L28",
-        "activation_desc": "130m after T19"
-      },
-      "straight_mode": {
-        "ref": "circuit map STRAIGHT MODE table; zone ends drawn only",
-        "normal_grip": {
-          "A1": "190m after T19",
-          "A2": "140m after T1",
-          "A3": "60m after T4",
-          "A4": "140m after T15",
-          "A5": "80m after T17"
-        },
-        "low_grip": {
-          "A1": "240m after T19",
-          "A2": "195m after T1",
-          "A3": "360m after T4",
-          "A4": "190m after T15",
-          "A5": "110m after T17"
-        }
-      },
-      "role": "main track",
-      "pit_lane_speed_limit_kph": {
-        "value": 80,
-        "ref": "(A) verify: pit-lane speed limit of the FIA Sporting Regulations / the event notes; not in the local event documents (circuit map Doc 7 v4 16.07.26: the pit lane drawing labels FAST LANE, Pit Entry, Pit Exit, Safety Car Lines, no speed value)",
-        "status": "assumption (verify)",
-        "rule_id": "R-PIT-01"
-      }
-    },
-    "Spielberg": {
-      "round": 8,
-      "sources": {
-        "pu_sheet": "fia_pu_information/2026_austrian_grand_prix_power_unit_information.pdf, Doc 5, 25 June 2026",
-        "circuit_map": "fia_circuit_maps/2026_austrian_grand_prix_circuit_map.pdf, Doc 7, 25 June 2026, v3 22.06.26"
-      },
-      "centreline_m": 4326,
-      "format": "Standard",
-      "recharge_mj_per_lap": {
-        "ref": "C5.2.10 via PU sheet",
-        "race": 8.0,
-        "race_overtake_active": 8.5,
-        "qualifying": 6.0,
-        "free_practice": 8.5,
-        "out_laps_not_race": 8.5
-      },
-      "power_limited_distance_m": {
-        "value": 2923,
-        "ref": "C5.12.6 a / FIA-F1-DOC-034 via PU sheet"
-      },
-      "reduction_rate_kw_per_s": {
-        "value": 100,
-        "ref": "C5.12.6 via PU sheet (sheet heading says C5.12.8)"
-      },
-      "alt_curve_sectors_m": {
-        "ref": "C5.2.8 iii via PU sheet",
-        "race_sprint": [
-          [
-            2170,
-            2960
-          ],
-          [
-            3720,
-            3920
-          ]
-        ]
-      },
-      "pending_reduction_sectors_m": {
-        "ref": "C5.12.4 via PU sheet",
-        "max_reduction_kw": 350,
-        "all_sessions": [
-          [
-            2700,
-            3000
-          ],
-          [
-            3750,
-            3900
-          ]
-        ],
-        "sq_q_only": [
-          [
-            3950,
-            4150
-          ]
-        ]
-      },
-      "reset_sectors_m": {
-        "ref": "C5.12.5 via PU sheet",
-        "all_sessions": [],
-        "sq_q_only": [
-          [
-            4100,
-            4400
-          ]
-        ]
-      },
-      "speed_threshold_sectors": {
-        "ref": "C5.12.7 f via PU sheet",
-        "items": []
-      },
-      "overtake": {
-        "ref": "PU sheet 'Article B7.2'; map OVERTAKE box",
-        "detection_gap_s": 1.0,
-        "detection_m": 3936,
-        "detection_loop": "L19",
-        "detection_desc": "50m before T10",
-        "activation_m": 4088,
-        "activation_loop": "L20",
-        "activation_desc": "110m after T10"
-      },
-      "straight_mode": {
-        "ref": "circuit map STRAIGHT MODE table; zone ends drawn only",
-        "normal_grip": {
-          "A1": "110m after T10",
-          "A2": "110m after T1",
-          "A3": "90m after T3",
-          "A4": "10m after T8"
-        },
-        "low_grip": {
-          "A1": "160m after T10",
-          "A2": "170m after T1",
-          "A3": "160m after T3",
-          "A4": "60m after T8"
-        }
-      },
-      "role": "physics test track",
-      "centreline_note": "PU sheet prints 4.236 km; map v3 gives 4.326 km (verify)",
-      "pit_lane_speed_limit_kph": {
-        "value": 80,
-        "ref": "(A) verify: pit-lane speed limit of the FIA Sporting Regulations / the event notes; not in the local event documents (circuit map Doc 7 v3 22.06.26: the pit lane drawing labels FAST LANE, Pit Entry, Pit Exit, Safety Car Lines, no speed value)",
-        "status": "assumption (verify)",
-        "rule_id": "R-PIT-01"
-      }
-    },
-    "Monza": {
-      "round": 13,
-      "sources": {
-        "pu_sheet": "fia_pu_information/2026_italian_grand_prix_power_unit_information.pdf, Doc 8, 03 September 2026",
-        "circuit_map": "fia_circuit_maps/2026_italian_grand_prix_circuit_map.pdf, Doc 6, 03 September 2026, v2 03.09.26"
-      },
-      "centreline_m": 5793,
-      "format": "Standard",
-      "recharge_mj_per_lap": {
-        "ref": "C5.2.10 via PU sheet",
-        "race": 7.0,
-        "race_overtake_active": 7.5,
-        "qualifying": 5.0,
-        "free_practice": 7.5,
-        "out_laps_not_race": 9.0
-      },
-      "power_limited_distance_m": {
-        "value": 4218,
-        "ref": "C5.12.6 a / FIA-F1-DOC-034 via PU sheet"
-      },
-      "reduction_rate_kw_per_s": {
-        "value": 50,
-        "ref": "C5.12.6 via PU sheet (sheet heading says C5.12.8)"
-      },
-      "alt_curve_sectors_m": {
-        "ref": "C5.2.8 iii via PU sheet",
-        "race_sprint": [
-          [
-            2100,
-            2800
-          ]
-        ]
-      },
-      "pending_reduction_sectors_m": {
-        "ref": "C5.12.4 via PU sheet",
-        "max_reduction_kw": 350,
-        "all_sessions": [
-          [
-            2100,
-            2800
-          ]
-        ],
-        "sq_q_only": [
-          [
-            5050,
-            5350
-          ]
-        ]
-      },
-      "reset_sectors_m": {
-        "ref": "C5.12.5 via PU sheet",
-        "all_sessions": [],
-        "sq_q_only": [
-          [
-            5300,
-            5800
-          ]
-        ]
-      },
-      "speed_threshold_sectors": {
-        "ref": "C5.12.7 f via PU sheet",
-        "items": []
-      },
-      "overtake": {
-        "ref": "PU sheet 'Article B7.2'; map OVERTAKE box",
-        "detection_gap_s": 1.0,
-        "detection_m": 5050,
-        "detection_status": "TBC on sheet",
-        "detection_loop": "L18",
-        "detection_desc": "Entry T11",
-        "activation_m": 5249,
-        "activation_loop": "L19",
-        "activation_desc": "T11"
-      },
-      "straight_mode": {
-        "ref": "circuit map STRAIGHT MODE table; zone ends drawn only",
-        "normal_grip": {
-          "A1": "30m after T11 / Pit Exit",
-          "A2": "70m after T3",
-          "A3": "170m after T7",
-          "A4": "130m after T10"
-        },
-        "low_grip": {
-          "A1": "100m after T11 / Pit Exit",
-          "A2": "110m after T3",
-          "A3": "230m after T7",
-          "A4": "180m after T10"
-        }
-      }
-    },
-    "Montreal": {
-      "round": 5,
-      "sources": {
-        "pu_sheet": "fia_pu_information/2026_canadian_grand_prix_power_unit_information.pdf, Doc 5, 21 May 2026",
-        "circuit_map": "fia_circuit_maps/2026_canadian_grand_prix_circuit_map.pdf, Doc 9, 22 May 2026, v3 22.05.26"
-      },
-      "centreline_m": 4361,
-      "format": "Alternative",
-      "recharge_mj_per_lap": {
-        "ref": "C5.2.10 via PU sheet",
-        "race": 8.0,
-        "race_overtake_active": 8.5,
-        "qualifying": 6.0,
-        "free_practice": 8.5,
-        "out_laps_not_race": 8.5
-      },
-      "power_limited_distance_m": {
-        "value": 2682,
-        "ref": "C5.12.6 a / FIA-F1-DOC-034 via PU sheet"
-      },
-      "reduction_rate_kw_per_s": {
-        "value": 100,
-        "ref": "C5.12.6 via PU sheet (sheet heading says C5.12.8)"
-      },
-      "alt_curve_sectors_m": {
-        "ref": "C5.2.8 iii via PU sheet",
-        "race_sprint": [
-          [
-            220,
-            1200
-          ]
-        ]
-      },
-      "pending_reduction_sectors_m": {
-        "ref": "C5.12.4 via PU sheet",
-        "max_reduction_kw": 350,
-        "all_sessions": [
-          [
-            980,
-            1100
-          ]
-        ],
-        "sq_q_only": [
-          [
-            3850,
-            4050
-          ]
-        ]
-      },
-      "reset_sectors_m": {
-        "ref": "C5.12.5 via PU sheet",
-        "all_sessions": [],
-        "sq_q_only": [
-          [
-            4000,
-            4400
-          ]
-        ]
-      },
-      "speed_threshold_sectors": {
-        "ref": "C5.12.7 f via PU sheet",
-        "items": []
-      },
-      "overtake": {
-        "ref": "PU sheet 'Article B7.2'; map OVERTAKE box",
-        "detection_gap_s": 1.0,
-        "detection_m": 3870,
-        "detection_desc": "Entry T13",
-        "activation_m": 3982,
-        "activation_desc": "70m after T14"
-      },
-      "straight_mode": {
-        "ref": "circuit map STRAIGHT MODE table; zone ends drawn only",
-        "normal_grip": {
-          "A1": "100m after T14",
-          "A2": "50m after T7",
-          "A3": "60m after T9",
-          "A4": "30m after T11"
-        },
-        "low_grip": {
-          "A1": "160m after T14",
-          "A2": "110m after T7",
-          "A3": null,
-          "A4": "120m after T11"
-        }
-      }
-    },
-    "Barcelona": {
-      "round": 7,
-      "sources": {
-        "pu_sheet": "fia_pu_information/2026_barcelona-catalunya_grand_prix_power_unit_information.pdf, Doc 5, 11 June 2026",
-        "circuit_map": "fia_circuit_maps/2026_barcelona-catalunya_grand_prix_circuit_map.pdf, Doc 8, 11 June 2026, v1 21.05.26"
-      },
-      "centreline_m": 4657,
-      "format": "Standard",
-      "recharge_mj_per_lap": {
-        "ref": "C5.2.10 via PU sheet",
-        "race": 8.5,
-        "race_overtake_active": 9.0,
-        "qualifying": 7.0,
-        "free_practice": 9.0,
-        "out_laps_not_race": 9.0
-      },
-      "power_limited_distance_m": {
-        "value": 2440,
-        "ref": "C5.12.6 a / FIA-F1-DOC-034 via PU sheet"
-      },
-      "reduction_rate_kw_per_s": {
-        "value": 100,
-        "ref": "C5.12.6 via PU sheet (sheet heading says C5.12.8)"
-      },
-      "alt_curve_sectors_m": {
-        "ref": "C5.2.8 iii via PU sheet",
-        "race_sprint": [
-          [
-            820,
-            2100
-          ],
-          [
-            2520,
-            2850
-          ],
-          [
-            3480,
-            3750
-          ]
-        ]
-      },
-      "pending_reduction_sectors_m": {
-        "ref": "C5.12.4 via PU sheet",
-        "max_reduction_kw": 350,
-        "all_sessions": [
-          [
-            850,
-            930
-          ],
-          [
-            3500,
-            3750
-          ],
-          [
-            4000,
-            4150
-          ]
-        ],
-        "sq_q_only": [
-          [
-            3750,
-            4500
-          ]
-        ]
-      },
-      "reset_sectors_m": {
-        "ref": "C5.12.5 via PU sheet",
-        "all_sessions": [
-          [
-            1150,
-            1400
-          ],
-          [
-            2850,
-            3050
-          ],
-          [
-            4300,
-            4700
-          ]
-        ],
-        "sq_q_only": []
-      },
-      "speed_threshold_sectors": {
-        "ref": "C5.12.7 f via PU sheet",
-        "items": [
-          {
-            "window_m": [
-              1000,
-              1200
-            ],
-            "threshold_kph": 260
-          },
-          {
-            "window_m": [
-              2800,
-              2950
-            ],
-            "threshold_kph": 260
-          },
-          {
-            "window_m": [
-              3980,
-              4100
-            ],
-            "threshold_kph": 260
-          }
-        ]
-      },
-      "overtake": {
-        "ref": "PU sheet 'Article B7.2'; map OVERTAKE box",
-        "detection_gap_s": 1.0,
-        "detection_m": 4047,
-        "detection_desc": "Apex T13",
-        "activation_m": 4271,
-        "activation_desc": "Entry T14"
-      },
-      "straight_mode": {
-        "ref": "circuit map STRAIGHT MODE table; zone ends drawn only",
-        "normal_grip": {
-          "A1": "45m after T14",
-          "A2": "40m before T3 exit",
-          "A3": "90m after T5",
-          "A4": "40m after T9"
-        },
-        "low_grip": {
-          "A1": "85m after T14",
-          "A2": "T3 exit",
-          "A3": "90m after T5",
-          "A4": "90m after T9"
-        }
-      }
-    },
-    "Silverstone": {
-      "round": 9,
-      "sources": {
-        "pu_sheet": "fia_pu_information/2026_british_grand_prix_power_unit_information.pdf, Doc 7, 02 July 2026",
-        "circuit_map": "fia_circuit_maps/2026_british_grand_prix_circuit_map.pdf, Doc 6, 02 July 2026, v2 30.06.26"
-      },
-      "centreline_m": 5891,
-      "format": "Alternative",
-      "recharge_mj_per_lap": {
-        "ref": "C5.2.10 via PU sheet",
-        "race": 8.0,
-        "race_overtake_active": 8.5,
-        "qualifying": 6.5,
-        "free_practice": 8.5,
-        "out_laps_not_race": 8.5
-      },
-      "power_limited_distance_m": {
-        "value": 3833,
-        "ref": "C5.12.6 a / FIA-F1-DOC-034 via PU sheet"
-      },
-      "reduction_rate_kw_per_s": {
-        "value": 50,
-        "ref": "C5.12.6 via PU sheet (sheet heading says C5.12.8)"
-      },
-      "alt_curve_sectors_m": {
-        "ref": "C5.2.8 iii via PU sheet",
-        "race_sprint": [
-          [
-            350,
-            1000
-          ],
-          [
-            4950,
-            5450
-          ]
-        ]
-      },
-      "pending_reduction_sectors_m": {
-        "ref": "C5.12.4 via PU sheet",
-        "max_reduction_kw": 350,
-        "all_sessions": [
-          [
-            350,
-            1000
-          ],
-          [
-            1950,
-            2100
-          ],
-          [
-            4950,
-            5200
-          ]
-        ],
-        "sq_q_only": [
-          [
-            5550,
-            5750
-          ]
-        ]
-      },
-      "reset_sectors_m": {
-        "ref": "C5.12.5 via PU sheet",
-        "all_sessions": [
-          [
-            400,
-            550
-          ],
-          [
-            3000,
-            3300
-          ]
-        ],
-        "sq_q_only": [
-          [
-            5650,
-            5900
-          ]
-        ]
-      },
-      "speed_threshold_sectors": {
-        "ref": "C5.12.7 f via PU sheet",
-        "items": [
-          {
-            "window_m": [
-              3700,
-              4150
-            ],
-            "threshold_kph": 300
-          },
-          {
-            "window_m": [
-              5600,
-              5800
-            ],
-            "threshold_kph": 230
-          }
-        ]
-      },
-      "overtake": {
-        "ref": "PU sheet 'Article B7.2'; map OVERTAKE box",
-        "detection_gap_s": 1.0,
-        "detection_m": 5560,
-        "detection_status": "TBC on sheet",
-        "detection_desc": "Exit of T17",
-        "activation_m": 5631,
-        "activation_desc": "95m after T17"
-      },
-      "straight_mode": {
-        "ref": "circuit map STRAIGHT MODE table; zone ends drawn only",
-        "normal_grip": {
-          "A1": "65m after T18",
-          "A2": "55m after T5",
-          "A3": "155m after T7",
-          "A4": "65m after T14"
-        },
-        "low_grip": {
-          "A1": "115m after T18",
-          "A2": "115m after T5",
-          "A3": null,
-          "A4": "125m after T14"
-        }
-      }
-    },
-    "Budapest": {
-      "round": 11,
-      "sources": {
-        "pu_sheet": "fia_pu_information/2026_hungarian_grand_prix_power_unit_information.pdf, Doc 3, 22 July 2026",
-        "circuit_map": "fia_circuit_maps/2026_hungarian_grand_prix_circuit_map.pdf, Doc 5, 23 July 2026, v2 21.07.26"
-      },
-      "centreline_m": 4381,
-      "format": "Standard",
-      "recharge_mj_per_lap": {
-        "ref": "C5.2.10 via PU sheet",
-        "race": 8.5,
-        "race_overtake_active": 9.0,
-        "qualifying": 9.0,
-        "free_practice": 9.0,
-        "out_laps_not_race": 9.0
-      },
-      "power_limited_distance_m": {
-        "value": 1885,
-        "ref": "C5.12.6 a / FIA-F1-DOC-034 via PU sheet"
-      },
-      "reduction_rate_kw_per_s": {
-        "value": 100,
-        "ref": "C5.12.6 via PU sheet (sheet heading says C5.12.8)"
-      },
-      "alt_curve_sectors_m": {
-        "ref": "C5.2.8 iii via PU sheet",
-        "race_sprint": [
-          [
-            1780,
-            2700
-          ],
-          [
-            3500,
-            4000
-          ]
-        ]
-      },
-      "pending_reduction_sectors_m": {
-        "ref": "C5.12.4 via PU sheet",
-        "max_reduction_kw": 350,
-        "all_sessions": [
-          [
-            1780,
-            2000
-          ],
-          [
-            2570,
-            2700
-          ],
-          [
-            3500,
-            4000
-          ]
-        ],
-        "sq_q_only": [
-          [
-            4000,
-            4200
-          ]
-        ]
-      },
-      "reset_sectors_m": {
-        "ref": "C5.12.5 via PU sheet",
-        "all_sessions": [],
-        "sq_q_only": [
-          [
-            4150,
-            4400
-          ]
-        ]
-      },
-      "speed_threshold_sectors": {
-        "ref": "C5.12.7 f via PU sheet",
-        "items": [
-          {
-            "window_m": [
-              1150,
-              1400
-            ],
-            "threshold_kph": 240
-          }
-        ]
-      },
-      "overtake": {
-        "ref": "PU sheet 'Article B7.2'; map OVERTAKE box",
-        "detection_gap_s": 1.0,
-        "detection_m": 3974,
-        "detection_desc": "Entry T14",
-        "activation_m": 4121,
-        "activation_desc": "30m before T14-exit (verify text layout)"
-      },
-      "straight_mode": {
-        "ref": "circuit map STRAIGHT MODE table; zone ends drawn only",
-        "normal_grip": {
-          "A1": "40m after T14",
-          "A2": "30m after T1A-entry",
-          "A3": "50m after T3",
-          "A4": "60m after T11"
-        },
-        "low_grip": {
-          "A1": "100m after T14",
-          "A2": "100m after T1A-entry",
-          "A3": "80m after T3",
-          "A4": "90m after T11"
-        }
-      },
-      "note": "Q recharge 9.0 MJ exceeds 8.5 MJ base: implies C5.2.10 iii applies in Q (verify B7.2)"
-    },
-    "Zandvoort": {
-      "round": 12,
-      "sources": {
-        "pu_sheet": "fia_pu_information/2026_dutch_grand_prix_power_unit_information.pdf, Doc 3, 19 August 2026",
-        "circuit_map": "fia_circuit_maps/2026_dutch_grand_prix_circuit_map.pdf, Doc 6, 20 August 2026, v2 17.08.26"
-      },
-      "centreline_m": 4259,
-      "format": "Alternative",
-      "recharge_mj_per_lap": {
-        "ref": "C5.2.10 via PU sheet",
-        "race": 8.5,
-        "race_overtake_active": 9.0,
-        "qualifying": 7.5,
-        "free_practice": 9.0,
-        "out_laps_not_race": 9.0
-      },
-      "power_limited_distance_m": {
-        "value": 2411,
-        "ref": "C5.12.6 a / FIA-F1-DOC-034 via PU sheet"
-      },
-      "reduction_rate_kw_per_s": {
-        "value": 100,
-        "ref": "C5.12.6 via PU sheet (sheet heading says C5.12.8)"
-      },
-      "alt_curve_sectors_m": {
-        "ref": "C5.2.8 iii via PU sheet",
-        "race_sprint": [
-          [
-            350,
-            800
-          ],
-          [
-            2000,
-            2450
-          ],
-          [
-            3100,
-            3400
-          ]
-        ]
-      },
-      "pending_reduction_sectors_m": {
-        "ref": "C5.12.4 via PU sheet",
-        "max_reduction_kw": 350,
-        "all_sessions": [
-          [
-            670,
-            800
-          ],
-          [
-            2000,
-            2450
-          ]
-        ],
-        "sq_q_only": [
-          [
-            3450,
-            3650
-          ]
-        ]
-      },
-      "reset_sectors_m": {
-        "ref": "C5.12.5 via PU sheet",
-        "all_sessions": [],
-        "sq_q_only": [
-          [
-            3700,
-            4200
-          ]
-        ]
-      },
-      "speed_threshold_sectors": {
-        "ref": "C5.12.7 f via PU sheet",
-        "items": []
-      },
-      "overtake": {
-        "ref": "PU sheet 'Article B7.2'; map OVERTAKE box",
-        "detection_gap_s": 1.0,
-        "detection_m": 3431,
-        "detection_desc": "10m before T13",
-        "activation_m": 3648,
-        "activation_desc": "45m after T14-entry"
-      },
-      "straight_mode": {
-        "ref": "circuit map STRAIGHT MODE table; zone ends drawn only",
-        "normal_grip": {
-          "A1": "20m after T14",
-          "A2": "50m after T10"
-        },
-        "low_grip": {
-          "A1": "80m after T14",
-          "A2": "120m after T10"
-        }
-      }
-    },
-    "Madrid": {
-      "round": 14,
-      "sources": {
-        "pu_sheet": "fia_pu_information/2026_spanish_grand_prix_power_unit_information.pdf, Doc 3, 10 September 2026",
-        "circuit_map": null
-      },
-      "centreline_m": 5416,
-      "format": "Standard",
-      "recharge_mj_per_lap": {
-        "ref": "C5.2.10 via PU sheet",
-        "race": 8.5,
-        "race_overtake_active": 9.0,
-        "qualifying": 7.5,
-        "free_practice": 9.0,
-        "out_laps_not_race": 9.0
-      },
-      "power_limited_distance_m": {
-        "value": 3206,
-        "ref": "C5.12.6 a / FIA-F1-DOC-034 via PU sheet"
-      },
-      "reduction_rate_kw_per_s": {
-        "value": 100,
-        "ref": "C5.12.6 via PU sheet (sheet heading says C5.12.8)"
-      },
-      "alt_curve_sectors_m": {
-        "ref": "C5.2.8 iii via PU sheet",
-        "race_sprint": [
-          [
-            1500,
-            5100
-          ]
-        ]
-      },
-      "pending_reduction_sectors_m": {
-        "ref": "C5.12.4 via PU sheet",
-        "max_reduction_kw": 350,
-        "all_sessions": [
-          [
-            3600,
-            3800
-          ],
-          [
-            4100,
-            4300
-          ],
-          [
-            4600,
-            4800
-          ]
-        ],
-        "sq_q_only": [
-          [
-            5100,
-            5300
-          ]
-        ]
-      },
-      "reset_sectors_m": {
-        "ref": "C5.12.5 via PU sheet",
-        "all_sessions": [],
-        "sq_q_only": [
-          [
-            5200,
-            5400
-          ]
-        ]
-      },
-      "speed_threshold_sectors": {
-        "ref": "C5.12.7 f via PU sheet",
-        "items": []
-      },
-      "overtake": {
-        "ref": "PU sheet 'Article B7.2'; map OVERTAKE box",
-        "detection_gap_s": 1.0,
-        "detection_m": null,
-        "detection_status": "TBC",
-        "detection_loop": "L24",
-        "activation_m": null,
-        "activation_status": "TBC",
-        "activation_loop": "L25"
-      },
-      "straight_mode": {
-        "ref": "circuit map STRAIGHT MODE table; zone ends drawn only",
-        "normal_grip": null,
-        "low_grip": null,
-        "note": "circuit map not in folder"
-      },
-      "note": "Alt sector printed '1500-5100*'; footnote not on the sheet"
-    },
-    "Baku": {
-      "round": null,
-      "sources": {
-        "pu_sheet": "NOT IN FOLDER: values from fia_pu_information/fia_pu_2026.json (image shared by user 2026-09-23)",
-        "circuit_map": null
-      },
-      "centreline_m": 6003,
-      "format": "Standard",
-      "recharge_mj_per_lap": {
-        "ref": "C5.2.10 via PU sheet",
-        "race": 8.5,
-        "race_overtake_active": 9.0,
-        "qualifying": 8.5,
-        "free_practice": 9.0,
-        "out_laps_not_race": 9.0
-      },
-      "power_limited_distance_m": {
-        "value": 3796,
-        "ref": "C5.12.6 a / FIA-F1-DOC-034 via PU sheet"
-      },
-      "reduction_rate_kw_per_s": {
-        "value": 50,
-        "ref": "C5.12.6 via PU sheet (sheet heading says C5.12.8)"
-      },
-      "alt_curve_sectors_m": {
-        "ref": "C5.2.8 iii via PU sheet",
-        "race_sprint": [
-          [
-            300,
-            600
-          ],
-          [
-            1500,
-            2870
-          ],
-          [
-            3700,
-            4050
-          ]
-        ]
-      },
-      "pending_reduction_sectors_m": {
-        "ref": "C5.12.4 via PU sheet",
-        "max_reduction_kw": 350,
-        "all_sessions": [
-          [
-            300,
-            600
-          ],
-          [
-            1500,
-            2870
-          ],
-          [
-            3700,
-            4050
-          ]
-        ],
-        "sq_q_only": [
-          [
-            4050,
-            5300
-          ]
-        ]
-      },
-      "reset_sectors_m": {
-        "ref": "C5.12.5 via PU sheet",
-        "all_sessions": [
-          [
-            4650,
-            5600
-          ]
-        ],
-        "sq_q_only": [
-          [
-            5600,
-            6000
-          ]
-        ]
-      },
-      "speed_threshold_sectors": {
-        "ref": "C5.12.7 f via PU sheet",
-        "items": []
-      },
-      "overtake": {
-        "ref": "PU sheet 'Article B7.2'; map OVERTAKE box",
-        "detection_gap_s": 1.0,
-        "detection_m": 4177,
-        "activation_m": 4270
-      },
-      "straight_mode": {
-        "ref": "circuit map STRAIGHT MODE table; zone ends drawn only",
-        "normal_grip": null,
-        "low_grip": null,
-        "note": "circuit map not in folder"
-      },
-      "status": "unverified (verify)"
-    }
+   },
+   "role": "physics test track",
+   "centreline_note": "PU sheet prints 4.236 km; map v3 gives 4.326 km (verify)",
+   "pit_lane_speed_limit_kph": {
+    "value": 80,
+    "ref": "(A) verify: pit-lane speed limit of the FIA Sporting Regulations / the event notes; not in the local event documents (circuit map Doc 7 v3 22.06.26: the pit lane drawing labels FAST LANE, Pit Entry, Pit Exit, Safety Car Lines, no speed value)",
+    "status": "assumption (verify)",
+    "rule_id": "R-PIT-01"
+   }
   }
+ }
 }
 {
  "format": "f1-3d track profile v1",

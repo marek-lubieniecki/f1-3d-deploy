@@ -4084,7 +4084,7 @@
     "sample_m": 4.0,
     "osm_max_n_m": 70.0,
     "osm_fence_max_n_m": 120.0,
-    "line_clear_m": 1.0,
+    "face_min_m": 0.9,
     "catch_fence_max_m": 15.0,
     "cover_n_m": 45.0,
     "cover_along_m": 12.0,
