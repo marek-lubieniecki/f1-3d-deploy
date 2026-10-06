@@ -5,14 +5,15 @@
   <meta name="robots" content="noindex,nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
   <title>HybridSim · v0.2 preview</title>
-  <meta name="description" content="Drive a car built to the 2026 single-seater regulations, with its hybrid energy controller, on circuits in the Ardennes and Styria rebuilt from open data. In the browser, on desktop and phone.">
+  <meta name="description" content="See how a 2026 hybrid race car really uses its energy, on a full lap: the fastest legal lap a calibrated model finds, replayed in 3D in the browser on circuits rebuilt from open data.">
   <!-- link previews (C9-web.md §7.5): canonical URL and image from SITE_URL (vite.config.js, default https://hybridsim.app/);
-       og.jpg 1200x630 is a render of the app (no logos or trademarks) -->
+       og.jpg 1200x630 is a render of the app (no logos or trademarks); the F1_PITCH placeholder: the watch-only or the full app's
+       description (scripts/shipped_tracks.mjs PITCH, C9-web.md §8.26) -->
   <link rel="canonical" href="https://hybridsim.app/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="HybridSim">
   <meta property="og:title" content="HybridSim · 2026 hybrid racing car in the browser">
-  <meta property="og:description" content="Drive a car built to the 2026 single-seater regulations, with its hybrid energy controller, on circuits in the Ardennes and Styria rebuilt from open data. In the browser, on desktop and phone.">
+  <meta property="og:description" content="See how a 2026 hybrid race car really uses its energy, on a full lap: the fastest legal lap a calibrated model finds, replayed in 3D in the browser on circuits rebuilt from open data.">
   <meta property="og:url" content="https://hybridsim.app/">
   <meta property="og:image" content="https://hybridsim.app/og.jpg">
   <meta property="og:image:width" content="1200">
@@ -20,7 +21,7 @@
   <meta property="og:image:alt" content="A 2026-style single-seater on a forest circuit, rendered in the browser">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="HybridSim · 2026 hybrid racing car in the browser">
-  <meta name="twitter:description" content="Drive a car built to the 2026 single-seater regulations, with its hybrid energy controller, on circuits in the Ardennes and Styria rebuilt from open data. In the browser, on desktop and phone.">
+  <meta name="twitter:description" content="See how a 2026 hybrid race car really uses its energy, on a full lap: the fastest legal lap a calibrated model finds, replayed in 3D in the browser on circuits rebuilt from open data.">
   <meta name="twitter:image" content="https://hybridsim.app/og.jpg">
   <meta name="twitter:image:alt" content="A 2026-style single-seater on a forest circuit, rendered in the browser">
   <meta name="theme-color" content="#10151c">
@@ -28,10 +29,10 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="HybridSim">
-  <script type="module" crossorigin src="./assets/main-Dhvzt6RI.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/ui-BmIrYL1D.js">
-  <link rel="stylesheet" crossorigin href="./assets/ui-DsGzWDea.css">
-  <link rel="stylesheet" crossorigin href="./assets/main-D6437fVw.css">
+  <script type="module" crossorigin src="./assets/main-CZ58Y49P.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/brand-DwcbIupF.js">
+  <link rel="stylesheet" crossorigin href="./assets/brand-DsGzWDea.css">
+  <link rel="stylesheet" crossorigin href="./assets/main-CMzONzTQ.css">
 </head>
 <body>
   <canvas id="view"></canvas>
@@ -56,6 +57,20 @@
     <div class="rb-time"><input id="rb-seek" class="rb-seek" type="range" min="0" max="1000" step="1" value="0" aria-label="replay position"><div class="rb-t"><span id="rb-label">replay</span><b id="rb-clock">–</b></div></div>
     <button id="rb-speed" class="rb-btn rb-speed" aria-label="replay speed, tap to change" title="Speed">1×</button>
   </div>
+  <!-- watch-only main menu (watchonly.js, watch.css; C9-web.md §8.26): title, message, caption, track cards (outline,
+       region, lap time, gap to pole), credibility, "What am I looking at?", About -->
+  <div id="ws-menu" class="ws-menu" role="dialog" aria-labelledby="ws-title" hidden>
+    <div class="ws-mwrap">
+      <header class="ws-head"><h1 id="ws-title"></h1><p id="ws-pitch" class="ws-pitch"></p><p id="ws-cap" class="ws-cap"></p></header>
+      <div id="ws-tracks" class="ws-tracks" role="group" aria-label="choose a track"></div>
+      <div class="ws-foot">
+        <p id="ws-cred" class="ws-cred"></p>
+        <div class="ws-macts"><button id="ws-what" class="ws-btn ws-what">What am I looking at?</button><button id="ws-about" class="ws-btn ws-about">About</button></div>
+        <p id="ws-unoff" class="ws-unoff"></p>
+      </div>
+    </div>
+  </div>
+  <div id="ws-cards" class="ws-cards" role="dialog" aria-label="What am I looking at?" hidden></div>
   <div id="pausehint" class="pausehint">PAUSED <span>· drag to orbit · CAM: next view</span></div>
   <div id="warn" class="warn"></div>
   <button id="reset-btn" class="resetbtn" hidden aria-label="reset to track">↺ RESET</button>
@@ -80,7 +95,7 @@
       </label>
       <label>Camera <select id="cam"></select></label>
       <label>Quality
-        <select id="preset"><option value="desktop">desktop</option><option value="mobile">mobile</option></select>
+        <select id="preset"><option value="desktop">desktop</option><option value="mobile">mobile</option><option value="low">low</option></select>
       </label>
       <label>Car model
         <select id="model"><option value="v1">V1 two-track (steering)</option><option value="v0">V0 on the racing line</option></select>
@@ -109,7 +124,7 @@
   <div id="screen-loading" class="screen loading">
     <div class="card">
       <h1>HybridSim <small>v0.2 preview</small></h1>
-      <p class="sub">A car built to the 2026 single-seater regulations, with its hybrid energy controller, on circuits in the Ardennes and Styria rebuilt from open data</p>
+      <p class="sub" id="load-sub">A car built to the 2026 single-seater regulations, with its hybrid energy controller, on circuits in the Ardennes and Styria rebuilt from open data</p>
       <div class="progress" role="progressbar" aria-label="loading" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
       <div class="stage" aria-live="polite">starting…</div>
       <noscript><p>This simulator needs JavaScript.</p></noscript>
