@@ -822,12 +822,12 @@
  "generated_by": "tools/export/export_pedal_plan.py --car-out (do not edit by hand; rerun tools/export/update_calibrated_plans.sh)",
  "calibration": {
   "plan": {
-   "run": "calib_v4_13_cap_e_spa",
-   "pipeline_results": "outputs/Spa/calib_v4/13_cap/e/spa/qual/pipeline_results.pkl",
-   "pipeline_results_sha1": "1f5599beeeea23c53c9788b58cadf11b42b29801",
-   "run_config": "runs/calib_v4/13_cap/e/spa.toml",
-   "run_config_sha1": "1a81fccfb4206dab92e9811818043ee500669322",
-   "lap_time_s": 104.458221,
+   "run": "calib_v4_release_e_kr_spa",
+   "pipeline_results": "outputs/Spa/calib_v4/release/e_kr/spa/qual/pipeline_results.pkl",
+   "pipeline_results_sha1": "c049d7ef7bf7a044927eb407ff1caa33ad437765",
+   "run_config": "runs/calib_v4/release/e_kr/spa.toml",
+   "run_config_sha1": "fc54e4d140f57961ba95c85f24de8473267d10e0",
+   "lap_time_s": 104.558335,
    "trims": {
     "grip_scale": 1.0968,
     "rear_grip_factor": 1.08,
@@ -836,7 +836,7 @@
     "drag_scale": 0.95,
     "drag_scale_closed": 0.9,
     "tire_compound": "soft",
-    "edge_geometry": "halfwidth_kerbs_edge",
+    "edge_geometry": "halfwidth_kerbs_edge_kr",
     "ds": 10.0,
     "vertical_curvature": true,
     "rolling_resistance_coeff": 0.015,
@@ -1521,7 +1521,7 @@
  },
  "tracks": {
   "Spa": {
-   "source": "calibrated two-track plan calib_v4_13_cap_e_spa",
+   "source": "calibrated two-track plan calib_v4_release_e_kr_spa",
    "run_file": "runs/canonical/v16/spa.toml",
    "tyre_compound": "C4",
    "aero": {
@@ -1586,12 +1586,12 @@
  "generated_by": "tools/export/export_pedal_plan.py --car-out (do not edit by hand; rerun tools/export/update_calibrated_plans.sh)",
  "calibration": {
   "plan": {
-   "run": "calib_v4_13_cap_e_spielberg",
-   "pipeline_results": "outputs/Spielberg/calib_v4/13_cap/e/spielberg/qual/pipeline_results.pkl",
-   "pipeline_results_sha1": "47df4e2140e6a13aee4c1817dcc9419d447f67ba",
-   "run_config": "runs/calib_v4/13_cap/e/spielberg.toml",
-   "run_config_sha1": "1baf50759b2bf7282444d86e789f2e390c178865",
-   "lap_time_s": 65.927662,
+   "run": "calib_v4_release_e_kr_spielberg",
+   "pipeline_results": "outputs/Spielberg/calib_v4/release/e_kr/spielberg/qual/pipeline_results.pkl",
+   "pipeline_results_sha1": "91500eafeb4ba58adc0ff401120694da7c081f36",
+   "run_config": "runs/calib_v4/release/e_kr/spielberg.toml",
+   "run_config_sha1": "90e294ac916af5e0d0dd5e2f1de85df09006b2d1",
+   "lap_time_s": 65.831182,
    "trims": {
     "grip_scale": 1.0648,
     "rear_grip_factor": 1.08,
@@ -1600,7 +1600,7 @@
     "drag_scale": 1.06,
     "drag_scale_closed": 0.9,
     "tire_compound": "soft",
-    "edge_geometry": "halfwidth_kerbs",
+    "edge_geometry": "halfwidth_kerbs_edge_kr",
     "ds": 10.0,
     "surface": "lidar",
     "vertical_curvature": true,
@@ -2286,7 +2286,7 @@
  },
  "tracks": {
   "Spielberg": {
-   "source": "calibrated two-track plan calib_v4_13_cap_e_spielberg",
+   "source": "calibrated two-track plan calib_v4_release_e_kr_spielberg",
    "run_file": "runs/canonical/v16/spielberg.toml",
    "tyre_compound": "C5",
    "aero": {

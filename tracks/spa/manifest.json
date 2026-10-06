@@ -30,7 +30,8 @@
   "Surface model: Service public de Wallonie (SPW) - Relief de la Wallonie - Modele Numerique de Surface (MNS) 2021-2022, CC BY 4.0",
   "Barriers, fences, buildings: (c) OpenStreetMap contributors, ODbL 1.0 (openstreetmap.org/copyright)",
   "Ground classes: derived from Service public de Wallonie (SPW) - Orthophotos 2024 (2026-01-15), CC BY 4.0 and the LiDAR surface and terrain models (tools/track/ground.py)",
-  "Gravel areas (labels of the photo classes): (c) OpenStreetMap contributors, ODbL 1.0 (openstreetmap.org/copyright); the ground classes are offered under ODbL 1.0"
+  "Gravel areas (labels of the photo classes): (c) OpenStreetMap contributors, ODbL 1.0 (openstreetmap.org/copyright); the ground classes are offered under ODbL 1.0",
+  "Painted run-off: measured in Service public de Wallonie (SPW) - Orthophotos 2024 (CC BY 4.0)"
  ],
  "inputs": {
   "surface": "tracks/spa/surface.json (opendata)",
@@ -347,7 +348,7 @@
    }
   ],
   "triangles": 197340,
-  "vertices": 122597,
+  "vertices": 122598,
   "node_count": 34,
   "by_material": {
    "asphalt": 15180,
@@ -356,7 +357,7 @@
    "verge": 151746,
    "kerb": 2448
   },
-  "bytes": 3743860,
+  "bytes": 3743876,
   "materials": {
    "asphalt": "inside the white lines (uv = ortho tile coordinates)",
    "line": "white line (uv = |n|, s in m)",
@@ -1354,8 +1355,8 @@
      "m_per_px": 2.125
     },
     "ground": {
-     "file": "ground/8_3.png",
-     "file_lo": "ground/8_3_lo.png",
+     "file": "ground/8_3.webp",
+     "file_lo": "ground/8_3_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -1551,8 +1552,8 @@
      "file_lo": "ortho/O1_4_4_lo.jpg"
     },
     "ground": {
-     "file": "ground/4_4.png",
-     "file_lo": "ground/4_4_lo.png",
+     "file": "ground/4_4.webp",
+     "file_lo": "ground/4_4_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -1578,8 +1579,8 @@
      "file_lo": "ortho/O1_5_4_lo.jpg"
     },
     "ground": {
-     "file": "ground/5_4.png",
-     "file_lo": "ground/5_4_lo.png",
+     "file": "ground/5_4.webp",
+     "file_lo": "ground/5_4_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -1626,8 +1627,8 @@
      "file_lo": "ortho/O1_7_4_lo.jpg"
     },
     "ground": {
-     "file": "ground/7_4.png",
-     "file_lo": "ground/7_4_lo.png",
+     "file": "ground/7_4.webp",
+     "file_lo": "ground/7_4_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -1653,8 +1654,8 @@
      "file_lo": "ortho/O1_8_4_lo.jpg"
     },
     "ground": {
-     "file": "ground/8_4.png",
-     "file_lo": "ground/8_4_lo.png",
+     "file": "ground/8_4.webp",
+     "file_lo": "ground/8_4_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -1680,8 +1681,8 @@
      "file_lo": "ortho/O1_9_4_lo.jpg"
     },
     "ground": {
-     "file": "ground/9_4.png",
-     "file_lo": "ground/9_4_lo.png",
+     "file": "ground/9_4.webp",
+     "file_lo": "ground/9_4_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -1859,8 +1860,8 @@
      "file_lo": "ortho/O1_4_5_lo.jpg"
     },
     "ground": {
-     "file": "ground/4_5.png",
-     "file_lo": "ground/4_5_lo.png",
+     "file": "ground/4_5.webp",
+     "file_lo": "ground/4_5_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -1886,8 +1887,8 @@
      "file_lo": "ortho/O1_5_5_lo.jpg"
     },
     "ground": {
-     "file": "ground/5_5.png",
-     "file_lo": "ground/5_5_lo.png",
+     "file": "ground/5_5.webp",
+     "file_lo": "ground/5_5_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -1913,8 +1914,8 @@
      "file_lo": "ortho/O1_6_5_lo.jpg"
     },
     "ground": {
-     "file": "ground/6_5.png",
-     "file_lo": "ground/6_5_lo.png",
+     "file": "ground/6_5.webp",
+     "file_lo": "ground/6_5_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -1940,8 +1941,8 @@
      "file_lo": "ortho/O1_7_5_lo.jpg"
     },
     "ground": {
-     "file": "ground/7_5.png",
-     "file_lo": "ground/7_5_lo.png",
+     "file": "ground/7_5.webp",
+     "file_lo": "ground/7_5_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -1967,8 +1968,8 @@
      "file_lo": "ortho/O1_8_5_lo.jpg"
     },
     "ground": {
-     "file": "ground/8_5.png",
-     "file_lo": "ground/8_5_lo.png",
+     "file": "ground/8_5.webp",
+     "file_lo": "ground/8_5_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -1994,8 +1995,8 @@
      "file_lo": "ortho/O1_9_5_lo.jpg"
     },
     "ground": {
-     "file": "ground/9_5.png",
-     "file_lo": "ground/9_5_lo.png",
+     "file": "ground/9_5.webp",
+     "file_lo": "ground/9_5_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -2175,8 +2176,8 @@
      "file_lo": "ortho/O1_4_6_lo.jpg"
     },
     "ground": {
-     "file": "ground/4_6.png",
-     "file_lo": "ground/4_6_lo.png",
+     "file": "ground/4_6.webp",
+     "file_lo": "ground/4_6_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -2202,8 +2203,8 @@
      "file_lo": "ortho/O1_5_6_lo.jpg"
     },
     "ground": {
-     "file": "ground/5_6.png",
-     "file_lo": "ground/5_6_lo.png",
+     "file": "ground/5_6.webp",
+     "file_lo": "ground/5_6_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -2229,8 +2230,8 @@
      "file_lo": "ortho/O1_6_6_lo.jpg"
     },
     "ground": {
-     "file": "ground/6_6.png",
-     "file_lo": "ground/6_6_lo.png",
+     "file": "ground/6_6.webp",
+     "file_lo": "ground/6_6_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -2256,8 +2257,8 @@
      "file_lo": "ortho/O1_7_6_lo.jpg"
     },
     "ground": {
-     "file": "ground/7_6.png",
-     "file_lo": "ground/7_6_lo.png",
+     "file": "ground/7_6.webp",
+     "file_lo": "ground/7_6_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -2283,8 +2284,8 @@
      "file_lo": "ortho/O1_8_6_lo.jpg"
     },
     "ground": {
-     "file": "ground/8_6.png",
-     "file_lo": "ground/8_6_lo.png",
+     "file": "ground/8_6.webp",
+     "file_lo": "ground/8_6_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -2310,8 +2311,8 @@
      "file_lo": "ortho/O1_9_6_lo.jpg"
     },
     "ground": {
-     "file": "ground/9_6.png",
-     "file_lo": "ground/9_6_lo.png",
+     "file": "ground/9_6.webp",
+     "file_lo": "ground/9_6_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -2508,8 +2509,8 @@
      "file_lo": "ortho/O1_5_7_lo.jpg"
     },
     "ground": {
-     "file": "ground/5_7.png",
-     "file_lo": "ground/5_7_lo.png",
+     "file": "ground/5_7.webp",
+     "file_lo": "ground/5_7_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -2535,8 +2536,8 @@
      "file_lo": "ortho/O1_6_7_lo.jpg"
     },
     "ground": {
-     "file": "ground/6_7.png",
-     "file_lo": "ground/6_7_lo.png",
+     "file": "ground/6_7.webp",
+     "file_lo": "ground/6_7_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -2562,8 +2563,8 @@
      "file_lo": "ortho/O1_7_7_lo.jpg"
     },
     "ground": {
-     "file": "ground/7_7.png",
-     "file_lo": "ground/7_7_lo.png",
+     "file": "ground/7_7.webp",
+     "file_lo": "ground/7_7_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -2589,8 +2590,8 @@
      "file_lo": "ortho/O1_8_7_lo.jpg"
     },
     "ground": {
-     "file": "ground/8_7.png",
-     "file_lo": "ground/8_7_lo.png",
+     "file": "ground/8_7.webp",
+     "file_lo": "ground/8_7_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -2615,8 +2616,8 @@
      "m_per_px": 2.125
     },
     "ground": {
-     "file": "ground/9_7.png",
-     "file_lo": "ground/9_7_lo.png",
+     "file": "ground/9_7.webp",
+     "file_lo": "ground/9_7_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -2810,8 +2811,8 @@
      "file_lo": "ortho/O1_5_8_lo.jpg"
     },
     "ground": {
-     "file": "ground/5_8.png",
-     "file_lo": "ground/5_8_lo.png",
+     "file": "ground/5_8.webp",
+     "file_lo": "ground/5_8_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -2837,8 +2838,8 @@
      "file_lo": "ortho/O1_6_8_lo.jpg"
     },
     "ground": {
-     "file": "ground/6_8.png",
-     "file_lo": "ground/6_8_lo.png",
+     "file": "ground/6_8.webp",
+     "file_lo": "ground/6_8_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -2864,8 +2865,8 @@
      "file_lo": "ortho/O2_7_8_lo.jpg"
     },
     "ground": {
-     "file": "ground/7_8.png",
-     "file_lo": "ground/7_8_lo.png",
+     "file": "ground/7_8.webp",
+     "file_lo": "ground/7_8_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -2891,8 +2892,8 @@
      "file_lo": "ortho/O2_8_8_lo.jpg"
     },
     "ground": {
-     "file": "ground/8_8.png",
-     "file_lo": "ground/8_8_lo.png",
+     "file": "ground/8_8.webp",
+     "file_lo": "ground/8_8_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -2917,8 +2918,8 @@
      "m_per_px": 2.125
     },
     "ground": {
-     "file": "ground/9_8.png",
-     "file_lo": "ground/9_8_lo.png",
+     "file": "ground/9_8.webp",
+     "file_lo": "ground/9_8_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -3110,8 +3111,8 @@
      "file_lo": "ortho/O1_5_9_lo.jpg"
     },
     "ground": {
-     "file": "ground/5_9.png",
-     "file_lo": "ground/5_9_lo.png",
+     "file": "ground/5_9.webp",
+     "file_lo": "ground/5_9_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -3137,8 +3138,8 @@
      "file_lo": "ortho/O2_6_9_lo.jpg"
     },
     "ground": {
-     "file": "ground/6_9.png",
-     "file_lo": "ground/6_9_lo.png",
+     "file": "ground/6_9.webp",
+     "file_lo": "ground/6_9_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -3164,8 +3165,8 @@
      "file_lo": "ortho/O2_7_9_lo.jpg"
     },
     "ground": {
-     "file": "ground/7_9.png",
-     "file_lo": "ground/7_9_lo.png",
+     "file": "ground/7_9.webp",
+     "file_lo": "ground/7_9_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -3191,8 +3192,8 @@
      "file_lo": "ortho/O2_8_9_lo.jpg"
     },
     "ground": {
-     "file": "ground/8_9.png",
-     "file_lo": "ground/8_9_lo.png",
+     "file": "ground/8_9.webp",
+     "file_lo": "ground/8_9_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -3405,8 +3406,8 @@
      "file_lo": "ortho/O2_5_10_lo.jpg"
     },
     "ground": {
-     "file": "ground/5_10.png",
-     "file_lo": "ground/5_10_lo.png",
+     "file": "ground/5_10.webp",
+     "file_lo": "ground/5_10_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -3432,8 +3433,8 @@
      "file_lo": "ortho/O2_6_10_lo.jpg"
     },
     "ground": {
-     "file": "ground/6_10.png",
-     "file_lo": "ground/6_10_lo.png",
+     "file": "ground/6_10.webp",
+     "file_lo": "ground/6_10_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -3459,8 +3460,8 @@
      "file_lo": "ortho/O2_7_10_lo.jpg"
     },
     "ground": {
-     "file": "ground/7_10.png",
-     "file_lo": "ground/7_10_lo.png",
+     "file": "ground/7_10.webp",
+     "file_lo": "ground/7_10_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -3486,8 +3487,8 @@
      "file_lo": "ortho/O1_8_10_lo.jpg"
     },
     "ground": {
-     "file": "ground/8_10.png",
-     "file_lo": "ground/8_10_lo.png",
+     "file": "ground/8_10.webp",
+     "file_lo": "ground/8_10_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -3680,8 +3681,8 @@
      "file_lo": "ortho/O1_4_11_lo.jpg"
     },
     "ground": {
-     "file": "ground/4_11.png",
-     "file_lo": "ground/4_11_lo.png",
+     "file": "ground/4_11.webp",
+     "file_lo": "ground/4_11_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -3707,8 +3708,8 @@
      "file_lo": "ortho/O2_5_11_lo.jpg"
     },
     "ground": {
-     "file": "ground/5_11.png",
-     "file_lo": "ground/5_11_lo.png",
+     "file": "ground/5_11.webp",
+     "file_lo": "ground/5_11_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -3734,8 +3735,8 @@
      "file_lo": "ortho/O2_6_11_lo.jpg"
     },
     "ground": {
-     "file": "ground/6_11.png",
-     "file_lo": "ground/6_11_lo.png",
+     "file": "ground/6_11.webp",
+     "file_lo": "ground/6_11_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -3761,8 +3762,8 @@
      "file_lo": "ortho/O1_7_11_lo.jpg"
     },
     "ground": {
-     "file": "ground/7_11.png",
-     "file_lo": "ground/7_11_lo.png",
+     "file": "ground/7_11.webp",
+     "file_lo": "ground/7_11_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -3974,8 +3975,8 @@
      "file_lo": "ortho/O1_4_12_lo.jpg"
     },
     "ground": {
-     "file": "ground/4_12.png",
-     "file_lo": "ground/4_12_lo.png",
+     "file": "ground/4_12.webp",
+     "file_lo": "ground/4_12_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -4001,8 +4002,8 @@
      "file_lo": "ortho/O1_5_12_lo.jpg"
     },
     "ground": {
-     "file": "ground/5_12.png",
-     "file_lo": "ground/5_12_lo.png",
+     "file": "ground/5_12.webp",
+     "file_lo": "ground/5_12_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -4028,8 +4029,8 @@
      "file_lo": "ortho/O1_6_12_lo.jpg"
     },
     "ground": {
-     "file": "ground/6_12.png",
-     "file_lo": "ground/6_12_lo.png",
+     "file": "ground/6_12.webp",
+     "file_lo": "ground/6_12_lo.webp",
      "px": 544,
      "px_lo": 272
     }
@@ -5196,7 +5197,7 @@
    "O1": 37,
    "O2": 10
   },
-  "bytes": 5363765,
+  "bytes": 5364997,
   "margin_m": 8.0,
   "attribution": "Service public de Wallonie (SPW) - Orthophotos 2024 (2026-01-15), CC BY 4.0",
   "tone": {},
@@ -5212,10 +5213,10 @@
    "end_m": 1.0,
    "step_m": 0.1
   },
-  "photo_kerb_painted_m2": 7176.5
+  "photo_kerb_painted_m2": 6305.3
  },
  "ground": {
-  "format": "f1-3d ground masks v1",
+  "format": "f1-3d ground masks v2",
   "classes": {
    "none": 0,
    "grass": 1,
@@ -5225,12 +5226,21 @@
    "other": 5,
    "road": 6
   },
+  "groups": [
+   "photo",
+   "grass",
+   "gravel",
+   "paved",
+   "paint"
+  ],
   "tiles": 43,
-  "bytes": 554185,
+  "bytes": 1543380,
   "mask_px": 544,
   "mask_lo_px": 272,
   "m_per_px": 0.5,
-  "layout": "ground/<i>_<j>[_lo].png: uint8 class per pixel over the tile's orthophoto square (tile + margin), row 0 at +y; sampled with the orthophoto uv",
+  "dist_max_m": 1.0,
+  "smooth_m": 0.35,
+  "layout": "ground/<i>_<j>[_lo].webp (lossless): RGB8 over the tile's orthophoto square (tile + margin), row 0 at +y, sampled with the orthophoto uv; R = render group (groups), G = distance of the texel centre to the nearest other group, d = dist_max_m G / 255; B = 0",
   "colours_srgb": {
    "grass": [
     70.0,
@@ -5292,12 +5302,12 @@
    "Gravel areas (labels of the photo classes): (c) OpenStreetMap contributors, ODbL 1.0 (openstreetmap.org/copyright); the ground classes are offered under ODbL 1.0"
   ],
   "area_m2_in_masks": {
-   "none": 1795052,
-   "grass": 400393,
-   "gravel": 62042,
-   "paved": 353328,
-   "paint": 38116,
-   "other": 532380
+   "none": 1795038,
+   "grass": 399943,
+   "gravel": 61873,
+   "paved": 353699,
+   "paint": 38353,
+   "other": 532407
   }
  },
  "objects": {
@@ -5860,8 +5870,8 @@
  },
  "pit_lane": {
   "file": "pit_lane.glb",
-  "bytes": 699272,
-  "triangles": 39558,
+  "bytes": 699444,
+  "triangles": 39570,
   "source": "tracks/spa/pit_lane.json",
   "lift_m": 0.015,
   "materials": {
@@ -5869,6 +5879,60 @@
    "line": "lane edge lines",
    "verge": "grass cells of the pit grid"
   }
+ },
+ "runoff_paint": {
+  "file": "runoff_paint.glb",
+  "atlas": "runoff_paint.webp",
+  "atlas_lo": "runoff_paint_lo.webp",
+  "bytes": 892592,
+  "glb_bytes": 425892,
+  "atlas_bytes": 466700,
+  "atlas_px": [
+   4096,
+   760
+  ],
+  "atlas_m_per_px": 0.1,
+  "dist_max_m": 0.4,
+  "triangles": 31928,
+  "areas": 27,
+  "blocks": 65,
+  "colours": [
+   "yellow",
+   "white",
+   "red",
+   "green",
+   "black"
+  ],
+  "colours_srgb": [
+   [
+    252,
+    238,
+    154
+   ],
+   [
+    250,
+    242,
+    226
+   ],
+   [
+    247,
+    124,
+    104
+   ],
+   [
+    94,
+    165,
+    127
+   ],
+   [
+    98,
+    91,
+    93
+   ]
+  ],
+  "lift_m": 0.03,
+  "source": "tracks/spa/runoff_paint.json",
+  "layout": "atlas RGB8: R = colour label (0 none, k = colours[k - 1]), G = distance to the nearest label edge (0..255 = 0..dist_max_m); glb uv = atlas texel coordinates / atlas size"
  },
  "budgets": {
   "road_triangles": 197340,
@@ -5886,14 +5950,15 @@
    "lod3": 238
   },
   "download_bytes": {
-   "road": 3743860,
+   "road": 3743876,
    "terrain_lod0.glb": 4041344,
    "terrain_lod1.glb": 2733980,
    "terrain_lod2.glb": 1544192,
    "terrain_lod3.glb": 626564,
-   "ortho": 5363765,
-   "ground": 554185,
+   "ortho": 5364997,
+   "ground": 1543380,
    "lookup": 279900,
+   "runoff_paint": 892592,
    "trees": 1022412,
    "buildings": 115456
   },

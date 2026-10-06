@@ -1,0 +1,1 @@
+import"./ui-BmIrYL1D.js";import{a as n}from"./credits-BocYXiuS.js";const o=document.getElementById("credits"),r=t=>fetch(t).then(e=>{if(!e.ok)throw new Error(e.status);return e.json()});n(r).then(t=>{o.innerHTML=t});
