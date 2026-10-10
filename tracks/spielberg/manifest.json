@@ -4153,17 +4153,17 @@
   },
   "buildings": {
    "file": "buildings_t3.glb",
-   "bytes": 370476,
+   "bytes": 454788,
    "nodes": 15,
-   "primitives": 20,
+   "primitives": 21,
    "triangles": {
     "t3_facade": 5625,
-    "t3_seats": 59
+    "t3_seats": 1640
    },
    "triangles_by_object": {
     "roofs": 2077,
     "walls": 3548,
-    "grandstands": 59
+    "grandstands": 1640
    },
    "buildings": 321,
    "pieces": 339,

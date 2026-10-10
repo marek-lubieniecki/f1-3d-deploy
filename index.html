@@ -29,10 +29,10 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="HybridSim">
-  <script type="module" crossorigin src="./assets/main-B4TTL1zE.js"></script>
+  <script type="module" crossorigin src="./assets/main-C0QFN2wL.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/brand-DwcbIupF.js">
   <link rel="stylesheet" crossorigin href="./assets/brand-DsGzWDea.css">
-  <link rel="stylesheet" crossorigin href="./assets/main-CW45XhOG.css">
+  <link rel="stylesheet" crossorigin href="./assets/main-CsRJDYBA.css">
 </head>
 <body>
   <canvas id="view"></canvas>
@@ -65,6 +65,7 @@
       <div id="ws-tracks" class="ws-tracks" role="group" aria-label="choose a track"></div>
       <div class="ws-foot">
         <p id="ws-cred" class="ws-cred"></p>
+        <p class="ws-drivep"><a id="ws-drive" class="ws-drivelink" href="#"></a></p>
         <div class="ws-macts"><button id="ws-what" class="ws-btn ws-what">What am I looking at?</button><button id="ws-about" class="ws-btn ws-about">About</button></div>
         <div class="ws-mrow"><label class="ws-gfxl">Graphics <select id="ws-gfx" class="ws-gfx" aria-label="graphics quality"></select></label><a id="ws-xlink" class="ws-btn ws-xlink" aria-label="@m_lubieniecki on X"><b>𝕏</b><span class="ws-xh">@m_lubieniecki</span></a></div>
         <p id="ws-unoff" class="ws-unoff"></p>
@@ -121,6 +122,7 @@
     <button id="pit-btn" class="pbtn pitbtn" aria-label="pit limiter" aria-pressed="false" title="Pit limiter (L / gamepad B)" hidden>PIT</button>
   </div>
   <div id="rotate" class="rotate" role="note">↻ Turn the phone sideways to drive or watch <button aria-label="dismiss">✕</button></div>
+  <div id="drive-hint" class="drive-hint" role="note" hidden><span id="drive-hint-text"></span><button id="drive-hint-x" aria-label="dismiss">✕</button></div>
   <div id="menu" class="screen menu hidden"></div>
   <div id="screen-loading" class="screen loading">
     <div class="card">

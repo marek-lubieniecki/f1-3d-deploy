@@ -46,8 +46,8 @@
   },
   "rw_flap": {
    "origin": [
-    -0.5477723227953328,
-    0.884570296225936,
+    -0.5533386701208961,
+    0.8835579453450758,
     0.0
    ],
    "axis": [
@@ -57,7 +57,7 @@
    ],
    "straight_mode_deg": 28.0,
    "flap_le_x": -0.41283856916006034,
-   "flap_te_x": -0.592750240673757
+   "flap_te_x": -0.6001720371078414
   }
  },
  "cameras": {
@@ -75,11 +75,11 @@
  "rear_wing": {
   "main_chord_m": 0.265,
   "flap_chord_m": [
-   0.2099,
-   0.1547
+   0.2185,
+   0.1697
   ],
   "slot_gap_m": 0.01,
-  "straight_mode_slot_m": 0.0664
+  "straight_mode_slot_m": 0.0707
  },
  "wheels": {
   "FL": {
@@ -5033,16 +5033,16 @@
    }
   }
  },
- "triangles": 39675,
+ "triangles": 39779,
  "files": {
   "car.glb": {
-   "bytes": 1067880,
-   "triangles": 39675,
+   "bytes": 1118664,
+   "triangles": 39779,
    "draw_primitives": 36
   },
   "car_lod1.glb": {
-   "bytes": 616592,
-   "triangles": 19747,
+   "bytes": 631520,
+   "triangles": 19649,
    "draw_primitives": 36
   }
  }

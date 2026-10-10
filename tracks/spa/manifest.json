@@ -5324,10 +5324,10 @@
   },
   "buildings": {
    "file": "buildings.glb",
-   "triangles": 2882,
-   "nodes": 6,
-   "cells": 767,
-   "bytes": 115456,
+   "triangles": 1446,
+   "nodes": 4,
+   "cells": 310,
+   "bytes": 59036,
    "source": "2 m cells >= 2.5 m, not vegetation, of surface model - terrain model (Service public de Wallonie (SPW) - Relief de la Wallonie - Modele Numerique de Surface (MNS) 2021-2022, CC BY 4.0; public: SPW Relief de la Wallonie - MNT 2021-2022 (LiDAR, 0.5 m)), checked in the orthophoto (Service public de Wallonie (SPW) - Orthophotos 2024 (2026-01-15), CC BY 4.0)"
   }
  },
@@ -5786,17 +5786,18 @@
   },
   "buildings": {
    "file": "buildings_t3.glb",
-   "bytes": 623580,
-   "nodes": 37,
-   "primitives": 40,
+   "bytes": 718456,
+   "nodes": 38,
+   "primitives": 42,
    "triangles": {
-    "t3_facade": 9284,
-    "t3_seats": 87
+    "t3_facade": 9316,
+    "t3_seats": 1847
    },
    "triangles_by_object": {
     "roofs": 3472,
-    "walls": 5812,
-    "grandstands": 87
+    "walls": 5820,
+    "grandstands": 1847,
+    "stand_roofs": 24
    },
    "buildings": 467,
    "pieces": 481,
@@ -5820,7 +5821,7 @@
     "mns": 342,
     "default": 139
    },
-   "grandstands": 7,
+   "grandstands": 8,
    "params": {
     "max_dist_m": 1400.0,
     "min_h_m": 2.5,
@@ -5830,7 +5831,14 @@
     "small_area_m2": 250.0,
     "dilate_m": 3.0
    },
-   "mns_cells_dropped": 1021,
+   "mns_stands": [
+    {
+     "id": 9000004,
+     "height_m": 17.29,
+     "roof": "stand_roofed"
+    }
+   ],
+   "mns_cells_dropped": 1478,
    "materials": {
     "t3_facade": "walls (vertex colour x generic facade texture; uv = along the wall m, height m)",
     "t3_roof": "roofs: in t3_facade with uv 0 (orthophoto colour)",
@@ -5960,9 +5968,9 @@
    "lookup": 279900,
    "runoff_paint": 892592,
    "trees": 1022412,
-   "buildings": 115456
+   "buildings": 59036
   },
   "trees": 42600,
-  "building_triangles": 2882
+  "building_triangles": 1446
  }
 }
