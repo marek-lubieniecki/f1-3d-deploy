@@ -1,13 +1,13 @@
 {
- "sha": "a7f9fb5aa30e",
+ "sha": "e40150209406",
  "dirty": false,
- "commit_date": "2026-10-09T10:26:59+02:00",
- "built": "2026-10-10T06:48:08Z",
+ "commit_date": "2026-10-10T22:44:27+02:00",
+ "built": "2026-10-10T20:46:51Z",
  "tracks": [
   "spa",
   "spielberg"
  ],
- "reallaps": false,
+ "reallaps": true,
  "watch_only": true,
  "drive_beta": false
 }
