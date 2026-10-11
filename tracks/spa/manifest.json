@@ -35,7 +35,7 @@
  ],
  "inputs": {
   "surface": "tracks/spa/surface.json (opendata)",
-  "kerbs": "tracks/spa/kerbs.json (regular_bands: 53)",
+  "kerbs": "tracks/spa/kerbs.json (regular_bands: 52)",
   "widths": "tracks/spa/profile_centreline.json",
   "terrain": "private/tracks/spa/terrain/terrain.json",
   "terrain_source": "public: SPW Relief de la Wallonie - MNT 2021-2022 (LiDAR, 0.5 m)"
@@ -347,17 +347,17 @@
     "primitives": 3
    }
   ],
-  "triangles": 197340,
-  "vertices": 122598,
+  "triangles": 197132,
+  "vertices": 122502,
   "node_count": 34,
   "by_material": {
-   "asphalt": 15180,
-   "line": 15180,
-   "kerb_yellow": 12786,
-   "verge": 151746,
+   "asphalt": 15164,
+   "line": 15164,
+   "kerb_yellow": 13002,
+   "verge": 151354,
    "kerb": 2448
   },
-  "bytes": 3743876,
+  "bytes": 3740708,
   "materials": {
    "asphalt": "inside the white lines (uv = ortho tile coordinates)",
    "line": "white line (uv = |n|, s in m)",
@@ -5197,7 +5197,7 @@
    "O1": 37,
    "O2": 10
   },
-  "bytes": 5364997,
+  "bytes": 5364861,
   "margin_m": 8.0,
   "attribution": "Service public de Wallonie (SPW) - Orthophotos 2024 (2026-01-15), CC BY 4.0",
   "tone": {},
@@ -5213,7 +5213,7 @@
    "end_m": 1.0,
    "step_m": 0.1
   },
-  "photo_kerb_painted_m2": 6305.3
+  "photo_kerb_painted_m2": 6443.0
  },
  "ground": {
   "format": "f1-3d ground masks v2",
@@ -5234,12 +5234,44 @@
    "paint"
   ],
   "tiles": 43,
-  "bytes": 1543380,
+  "bytes": 1044482,
   "mask_px": 544,
   "mask_lo_px": 272,
   "m_per_px": 0.5,
   "dist_max_m": 1.0,
   "smooth_m": 0.35,
+  "render_clean": {
+   "other_fill_m": 45.0,
+   "other_min_m2": 200.0,
+   "island_m2": {
+    "grass": 12.0,
+    "paved": 150.0
+   },
+   "grey_grass_v_s": [
+    0.35,
+    0.12
+   ],
+   "vector_paint_dilate_m": 0.5,
+   "reclassified_m2": {
+    "grass->none": 15,
+    "grass->gravel": 310,
+    "grass->paved": 11262,
+    "grass->paint": 287,
+    "grass->other": 2572,
+    "paved->none": 39,
+    "paved->grass": 8552,
+    "paved->gravel": 467,
+    "paved->paint": 112,
+    "paved->other": 881,
+    "paint->grass": 29,
+    "paint->paved": 12167,
+    "other->none": 3,
+    "other->grass": 121208,
+    "other->gravel": 472,
+    "other->paved": 28811,
+    "other->paint": 39
+   }
+  },
   "layout": "ground/<i>_<j>[_lo].webp (lossless): RGB8 over the tile's orthophoto square (tile + margin), row 0 at +y, sampled with the orthophoto uv; R = render group (groups), G = distance of the texel centre to the nearest other group, d = dist_max_m G / 255; B = 0",
   "colours_srgb": {
    "grass": [
@@ -5302,12 +5334,12 @@
    "Gravel areas (labels of the photo classes): (c) OpenStreetMap contributors, ODbL 1.0 (openstreetmap.org/copyright); the ground classes are offered under ODbL 1.0"
   ],
   "area_m2_in_masks": {
-   "none": 1795038,
-   "grass": 399943,
-   "gravel": 61873,
-   "paved": 353699,
-   "paint": 38353,
-   "other": 532407
+   "none": 1795096,
+   "grass": 528561,
+   "gravel": 63315,
+   "paved": 402930,
+   "paint": 24752,
+   "other": 366659
   }
  },
  "objects": {
@@ -5477,15 +5509,15 @@
  "checks": {
   "seam": {
    "edge_minus_terrain_left": {
-    "rows": 3697,
-    "rms_m": 0.08290419933535509,
-    "p99_abs_m": 0.245295064000436,
+    "rows": 3693,
+    "rms_m": 0.08294642931731565,
+    "p99_abs_m": 0.24533159211672448,
     "max_abs_m": 2.185820302032198
    },
    "edge_minus_terrain_right": {
-    "rows": 3570,
-    "rms_m": 0.08195069474037064,
-    "p99_abs_m": 0.2535252060600646,
+    "rows": 3566,
+    "rms_m": 0.08197812971917826,
+    "p99_abs_m": 0.253527788530198,
     "max_abs_m": 2.033142356850874
    },
    "paved_minus_lod_mesh_min_m": 0.22622871910812137,
@@ -5892,18 +5924,18 @@
   "file": "runoff_paint.glb",
   "atlas": "runoff_paint.webp",
   "atlas_lo": "runoff_paint_lo.webp",
-  "bytes": 892592,
-  "glb_bytes": 425892,
-  "atlas_bytes": 466700,
+  "bytes": 870774,
+  "glb_bytes": 416820,
+  "atlas_bytes": 453954,
   "atlas_px": [
    4096,
-   760
+   738
   ],
   "atlas_m_per_px": 0.1,
   "dist_max_m": 0.4,
-  "triangles": 31928,
+  "triangles": 31374,
   "areas": 27,
-  "blocks": 65,
+  "blocks": 59,
   "colours": [
    "yellow",
    "white",
@@ -5943,7 +5975,7 @@
   "layout": "atlas RGB8: R = colour label (0 none, k = colours[k - 1]), G = distance to the nearest label edge (0..255 = 0..dist_max_m); glb uv = atlas texel coordinates / atlas size"
  },
  "budgets": {
-  "road_triangles": 197340,
+  "road_triangles": 197132,
   "road_draw_calls": 132,
   "terrain_triangles_per_tile": {
    "lod0": 8704,
@@ -5958,15 +5990,15 @@
    "lod3": 238
   },
   "download_bytes": {
-   "road": 3743876,
+   "road": 3740708,
    "terrain_lod0.glb": 4041344,
    "terrain_lod1.glb": 2733980,
    "terrain_lod2.glb": 1544192,
    "terrain_lod3.glb": 626564,
-   "ortho": 5364997,
-   "ground": 1543380,
+   "ortho": 5364861,
+   "ground": 1044482,
    "lookup": 279900,
-   "runoff_paint": 892592,
+   "runoff_paint": 870774,
    "trees": 1022412,
    "buildings": 59036
   },

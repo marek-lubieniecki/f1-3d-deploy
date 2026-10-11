@@ -3666,12 +3666,43 @@
    "paint"
   ],
   "tiles": 25,
-  "bytes": 570500,
+  "bytes": 437284,
   "mask_px": 544,
   "mask_lo_px": 272,
   "m_per_px": 0.5,
   "dist_max_m": 1.0,
   "smooth_m": 0.35,
+  "render_clean": {
+   "other_fill_m": 45.0,
+   "other_min_m2": 200.0,
+   "island_m2": {
+    "grass": 12.0,
+    "paved": 150.0
+   },
+   "grey_grass_v_s": [
+    0.35,
+    0.12
+   ],
+   "vector_paint_dilate_m": 0.5,
+   "reclassified_m2": {
+    "grass->none": 58,
+    "grass->gravel": 6,
+    "grass->paved": 6149,
+    "grass->other": 615,
+    "gravel->paved": 1443,
+    "paved->none": 4,
+    "paved->grass": 3417,
+    "paved->gravel": 177,
+    "paved->paint": 4,
+    "paved->other": 503,
+    "paint->gravel": 3,
+    "paint->paved": 7251,
+    "other->none": 21,
+    "other->grass": 13267,
+    "other->gravel": 57,
+    "other->paved": 16290
+   }
+  },
   "layout": "ground/<i>_<j>[_lo].webp (lossless): RGB8 over the tile's orthophoto square (tile + margin), row 0 at +y, sampled with the orthophoto uv; R = render group (groups), G = distance of the texel centre to the nearest other group, d = dist_max_m G / 255; B = 0",
   "colours_srgb": {
    "grass": [
@@ -3722,12 +3753,12 @@
    "Gravel areas (labels of the photo classes): (c) OpenStreetMap contributors, ODbL 1.0 (openstreetmap.org/copyright); the ground classes are offered under ODbL 1.0"
   ],
   "area_m2_in_masks": {
-   "none": 1018917,
-   "grass": 335135,
-   "gravel": 69145,
-   "paved": 323686,
-   "paint": 9813,
-   "other": 92903
+   "none": 1019008,
+   "grass": 345866,
+   "gravel": 67745,
+   "paved": 353993,
+   "paint": 2381,
+   "other": 60607
   }
  },
  "objects": {
@@ -4256,18 +4287,18 @@
   "file": "runoff_paint.glb",
   "atlas": "runoff_paint.webp",
   "atlas_lo": "runoff_paint_lo.webp",
-  "bytes": 672164,
-  "glb_bytes": 337012,
-  "atlas_bytes": 335152,
+  "bytes": 618644,
+  "glb_bytes": 315484,
+  "atlas_bytes": 303160,
   "atlas_px": [
    4096,
-   718
+   686
   ],
   "atlas_m_per_px": 0.1,
   "dist_max_m": 0.4,
-  "triangles": 24432,
+  "triangles": 23200,
   "areas": 31,
-  "blocks": 74,
+  "blocks": 68,
   "colours": [
    "red",
    "white",
